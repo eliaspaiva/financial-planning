@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/eliaspaiva/financial-planning/issues"
   },
-  "homepage": "https://github.com/eliaspaiva/financial-planning#readme"
+  "homepage": "https://github.com/eliaspaiva/financial-planning#readme",
+  "devDependencies": {
+    "eslint": "^8.24.0"
+  }
 }
