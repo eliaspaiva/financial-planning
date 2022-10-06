@@ -26,6 +26,7 @@
         "semi": [
             "error",
             "always"
-        ]
+        ], "max-lines-per-function": [
+            "error", { "max": 20 }]
     }
 }
