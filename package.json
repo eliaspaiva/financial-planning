@@ -4,7 +4,7 @@
   "description": "This is a web app, built in Vanilla Javascript, that helps me keep track of my expenses",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
