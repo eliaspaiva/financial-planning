@@ -1,2 +1,97 @@
+/* Colors */
+/* Font*/
+/* Font Weight */
+/* Font-size */
+/* Margin */
+/* Line Separation */
+/* Useful */
+.ff-1 {
+  font-family: var(--font-family-raleway); }
+
+.ff-2 {
+  font-family: var(--font-family-lato); }
+
+.fw-1 {
+  font-weight: var(--font-weight-400); }
+
+.fw-2 {
+  font-weight: var(--font-weight-500); }
+
+.fw-3 {
+  font-weight: var(--font-weight-600); }
+
+.fw-4 {
+  font-weight: var(--font-weight-700); }
+
+.fw-5 {
+  font-weight: var(--font-weight-800); }
+
+.fw-6 {
+  font-weight: var(--font-weight-300); }
+
+.fc-1 {
+  color: var(--white-color); }
+
+.fc-2 {
+  color: var(--green-color); }
+
+.fc-3 {
+  color: var(--blue-color); }
+
+.fc-4 {
+  color: var(--purple-color); }
+
+.fc-5 {
+  color: var(--black-color); }
+
+.fs-1 {
+  font-size: var(--font-size-1); }
+
+.fs-2 {
+  font-size: var(--font-size-2); }
+
+.fs-3 {
+  font-size: var(--font-size-3); }
+
+.fs-4 {
+  font-size: var(--font-size-4); }
+
+.fs-5 {
+  font-size: var(--font-size-5); }
+
+.fs-6 {
+  font-size: var(--font-size-6); }
+
+.fs-7 {
+  font-size: var(--font-size-7); }
+
+.fs-8 {
+  font-size: var(--font-size-8); }
+
 html {
-  background-color: blue; }
+  font-family: "Lato", sans-serif; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center; }
+  main h1 {
+    font-size: 2.25rem; }
+  main label {
+    font-size: 25px; }
+  main input[type='text'],
+  main input[type='password'] {
+    margin-top: 0.3rem;
+    border: 0;
+    background-color: #e1e1e1;
+    padding: 1.5rem 2.9rem; }
+  main button {
+    border: 0;
+    padding: 1rem 5.6rem;
+    font-size: 25px;
+    margin-bottom: 1.5rem; }
+  main a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2d2d52; }
