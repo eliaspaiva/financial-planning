@@ -125,7 +125,10 @@ main {
     padding: 0.5rem 5.6rem;
     font-size: 25px;
     margin-bottom: 1.5rem;
-    background-color: #00dce5; }
+    background-color: black;
+    color: white; }
+  main button:disabled {
+    background-color: green; }
   main a {
     text-decoration: none;
     font-size: 18px;
