@@ -25,8 +25,15 @@ const showPassword = () => {
     closedEye.style.display = 'block';
 };
 
+const hidePassword = () => {
+    password.type = 'password';
+    openEye.style.display = 'block';
+    closedEye.style.display = 'none';
+};
+
 
 form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
+closedEye.addEventListener('click', hidePassword);
 
 
