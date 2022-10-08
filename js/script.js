@@ -35,9 +35,7 @@ const hidePassword = () => {
 };
 
 
-form.addEventListener('input', enabledButton);
-openEye.addEventListener('click', showPassword);
-closedEye.addEventListener('click', hidePassword);
+
 
 
 // Remember Me Checkbox
@@ -49,7 +47,8 @@ if (localStorage.checkbox && localStorage.checkbox !== '') {
     username.value = '';
 }
 
-function lsRememberMe() {
+function lsRememberMe(e) {
+    e.preventDefault();
     if (rememberMe.checked && username.value !== '') {
         localStorage.username = username.value;
         localStorage.checkbox = rememberMe.value;
@@ -59,4 +58,7 @@ function lsRememberMe() {
     }
 }
 
-console.log(lsRememberMe());
+form.addEventListener('input', enabledButton);
+openEye.addEventListener('click', showPassword);
+closedEye.addEventListener('click', hidePassword);
+form.addEventListener('submit', lsRememberMe);
