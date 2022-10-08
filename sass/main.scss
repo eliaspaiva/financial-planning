@@ -207,7 +207,7 @@ main {
     padding: 0.5rem 0;
     background-color: $gray-color;
     font-size: $font-size-4;
-    
+    position: relative;
   }
 
   ::-webkit-input-placeholder {
@@ -254,4 +254,19 @@ main {
   p {
     text-align: center;
   }
+
+  .fa-eye {
+    position: absolute;
+    right: 35px;
+    top: 260px;
+    display: none;
+  }
+
+  .fa-eye-slash {
+    position: absolute;
+      right: 35px;
+      top: 260px;
+      display: none;
+  }
+
 }
