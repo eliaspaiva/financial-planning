@@ -3,6 +3,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const btn = document.getElementById('btn');
 const form = document.getElementById('form');
+const checkbox = document.getElementById('checkbox');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
 const rememberMe = document.getElementById('rememberMe');
@@ -24,6 +25,7 @@ const enabledButton = () => {
 
 const showPassword = () => {
     password.type = 'text';
+    localStorage.setItem('password', password.value);
     openEye.style.display = 'none';
     closedEye.style.display = 'block';
 };
@@ -34,31 +36,22 @@ const hidePassword = () => {
     closedEye.style.display = 'none';
 };
 
-
-
-
-
 // Remember Me Checkbox
-if (localStorage.checkbox && localStorage.checkbox !== '') {
-    rememberMe.setAttribute('checked', 'checked');
-    username.value = localStorage.username;
-} else {
-    rememberMe.removeAttribute('checked');
-    username.value = '';
-}
-
-function lsRememberMe(e) {
-    e.preventDefault();
-    if (rememberMe.checked && username.value !== '') {
-        localStorage.username = username.value;
-        localStorage.checkbox = rememberMe.value;
-    } else {
-        localStorage.username = '';
-        localStorage.checkbox = '';
+const getLoginDetails = () => {
+    clear()
+    const loginDetails = {
+        username: username.value,
+        password: password.value,
+    };
+    if (checkbox.checked = true) {
+        localStorage.setItem('user', JSON.stringify(loginDetails));
     }
-}
+};
 
+
+
+// Event Listener
 form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
-form.addEventListener('submit', lsRememberMe);
+btn.addEventListener('click', getLoginDetails);
