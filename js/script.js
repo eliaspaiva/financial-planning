@@ -38,15 +38,23 @@ const hidePassword = () => {
 
 // Remember Me Checkbox
 const getLoginDetails = () => {
-    clear()
     const loginDetails = {
         username: username.value,
         password: password.value,
     };
-    if (checkbox.checked = true) {
+    if (checkbox.checked == true) {
         localStorage.setItem('user', JSON.stringify(loginDetails));
     }
 };
+
+// const teste = () => {
+//     if ('username' in localStorage) {
+//         alert('yes');
+//     } else {
+//         alert('no');
+//     }
+// };
+
 
 
 
@@ -55,3 +63,11 @@ form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
 btn.addEventListener('click', getLoginDetails);
+window.addEventListener('load', () => {
+    if ('user' in localStorage) {
+        const teste = JSON.parse(window.localStorage.getItem('user'));
+        console.log(teste);
+        username.value = Object.values(teste)[0];
+        password.value = Object.values(teste)[1];
+    }
+});
