@@ -47,16 +47,6 @@ const getLoginDetails = () => {
     }
 };
 
-// const teste = () => {
-//     if ('username' in localStorage) {
-//         alert('yes');
-//     } else {
-//         alert('no');
-//     }
-// };
-
-
-
 
 // Event Listener
 form.addEventListener('input', enabledButton);
@@ -65,9 +55,9 @@ closedEye.addEventListener('click', hidePassword);
 btn.addEventListener('click', getLoginDetails);
 window.addEventListener('load', () => {
     if ('user' in localStorage) {
-        const teste = JSON.parse(window.localStorage.getItem('user'));
-        console.log(teste);
-        username.value = Object.values(teste)[0];
-        password.value = Object.values(teste)[1];
+        const loginDetails = JSON.parse(window.localStorage.getItem('user'));
+        console.log(loginDetails);
+        username.value = Object.values(loginDetails)[0];
+        password.value = Object.values(loginDetails)[1];
     }
 });
