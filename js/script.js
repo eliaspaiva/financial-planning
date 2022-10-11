@@ -6,7 +6,7 @@ const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
-const rememberMe = document.getElementById('rememberMe');
+// const rememberMe = document.getElementById('rememberMe');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
@@ -25,7 +25,7 @@ const enabledButton = () => {
 
 const showPassword = () => {
     password.type = 'text';
-    localStorage.setItem('password', password.value);
+    localStorage.setItem('user', password.value);
     openEye.style.display = 'none';
     closedEye.style.display = 'block';
 };
@@ -48,7 +48,7 @@ const getLoginDetails = () => {
 };
 
 
-// Event Listener
+// Event Listeners
 form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
