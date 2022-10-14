@@ -4,11 +4,13 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('login');
 });
 
-app.get('/admin', (req, res) => {
-    res.send('<h1>Admin</h1><button>click here</button>');
+app.get('/singup', (req, res) => {
+    res.render('singup', {
+        title: 'Create Account', 
+    });
 });
 
 app.get('/delete', (req, res) => {
