@@ -130,7 +130,8 @@ main {
     background-color: black;
     color: white; }
   main button:disabled {
-    background-color: green; }
+    opacity: 0.3;
+    cursor: not-allowed; }
   main a {
     text-decoration: none;
     font-size: 18px;

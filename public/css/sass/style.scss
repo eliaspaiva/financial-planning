@@ -242,7 +242,8 @@
     }
 
     button:disabled {
-      background-color: green;
+      opacity: 0.3;
+      cursor: not-allowed;
     }
 
     a {
