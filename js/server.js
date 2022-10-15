@@ -1,7 +1,14 @@
-const express = require('express');
+import express from 'express';
 const app = express();
+import path from 'path';
+const __dirname = path.resolve();
+
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
+
+
 
 app.get('/', (req, res) => {
     res.render('login');
@@ -33,5 +40,5 @@ app.get('*', (req, res)=> {
 
 
 app.listen(3000, () => {
-    console.log('listening to port 3000');
+    console.log('listening on port 3000');
 });

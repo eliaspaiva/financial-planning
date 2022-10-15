@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a web app, built in Vanilla Javascript, that helps me keep track of my expenses",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
     "devStart": "nodemon server.js"
