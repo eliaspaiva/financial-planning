@@ -2,16 +2,17 @@ import express from 'express';
 const app = express();
 import path from 'path';
 const __dirname = path.resolve();
-
+import { teste } from './script.js';
+ 
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
-
-
 app.get('/', (req, res) => {
-    res.render('login');
+    res.render('login', {
+        teste: teste,
+    });
 });
 
 app.get('/singup', (req, res) => {
