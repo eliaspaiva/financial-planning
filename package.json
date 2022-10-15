@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "sass": "node-sass public/css/sass/ -o public/css/",
     "devStart": "nodemon server.js"
   },
   "repository": {
