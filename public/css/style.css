@@ -98,7 +98,8 @@ main {
     margin: 0 auto;
     max-width: 600px; }
   main input[type='text'],
-  main input[type='password'] {
+  main input[type='password'],
+  main input[type='email'] {
     width: 100%;
     margin-top: 0.3rem;
     border: 0;
