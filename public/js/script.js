@@ -62,8 +62,8 @@ window.addEventListener('load', () => {
         openEye.style.display = 'block';
     }
 
-    if (username.value.length > 0 && password.value.length > 5) {
-        btn.removeAttribute('disabled');
+    username.value.length > 0 && password.value.length > 5 ?
+        btn.removeAttribute('disabled') :
         openEye.style.display = 'block';
-    }
+    
 });
