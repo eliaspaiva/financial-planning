@@ -7,7 +7,6 @@ const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
-// const rememberMe = document.getElementById('rememberMe');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
@@ -18,15 +17,11 @@ const enabledButton = () => {
         btn.setAttribute('disabled', 'disabled');
     }
 
-    if (password.value.length === 0) {
-        openEye.style.display = 'none';
-        closedEye.style.display = 'none';
-    }
+    password.value.length === 0 ? openEye.style.display = 'none' : closedEye.style.display = 'none';
 };
-
+  
 const showPassword = () => {
     password.type = 'text';
-    localStorage.setItem('user', password.value);
     openEye.style.display = 'none';
     closedEye.style.display = 'block';
 };
@@ -42,6 +37,8 @@ const clearField = () => {
         username.value = '';
         password.value = '';
         btn.setAttribute('disabled', 'disabled');
+        openEye.style.display = 'none';
+        closedEye.style.display = 'none';
     }
 };
 
@@ -56,23 +53,22 @@ const getLoginDetails = () => {
     }
 };
 
-
 // Event Listeners
 form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
 btn.addEventListener('click', getLoginDetails);
 btnClear.addEventListener('click', clearField);
-window.addEventListener('load', () => {
-    if ('user' in localStorage) {
-        const loginDetails = JSON.parse(window.localStorage.getItem('user'));
-        username.value = Object.values(loginDetails)[0];
-        password.value = Object.values(loginDetails)[1];
-        openEye.style.display = 'block';
-    }
+// window.addEventListener('load', () => {
+//     if ('user' in localStorage) {
+//         const loginDetails = JSON.parse(window.localStorage.getItem('user'));
+//         username.value = Object.values(loginDetails)[0];
+//         password.value = Object.values(loginDetails)[1];
+//         openEye.style.display = 'block';
+//     }
 
-    if (username.value.length > 0 && password.value.length > 5) {
-        btn.removeAttribute('disabled');
-        openEye.style.display = 'block';
-    }
-});
+//     if (username.value.length > 0 && password.value.length > 5) {
+//         btn.removeAttribute('disabled');
+//         openEye.style.display = 'block';
+//     }
+// });
