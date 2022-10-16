@@ -10,14 +10,9 @@ const closedEye = document.querySelector('.fa-eye-slash');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
-    if (username.value.length > 0 && password.value.length > 5) {
-        btn.removeAttribute('disabled');
-        openEye.style.display = 'block';
-    } else {
-        btn.setAttribute('disabled', 'disabled');
-    }
+    username.value.length > 0 && password.value.length > 5 ? btn.removeAttribute('disabled') : btn.setAttribute('disabled', 'disabled');
 
-    password.value.length === 0 ? openEye.style.display = 'none' : closedEye.style.display = 'none';
+    username.value.length > 0 && password.value.length >= 1 ? openEye.style.display = 'block' : openEye.style.display = 'none';
 };
   
 const showPassword = () => {
@@ -59,16 +54,16 @@ openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
 btn.addEventListener('click', getLoginDetails);
 btnClear.addEventListener('click', clearField);
-// window.addEventListener('load', () => {
-//     if ('user' in localStorage) {
-//         const loginDetails = JSON.parse(window.localStorage.getItem('user'));
-//         username.value = Object.values(loginDetails)[0];
-//         password.value = Object.values(loginDetails)[1];
-//         openEye.style.display = 'block';
-//     }
+window.addEventListener('load', () => {
+    if ('user' in localStorage) {
+        const loginDetails = JSON.parse(window.localStorage.getItem('user'));
+        username.value = Object.values(loginDetails)[0];
+        password.value = Object.values(loginDetails)[1];
+        openEye.style.display = 'block';
+    }
 
-//     if (username.value.length > 0 && password.value.length > 5) {
-//         btn.removeAttribute('disabled');
-//         openEye.style.display = 'block';
-//     }
-// });
+    if (username.value.length > 0 && password.value.length > 5) {
+        btn.removeAttribute('disabled');
+        openEye.style.display = 'block';
+    }
+});
