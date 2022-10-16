@@ -2,6 +2,7 @@
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const btn = document.getElementById('btn');
+const btnClear = document.getElementById('btn-clear');
 const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
 const openEye = document.querySelector('.fa-eye');
@@ -36,6 +37,14 @@ const hidePassword = () => {
     closedEye.style.display = 'none';
 };
 
+const clearField = () => {
+    if (username.value.length >= 0 && password.value.length >= 0) {
+        username.value = '';
+        password.value = '';
+        btn.setAttribute('disabled', 'disabled');
+    }
+};
+
 // Remember Me Checkbox
 const getLoginDetails = () => {
     const loginDetails = {
@@ -53,10 +62,17 @@ form.addEventListener('input', enabledButton);
 openEye.addEventListener('click', showPassword);
 closedEye.addEventListener('click', hidePassword);
 btn.addEventListener('click', getLoginDetails);
+btnClear.addEventListener('click', clearField);
 window.addEventListener('load', () => {
     if ('user' in localStorage) {
         const loginDetails = JSON.parse(window.localStorage.getItem('user'));
         username.value = Object.values(loginDetails)[0];
         password.value = Object.values(loginDetails)[1];
+        openEye.style.display = 'block';
+    }
+
+    if (username.value.length > 0 && password.value.length > 5) {
+        btn.removeAttribute('disabled');
+        openEye.style.display = 'block';
     }
 });
