@@ -16,6 +16,10 @@ app.get('/', (req, res) => {
     res.render('login');
 });
 
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
 app.get('/singup', (req, res) => {
     res.render('singup', {
         title: 'Create Account', 

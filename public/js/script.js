@@ -56,7 +56,6 @@ btn.addEventListener('click', getLoginDetails);
 window.addEventListener('load', () => {
     if ('user' in localStorage) {
         const loginDetails = JSON.parse(window.localStorage.getItem('user'));
-        console.log(loginDetails);
         username.value = Object.values(loginDetails)[0];
         password.value = Object.values(loginDetails)[1];
     }
