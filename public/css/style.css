@@ -87,20 +87,20 @@ main {
     text-align: center;
     color: white;
     font-weight: 100; }
-  main label {
-    font-size: 20px;
-    color: white;
-    font-weight: 100; }
   main form {
     width: 80%;
     margin: 0 auto;
     max-width: 600px; }
+  main label {
+    font-size: 20px;
+    color: white;
+    font-weight: 100; }
   main .input-field {
     width: 100%;
     padding: 10px;
     text-align: center;
     font-size: 1rem;
-    padding: 0.6rem 0;
+    padding: 1.1rem 0;
     width: 100%;
     margin-top: 0.3rem;
     border: 0;
@@ -112,11 +112,11 @@ main {
     width: 100%;
     margin-bottom: 10px; }
   main .icon {
-    padding: 20px 0 0 0;
+    padding: 21px 0 0 0;
     color: black;
     min-width: 50px;
     text-align: center;
-    font-size: 1rem; }
+    font-size: 1.2rem; }
   main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder {
