@@ -212,6 +212,10 @@
       position: relative;
     }
 
+    .input-validation {
+      display: none;
+    }
+
     ::-webkit-input-placeholder {
       /* Edge */
       color: $gray-placeholder-color;
