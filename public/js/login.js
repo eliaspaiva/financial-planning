@@ -5,8 +5,8 @@ const btn = document.getElementById('btn');
 const btnClear = document.getElementById('btn-clear');
 const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
-// const openEye = document.querySelector('.fa-eye');
-// const closedEye = document.querySelector('.fa-eye-slash');
+const openEye = document.querySelector('.fa-eye');
+const closedEye = document.querySelector('.fa-eye-slash');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
@@ -47,13 +47,8 @@ const getLoginDetails = () => {
     }
 };
 
-// Event Listeners
-form.addEventListener('input', enabledButton);
-openEye.addEventListener('click', showPassword);
-closedEye.addEventListener('click', hidePassword);
-btn.addEventListener('click', getLoginDetails);
-btnClear.addEventListener('click', clearField);
-window.addEventListener('load', () => {
+//Page Load
+const pageLoad = () => {
     if ('user' in localStorage) {
         const loginDetails = JSON.parse(window.localStorage.getItem('user'));
         username.value = Object.values(loginDetails)[0];
@@ -64,5 +59,12 @@ window.addEventListener('load', () => {
     username.value.length > 0 && password.value.length > 5 ?
         btn.removeAttribute('disabled') :
         openEye.style.display = 'block';
-    
-});
+};
+
+// Event Listeners
+form.addEventListener('input', enabledButton);
+openEye.addEventListener('click', showPassword);
+closedEye.addEventListener('click', hidePassword);
+btn.addEventListener('click', getLoginDetails);
+btnClear.addEventListener('click', clearField);
+window.addEventListener('load', pageLoad);
