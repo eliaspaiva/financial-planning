@@ -26,30 +26,30 @@
 
       <form id="form">
         <label for="username">Username</label><br>
-        <input type="text" id="username" name="name" placeholder="Username" required><br><br>
-        <div class="usarname-validation">
-        <p>Username must contain at least 5 characters.</p>
+        <input type="text" id="username" name="name" placeholder="Username" minlength="5" required><br><br>
+        <div class="input-validation">
+          <p>Username must contain at least 5 characters.</p>
         </div>
 
         <label for="email">Email</label><br>
         <input type="email" id="email" name="email" placeholder="Email" required><br><br>
         <div class="input-validation"></div>
-        <div class="email-validation">
-        <p>Email must contain @ symbol.</p>
+          <p>Email must contain @ symbol.</p>
         </div>
 
         <label for="password">Password</label><br>
         <input type="password" id="password" placeholder="Password" name="password" required><br><br>
-        <div class="email-validation">
-        <p>Password must contain at least 5 characters.</p>
+        <div class="input-validation">
+          <p>Password must contain at least 5 characters.</p>
         </div>
         <i class="fa-solid fa-eye"></i>
         <i class="fa-solid fa-eye-slash"></i>
-        <div class="input-validation"></div>
 
         <label for="cPassword">Confirm Password</label><br>
         <input type="password" id="cPassword" placeholder="Confirm Password" name="cPassword" required><br><br>
-        <div class="input-validation"></div>
+        <div class="input-validation">
+          <p>Password must contain at least 5 characters.</p>
+        </div>
        
         <button type="submit" id="btn" disabled>Sign Up</button>
 
