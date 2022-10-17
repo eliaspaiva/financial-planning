@@ -25,13 +25,22 @@
       <h1>Member Login</h1>
 
       <form id="form" method="get">
-        <label for="username">Username</label><br>
-        <input type="text" id="username" name="username" placeholder="Username" required><br><br>
 
-        <label for="password">Password</label><br>
-        <input type="password" id="password" placeholder="Password" name="password" required><br><br>
-        <button><i class="fa-solid fa-eye"></i></button>
-        <button><i class="fa-solid fa-eye-slash"></i></button>
+        <div class="input-icons">
+          <label for="username">Username</label><br>
+          <i class="fa-solid fa-eye icon"></i>
+          <input type="text" id="username" name="username" placeholder="Username"
+          class="input-field" required><br><br>
+        </div>
+
+
+        
+        <div class="input-icons">
+          <label for="password">Password</label><br>
+          <i class="fa-solid fa-eye icon"></i>
+          <i class="fa-solid fa-eye-slash icon"></i>
+          <input type="password" id="password" placeholder="Password" name="password" class="input-field" required> 
+        </div>
 
         <input type="checkbox" name="checkbox" id="checkbox">
         <label for="checkbox" id="rememberMe">Remember Me</label><br><br>

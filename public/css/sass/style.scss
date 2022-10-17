@@ -176,10 +176,6 @@
       margin-top: 1rem;
     }
 
-    .fa-solid {
-      font-size: 1.4rem;
-    }
-
     h1 {
       font-size: $size-8;
       text-align: center;
@@ -194,10 +190,11 @@
     }
 
     form {
-      width: 100%;
+      width: 80%;
       margin: $margin-middle;
       max-width: 600px;
     }
+
 
     input[type='text'],
     input[type='password'],
@@ -209,9 +206,32 @@
       padding: 0.5rem 0;
       background-color: $gray-color;
       font-size: $font-size-4;
-      position: relative;
     }
 
+    .input-icons i {
+    position: absolute;
+    }
+    
+    .input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    
+    .icon {
+    padding: 20px 0 0 0;
+    color: black;
+    min-width: 50px;
+    text-align: center;
+    font-size: 1rem;
+    }
+    
+    .input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    }
+
+   
     .input-validation {
       display: none;
     }
@@ -236,7 +256,7 @@
       font-size: $font-size-3;
     }
 
-    button {
+     #btn, #btn-clear {
       cursor: pointer;
       width: 100%;
       border: 0;
@@ -262,19 +282,4 @@
     p {
       text-align: center;
     }
-
-    .fa-eye {
-      position: absolute;
-      right: 35px;
-      top: 260px;
-      display: none;
-    }
-
-    .fa-eye-slash {
-      position: absolute;
-      right: 35px;
-      top: 260px;
-      display: none;
-    }
-
   }

@@ -1,13 +1,12 @@
 // Variables
-console.log('oi');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
 const btn = document.getElementById('btn');
 const btnClear = document.getElementById('btn-clear');
 const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
-const openEye = document.querySelector('.fa-eye');
-const closedEye = document.querySelector('.fa-eye-slash');
+// const openEye = document.querySelector('.fa-eye');
+// const closedEye = document.querySelector('.fa-eye-slash');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
