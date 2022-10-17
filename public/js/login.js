@@ -5,12 +5,14 @@ const btn = document.getElementById('btn');
 const btnClear = document.getElementById('btn-clear');
 const form = document.getElementById('form');
 const checkbox = document.getElementById('checkbox');
+const lock = document.querySelector('.fa-lock');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
     username.value.length > 0 && password.value.length > 5 ? btn.removeAttribute('disabled') : btn.setAttribute('disabled', 'disabled');
+    
     username.value.length > 0 && password.value.length >= 1 ? openEye.style.display = 'block' : openEye.style.display = 'none';
 };
   
