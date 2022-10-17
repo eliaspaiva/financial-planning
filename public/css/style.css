@@ -78,10 +78,6 @@ main {
   width: 100%;
   margin: 0 auto;
   align-items: center; }
-  main .prn-fnt-asw {
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem; }
   main h1 {
     font-size: 1.75rem;
     text-align: center;
@@ -117,6 +113,8 @@ main {
     min-width: 50px;
     text-align: center;
     font-size: 1.2rem; }
+  main .fa-eye, main .fa-eye-slash {
+    display: none; }
   main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder {
