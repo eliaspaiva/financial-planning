@@ -183,11 +183,7 @@
       font-weight: 100;
     }
 
-    label {
-      font-size: $font-size-3;
-      color: white;
-      font-weight: 100;
-    }
+  
 
     form {
       width: 80%;
@@ -195,17 +191,24 @@
       max-width: 600px;
     }
 
+    label {
+      font-size: $font-size-3;
+      color: white;
+      font-weight: 100;
+    }
 
-    input[type='text'],
-    input[type='password'],
-    input[type='email']
-    {
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      font-size: 1rem;
+      padding: 0.6rem 0;
       width: 100%;
       margin-top: 0.3rem;
       border: 0;
-      padding: 0.5rem 0;
       background-color: $gray-color;
-      font-size: $font-size-4;
+      font-size: $font-size-2;
     }
 
     .input-icons i {
@@ -225,11 +228,7 @@
     font-size: 1rem;
     }
     
-    .input-field {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    }
+    
 
    
     .input-validation {

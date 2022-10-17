@@ -95,15 +95,17 @@ main {
     width: 80%;
     margin: 0 auto;
     max-width: 600px; }
-  main input[type='text'],
-  main input[type='password'],
-  main input[type='email'] {
+  main .input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.6rem 0;
     width: 100%;
     margin-top: 0.3rem;
     border: 0;
-    padding: 0.5rem 0;
     background-color: #e1e1e1;
-    font-size: 25px; }
+    font-size: 18px; }
   main .input-icons i {
     position: absolute; }
   main .input-icons {
@@ -115,10 +117,6 @@ main {
     min-width: 50px;
     text-align: center;
     font-size: 1rem; }
-  main .input-field {
-    width: 100%;
-    padding: 10px;
-    text-align: center; }
   main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder {
