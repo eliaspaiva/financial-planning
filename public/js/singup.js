@@ -18,6 +18,8 @@ const enabledButton = () => {
 const passwordVisibility = () => {
     if (password.value.length > 0) {
         openEye.style.display = 'block';
+    } else {
+        openEye.style.display = 'none';
     }
 };
 
