@@ -12,8 +12,14 @@ const closedEye = document.querySelector('.fa-eye-slash');
 // Button Activation and Password Visibility
 const enabledButton = () => {
     username.value.length > 0 && password.value.length > 5 ? btn.removeAttribute('disabled') : btn.setAttribute('disabled', 'disabled');
-    
-    username.value.length > 0 && password.value.length >= 1 ? openEye.style.display = 'block' : openEye.style.display = 'none';
+
+    if (username.value.length > 0 && password.value.length >= 1) {
+        lock.style.display = 'none';
+        openEye.style.display = 'block';
+    } else {
+        openEye.style.display = 'none';
+        lock.style.display = 'block';
+    }
 };
   
 const showPassword = () => {
@@ -35,6 +41,8 @@ const clearField = () => {
         btn.setAttribute('disabled', 'disabled');
         openEye.style.display = 'none';
         closedEye.style.display = 'none';
+        lock.style.display = 'block';
+
     }
 };
 
@@ -58,9 +66,12 @@ const pageLoad = () => {
         openEye.style.display = 'block';
     }
 
-    username.value.length > 0 && password.value.length > 5 ?
-        btn.removeAttribute('disabled') :
+    if (username.value.length > 0 && password.value.length > 5) {
+        btn.removeAttribute('disabled');
         openEye.style.display = 'block';
+        lock.style.display = 'none';
+    }
+        
 };
 
 // Event Listeners
