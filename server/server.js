@@ -26,8 +26,8 @@ app.get('/singup', (req, res) => {
     });
 });
 
-app.get('/delete', (req, res) => {
-    res.send('<h1>Delete</h1><button>click here</button>');
+app.get('/main', (req, res) => {
+    res.render('index');
 });
 
 app.get('/r/:players/:id', (req, res) => {

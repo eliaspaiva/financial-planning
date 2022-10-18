@@ -11,8 +11,6 @@ const closedEye = document.querySelector('.fa-eye-slash');
 const enabledButton = () => {
     if (username.value.length > 4 && email.value.length > 0 && password.value.length > 5 && cPassword.value.length > 5 && password.value === cPassword.value) {
         btn.removeAttribute('disabled');
-        console.log(password.value);
-        console.log(cPassword.value);
     } else {
         btn.setAttribute('disabled', 'disabled');
     }
