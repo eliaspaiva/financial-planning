@@ -25,6 +25,20 @@
       <h1><%= title %></h1>
 
       <form id="form">
+        <div class="input-icons">
+          <label for="username">Username</label><br>
+          <i class="fa-solid fa-user icon"></i>
+          <input type="text" id="username" name="username" placeholder="Username" class="input-field" required><br><br>
+        </div>
+             
+        <div class="input-icons">
+          <label for="password">Password</label><br>
+          <i class="fa-solid fa-lock icon"></i>
+          <i class="fa-solid fa-eye icon"></i>
+          <i class="fa-solid fa-eye-slash icon"></i>
+          <input type="password" id="password" placeholder="Password" name="password" class="input-field" required>
+        </div>
+
         <label for="username">Username</label><br>
         <input type="text" id="username" name="name" placeholder="Username" minlength="5" required><br><br>
         <div class="input-validation">
