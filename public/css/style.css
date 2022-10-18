@@ -131,7 +131,7 @@ main {
     color: #7a7a7a;
     text-align: center;
     font-size: 20px; }
-  main #btn, main #btn-clear {
+  main #btn, main #btn-clear, main #btn-sing-up {
     cursor: pointer;
     width: 100%;
     border: 0;
@@ -143,10 +143,12 @@ main {
   main button:disabled {
     opacity: 0.3;
     cursor: not-allowed; }
-  main a {
+  main button a, main .ctn-p a {
     text-decoration: none;
-    font-size: 18px;
-    color: #2d2d52;
-    font-size: 1.3rem; }
+    font-size: 16px;
+    color: white;
+    font-size: 16px; }
+  main .ctn-p a {
+    font-size: 18px; }
   main p {
     text-align: center; }

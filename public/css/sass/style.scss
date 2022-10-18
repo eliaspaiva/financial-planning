@@ -249,7 +249,7 @@
       font-size: $font-size-3;
     }
 
-     #btn, #btn-clear {
+     #btn, #btn-clear, #btn-sing-up {
       cursor: pointer;
       width: 100%;
       border: 0;
@@ -257,7 +257,7 @@
       font-size: $font-size-1;
       margin-bottom: $size-6;
       background-color: black;
-      color: white;
+      color: $white-color;
     }
 
     button:disabled {
@@ -265,11 +265,15 @@
       cursor: not-allowed;
     }
 
-    a {
+    button a, .ctn-p a {
       text-decoration: none;
+      font-size: $font-size-1;
+      color: $white-color;
+      font-size: $font-size-1;
+    }
+
+    .ctn-p a {
       font-size: $font-size-2;
-      color: $black-color;
-      font-size: 1.3rem;
     }
 
     p {

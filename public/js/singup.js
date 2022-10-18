@@ -2,14 +2,17 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const cPassword = document.getElementById('cPassword');
-const btn = document.getElementById('btn');
+const cPassword = document.getElementById('passwordConf');
+const btn = document.getElementById('btn-sing-up');
+const lock = document.querySelector('.fa-lock');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
 
 const enabledButton = () => {
     if (username.value.length > 4 && email.value.length > 0 && password.value.length > 5 && cPassword.value.length > 5 && password.value === cPassword.value) {
         btn.removeAttribute('disabled');
+        console.log(password.value);
+        console.log(cPassword.value);
     } else {
         btn.setAttribute('disabled', 'disabled');
     }
@@ -17,7 +20,10 @@ const enabledButton = () => {
 
 const passwordVisibility = () => {
     if (password.value.length > 0) {
+        console.log('oi');
+        lock.style.display = 'none';
         openEye.style.display = 'block';
+        closedEye.style.display = 'none';
     } else {
         openEye.style.display = 'none';
     }
