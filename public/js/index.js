@@ -6,14 +6,14 @@ const closeIcon = document.getElementById('closeicon');
 
 
 // Functions
-// const getCurrentMonth = () => {
-const today = new Date();
-const month = today.toLocaleString('default', { month: 'long' });
-const h1Header = document.createElement('h1');
-h1Header.innerHTML = month;
-console.log(h1Header.innerHTML);
-header.appendChild(h1Header);
-// };
+const getCurrentMonth = () => {
+    const today = new Date();
+    const month = today.toLocaleString('default', { month: 'long' });
+    const year = today.getFullYear();
+    const h1Header = document.createElement('h1');
+    h1Header.innerHTML =`${month}, ${year}`;
+    header.appendChild(h1Header);
+};
 
 const showCategoryButton = () => {
     expenseBox.style.display = 'block';
@@ -28,7 +28,7 @@ const closeCategoryIcon = () => {
 }; 
 
 // Event Listeners
-// getCurrentMonth();
+getCurrentMonth();
 btnCategory.addEventListener('click', showCategoryButton);
 closeBtn.addEventListener('click', closeCategoryButton);
 closeIcon.addEventListener('click', closeCategoryIcon);
