@@ -15,6 +15,10 @@ const getCurrentMonth = () => {
     header.appendChild(h1Header);
 };
 
+const addIncome = () => {
+    
+}
+
 const showCategoryButton = () => {
     expenseBox.style.display = 'block';
 };

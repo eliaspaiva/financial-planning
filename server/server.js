@@ -26,8 +26,12 @@ app.get('/singup', (req, res) => {
     });
 });
 
-app.get('/main', (req, res) => {
-    res.render('index');
+app.get('/login', (req, res) => {
+    res.render('login');
+});
+
+app.get('/category', (req, res) => {
+    res.render('category');
 });
 
 app.get('/r/:players/:id', (req, res) => {
