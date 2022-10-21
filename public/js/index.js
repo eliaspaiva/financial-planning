@@ -18,5 +18,5 @@ const closeCategoryIcon = () => {
 
 // Event Listeners
 btnCategory.addEventListener('click', showCategoryButton);
-closeBtn.closeBtn('click', closeCategoryButton);
+closeBtn.addEventListener('click', closeCategoryButton);
 closeIcon.addEventListener('click', closeCategoryIcon);
