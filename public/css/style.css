@@ -131,7 +131,7 @@ main {
     color: #7a7a7a;
     text-align: center;
     font-size: 20px; }
-  main #btn, main #btn-clear, main #btn-sing-up {
+  main .btn {
     cursor: pointer;
     width: 100%;
     border: 0;
