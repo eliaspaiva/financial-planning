@@ -1,0 +1,25 @@
+@import './variables';
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  padding: 1.3rem 5.6rem;
+  font-size: $font-size-1;
+  margin-bottom: $size-6;
+  background-color: black;
+  color: $white-color;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+button a,
+.ctn-p a {
+  text-decoration: none;
+  font-size: $font-size-1;
+  color: $white-color;
+  font-size: $font-size-1;
+}
