@@ -17,7 +17,7 @@ const getCurrentMonth = () => {
 
 const addIncome = () => {
     
-}
+};
 
 const showCategoryButton = () => {
     expenseBox.style.display = 'block';

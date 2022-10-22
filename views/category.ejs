@@ -29,7 +29,24 @@
           <input type="number" id="income" name="income" placeholder="Monthly Income" class="input-field" required><br><br>
         </div>
 
-        <button type="submit" id="btn" class="btn">Create Categories</button>
+        <button type="submit" id="btn-categories" class="btn">Create Categories</button>
+
+        <!-- Category Box -->
+        <div id="expense-box" style="display: none;">
+            <div class="box-header">
+              <h3>Insert Category</h3>
+              <i class="fa-light fa-circle-xmark" id="closeicon"></i>
+            </div>
+            <form action="">
+              <input type="text" name="category" id="category" placeholder="Category">
+              <input type="text" name="expense" id="expense" placeholder="Expense">
+            </form>
+            <div class="box-footer">
+              <button id="close-btn" class="btn">Close</button>
+              <button id="save-bt" class="btn">Save</button>
+            </div>
+        </div>
+        <!-- Category Box -->
 
         <button type="submit" id="btn" class="btn">Save</button>
       </form>
