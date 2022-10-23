@@ -66,8 +66,6 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
-/* Line Separation */
-/* Useful */
 .ff-1 {
   font-family: var(--font-family-raleway); }
 
@@ -136,8 +134,6 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
-/* Line Separation */
-/* Useful */
 .ff-1 {
   font-family: var(--font-family-raleway); }
 
@@ -207,7 +203,7 @@ select {
   border: 0;
   padding: 1.3rem 5.6rem;
   font-size: 16px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.50rem;
   background-color: black;
   color: white; }
 
@@ -233,7 +229,6 @@ main {
   margin: 0 auto;
   align-items: center; }
   main h1 {
-    font-size: 1.75rem;
     text-align: center;
     color: white;
     font-weight: 100; }

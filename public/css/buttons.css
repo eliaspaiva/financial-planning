@@ -3,8 +3,6 @@
 /* Font Weight */
 /* Font-size */
 /* Margin */
-/* Line Separation */
-/* Useful */
 .ff-1 {
   font-family: var(--font-family-raleway); }
 
@@ -74,7 +72,7 @@
   border: 0;
   padding: 1.3rem 5.6rem;
   font-size: 16px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.50rem;
   background-color: black;
   color: white; }
 
