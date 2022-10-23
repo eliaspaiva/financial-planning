@@ -7,6 +7,7 @@ $white-color: rgb(255, 255, 255);
 $blue-color: rgb(0, 220, 229);
 $purple-color: rgb(71, 26, 153);
 $black-color: rgb(45, 45, 82);
+$gradient: linear-gradient(88deg, rgba(95, 133, 229, 1) 0%, rgba(161, 62, 235, 1) 100%);
 
 /* Font*/
 $font-family-raleway: 'Raleway', sans-serif;
@@ -38,86 +39,93 @@ $margin-middle: 0 auto;
 
 
 .ff-1 {
-  font-family: var(--font-family-raleway);
+  font-family: $font-family-raleway;
 }
 
 .ff-2 {
-  font-family: var(--font-family-lato);
+  font-family: $font-family-lato;
 }
 
-
 .fw-1 {
-  font-weight: var(--font-weight-400);
+  font-weight: $font-weight-100;
 }
 
 .fw-2 {
-  font-weight: var(--font-weight-500);
+  font-weight: $font-weight-200;
 }
 
 .fw-3 {
-  font-weight: var(--font-weight-600);
+  font-weight: $font-weight-300;
 }
 
 .fw-4 {
-  font-weight: var(--font-weight-700);
+  font-weight: $font-weight-400;
 }
 
 .fw-5 {
-  font-weight: var(--font-weight-800);
+  font-weight: $font-weight-500;
 }
 
 .fw-6 {
-  font-weight: var(--font-weight-300);
+  font-weight: $font-weight-600;
+}
+
+.fw-7 {
+  font-weight: $font-weight-700;
+}
+
+.fw-8 {
+  font-weight: $font-weight-800;
 }
 
 .fc-1 {
-  color: var(--white-color);
+  color: $white-color;
 }
 
 .fc-2 {
-  color: var(--green-color);
+  color: $green-color;
 }
 
 .fc-3 {
-  color: var(--blue-color);
+  color: $blue-color;
 }
 
 .fc-4 {
-  color: var(--purple-color);
+  color: $purple-color;
 }
 
 .fc-5 {
-  color: var(--black-color);
+  color: $black-color;
 }
 
 .fs-1 {
-  font-size: var(--font-size-1);
+  font-size: $font-size-1;
 }
 
 .fs-2 {
-  font-size: var(--font-size-2);
+  font-size: $font-size-2;
 }
 
 .fs-3 {
-  font-size: var(--font-size-3);
+  font-size: $font-size-3;
 }
 
 .fs-4 {
-  font-size: var(--font-size-4);
+  font-size: $font-size-4;
 }
 
 .fs-5 {
-  font-size: var(--font-size-5);
+  font-size: $font-size-5;
 }
 
 .fs-6 {
-  font-size: var(--font-size-6);
+  font-size: $font-size-6;
 }
 
 .fs-7 {
-  font-size: var(--font-size-7);
+  font-size: $font-size-7;
 }
 
 .fs-8 {
-  font-size: var(--font-size-8);
+  font-size: $font-size-8;
 }
