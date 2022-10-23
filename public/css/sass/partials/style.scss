@@ -33,13 +33,13 @@
     label {
       font-size: $font-size-3;
       color: white;
-      font-weight: 100;
+      font-weight: $font-weight-100;
     }
 
 
     .input-field {
       width: 100%;
-      padding: 10px;
+      padding: 0.6rem;
       text-align: center;
       font-size: 1rem;
       padding: 1.1rem 0;
@@ -47,7 +47,7 @@
       margin-top: 0.3rem;
       border: 0;
       background-color: $gray-color;
-      font-size: $font-size-2;
+      font-size: 1.12rem;
     }
 
     .input-icons i {
@@ -56,13 +56,13 @@
     
     .input-icons {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0.6rem;
     }
     
     .icon {
-    padding: 21px 0 0 0;
-    color: black;
-    min-width: 50px;
+    padding: 1.3rem 0 0 0;
+    color: $black-color;
+    min-width: 3.12rem;
     text-align: center;
     font-size: 1.2rem;
     }
@@ -75,21 +75,8 @@
       display: none;
     }
 
-    ::-webkit-input-placeholder {
+    ::-webkit-input-placeholder, ::placeholder, :-ms-input-placeholder{
       /* Edge */
-      color: $gray-placeholder-color;
-      text-align: center;
-      font-size: $font-size-3;
-    }
-
-    :-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
-      color: $gray-placeholder-color;
-      text-align: center;
-      font-size: $font-size-3;
-    }
-
-    ::placeholder {
       color: $gray-placeholder-color;
       text-align: center;
       font-size: $font-size-3;
