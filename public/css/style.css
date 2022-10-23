@@ -235,12 +235,6 @@ button:disabled {
   opacity: 0.3;
   cursor: not-allowed; }
 
-.ctn-p a {
-  text-decoration: none;
-  font-size: 16px;
-  color: white;
-  font-size: 16px; }
-
 html {
   font-family: "Lato", sans-serif;
   background: linear-gradient(88deg, #5f85e5 0%, #a13eeb 100%); }
@@ -283,3 +277,5 @@ main {
     font-size: 20px; }
   main p {
     text-align: center; }
+  main .hyperlink {
+    text-decoration: none; }
