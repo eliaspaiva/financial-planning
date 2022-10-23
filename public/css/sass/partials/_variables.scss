@@ -24,20 +24,26 @@ $font-weight-700: 700;
 $font-weight-800: 800;
 
 /* Font-size */
-$font-size-1: 16px;
-$font-size-2: 18px;
-$font-size-3: 20px;
-$font-size-4: 25px;
-$font-size-5: 30px;
-$font-size-6: 36px;
-$font-size-7: 40px;
-$font-size-8: 48px;
-$font-size-9: 54px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-25: 25px;
+$font-size-30: 30px;
+$font-size-36: 36px;
+$font-size-40: 40px;
+$font-size-48: 48px;
+$font-size-54: 54px;
 
 /* Margin */
 $margin-middle: 0 auto;
 
+/* Text Alignment  */
+$text-center: center;
 
+/* Display  */
+$display-none: none;
+
+/* Classes  */
 .ff-1 {
   font-family: $font-family-raleway;
 }
@@ -45,6 +51,8 @@ $margin-middle: 0 auto;
 .ff-2 {
   font-family: $font-family-lato;
 }
+
+
 
 .fw-1 {
   font-weight: $font-weight-100;
@@ -78,54 +86,63 @@ $margin-middle: 0 auto;
   font-weight: $font-weight-800;
 }
 
-.fc-1 {
+
+
+
+.fc-w {
   color: $white-color;
 }
 
-.fc-2 {
+.fc-g {
   color: $green-color;
 }
 
-.fc-3 {
+.fc-b {
   color: $blue-color;
 }
 
-.fc-4 {
+.fc-p {
   color: $purple-color;
 }
 
-.fc-5 {
+.fc-b {
   color: $black-color;
 }
 
-.fs-1 {
-  font-size: $font-size-1;
+
+
+.fs-16 {
+  font-size: $font-size-16;
 }
 
-.fs-2 {
-  font-size: $font-size-2;
+.fs-18 {
+  font-size: $font-size-18;
 }
 
-.fs-3 {
-  font-size: $font-size-3;
+.fs-20 {
+  font-size: $font-size-20;
 }
 
-.fs-4 {
-  font-size: $font-size-4;
+.fs-25 {
+  font-size: $font-size-25;
 }
 
-.fs-5 {
-  font-size: $font-size-5;
+.fs-30 {
+  font-size: $font-size-30;
 }
 
-.fs-6 {
-  font-size: $font-size-6;
+.fs-36 {
+  font-size: $font-size-36;
 }
 
-.fs-7 {
-  font-size: $font-size-7;
+.fs-40 {
+  font-size: $font-size-40;
 }
 
-.fs-8 {
-  font-size: $font-size-8;
+.fs-48 {
+  font-size: $font-size-48;
+}
+
+.fs-54 {
+  font-size: $font-size-54;
 }

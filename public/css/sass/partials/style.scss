@@ -19,7 +19,6 @@
 
     h1 {
       text-align: center;
-      color: white;
     }
 
     form {
@@ -28,24 +27,13 @@
       max-width: 600px;
     }
 
-    label {
-      font-size: $font-size-3;
-      color: white;
-      font-weight: $font-weight-100;
-    }
-
-
     .input-field {
       width: 100%;
-      padding: 0.6rem;
-      text-align: center;
-      font-size: 1rem;
+      text-align: $text-center;
       padding: 1.1rem 0;
-      width: 100%;
       margin-top: 0.3rem;
       border: 0;
       background-color: $gray-color;
-      font-size: 1.12rem;
     }
 
     .input-icons i {
@@ -61,30 +49,22 @@
     padding: 1.3rem 0 0 0;
     color: $black-color;
     min-width: 3.12rem;
-    text-align: center;
-    font-size: 1.2rem;
+    text-align: $text-center;
     }
 
-    .fa-eye, .fa-eye-slash {
-      display: none;
+    .fa-eye, .fa-eye-slash, .input-validation{
+      display: $display-none;
     }
-    
-    .input-validation {
-      display: none;
-    }
+  
 
     ::-webkit-input-placeholder, ::placeholder, :-ms-input-placeholder{
       /* Edge */
       color: $gray-placeholder-color;
-      text-align: center;
-      font-size: $font-size-3;
-    }
-
-    .ctn-p a {
-      font-size: $font-size-2;
+      text-align: $text-center;
+      font-size: $font-size-20;
     }
 
     p {
-      text-align: center;
+      text-align: $text-center;
     }
   }

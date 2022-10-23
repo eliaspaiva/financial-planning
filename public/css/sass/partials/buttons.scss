@@ -5,7 +5,7 @@
   width: 100%;
   border: 0;
   padding: 1.3rem 5.6rem;
-  font-size: $font-size-1;
+  font-size: $font-size-16;
   margin-bottom: 1.50rem;
   background-color: $black-color;
   color: $white-color;
@@ -16,10 +16,9 @@ button:disabled {
   cursor: not-allowed;
 }
 
-button a,
 .ctn-p a {
   text-decoration: none;
-  font-size: $font-size-1;
+  font-size: $font-size-16;
   color: $white-color;
-  font-size: $font-size-1;
+  font-size: $font-size-16;
 }

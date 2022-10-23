@@ -3,6 +3,9 @@
 /* Font Weight */
 /* Font-size */
 /* Margin */
+/* Text Alignment  */
+/* Display  */
+/* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
@@ -33,44 +36,47 @@
 .fw-8 {
   font-weight: 800; }
 
-.fc-1 {
+.fc-w {
   color: white; }
 
-.fc-2 {
+.fc-g {
   color: #36e9bb; }
 
-.fc-3 {
+.fc-b {
   color: #00dce5; }
 
-.fc-4 {
+.fc-p {
   color: #471a99; }
 
-.fc-5 {
+.fc-b {
   color: #2d2d52; }
 
-.fs-1 {
+.fs-16 {
   font-size: 16px; }
 
-.fs-2 {
+.fs-18 {
   font-size: 18px; }
 
-.fs-3 {
+.fs-20 {
   font-size: 20px; }
 
-.fs-4 {
+.fs-25 {
   font-size: 25px; }
 
-.fs-5 {
+.fs-30 {
   font-size: 30px; }
 
-.fs-6 {
+.fs-36 {
   font-size: 36px; }
 
-.fs-7 {
+.fs-40 {
   font-size: 40px; }
 
-.fs-8 {
+.fs-48 {
   font-size: 48px; }
+
+.fs-54 {
+  font-size: 54px; }
 
 .btn {
   cursor: pointer;
@@ -86,7 +92,6 @@ button:disabled {
   opacity: 0.3;
   cursor: not-allowed; }
 
-button a,
 .ctn-p a {
   text-decoration: none;
   font-size: 16px;

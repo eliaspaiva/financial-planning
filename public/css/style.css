@@ -66,6 +66,9 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+/* Text Alignment  */
+/* Display  */
+/* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
@@ -96,50 +99,56 @@ select {
 .fw-8 {
   font-weight: 800; }
 
-.fc-1 {
+.fc-w {
   color: white; }
 
-.fc-2 {
+.fc-g {
   color: #36e9bb; }
 
-.fc-3 {
+.fc-b {
   color: #00dce5; }
 
-.fc-4 {
+.fc-p {
   color: #471a99; }
 
-.fc-5 {
+.fc-b {
   color: #2d2d52; }
 
-.fs-1 {
+.fs-16 {
   font-size: 16px; }
 
-.fs-2 {
+.fs-18 {
   font-size: 18px; }
 
-.fs-3 {
+.fs-20 {
   font-size: 20px; }
 
-.fs-4 {
+.fs-25 {
   font-size: 25px; }
 
-.fs-5 {
+.fs-30 {
   font-size: 30px; }
 
-.fs-6 {
+.fs-36 {
   font-size: 36px; }
 
-.fs-7 {
+.fs-40 {
   font-size: 40px; }
 
-.fs-8 {
+.fs-48 {
   font-size: 48px; }
+
+.fs-54 {
+  font-size: 54px; }
 
 /* Colors */
 /* Font*/
 /* Font Weight */
 /* Font-size */
 /* Margin */
+/* Text Alignment  */
+/* Display  */
+/* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
@@ -170,44 +179,47 @@ select {
 .fw-8 {
   font-weight: 800; }
 
-.fc-1 {
+.fc-w {
   color: white; }
 
-.fc-2 {
+.fc-g {
   color: #36e9bb; }
 
-.fc-3 {
+.fc-b {
   color: #00dce5; }
 
-.fc-4 {
+.fc-p {
   color: #471a99; }
 
-.fc-5 {
+.fc-b {
   color: #2d2d52; }
 
-.fs-1 {
+.fs-16 {
   font-size: 16px; }
 
-.fs-2 {
+.fs-18 {
   font-size: 18px; }
 
-.fs-3 {
+.fs-20 {
   font-size: 20px; }
 
-.fs-4 {
+.fs-25 {
   font-size: 25px; }
 
-.fs-5 {
+.fs-30 {
   font-size: 30px; }
 
-.fs-6 {
+.fs-36 {
   font-size: 36px; }
 
-.fs-7 {
+.fs-40 {
   font-size: 40px; }
 
-.fs-8 {
+.fs-48 {
   font-size: 48px; }
+
+.fs-54 {
+  font-size: 54px; }
 
 .btn {
   cursor: pointer;
@@ -223,7 +235,6 @@ button:disabled {
   opacity: 0.3;
   cursor: not-allowed; }
 
-button a,
 .ctn-p a {
   text-decoration: none;
   font-size: 16px;
@@ -241,27 +252,18 @@ main {
   margin: 0 auto;
   align-items: center; }
   main h1 {
-    text-align: center;
-    color: white; }
+    text-align: center; }
   main form {
     width: 80%;
     margin: 0 auto;
     max-width: 600px; }
-  main label {
-    font-size: 20px;
-    color: white;
-    font-weight: 100; }
   main .input-field {
     width: 100%;
-    padding: 0.6rem;
     text-align: center;
-    font-size: 1rem;
     padding: 1.1rem 0;
-    width: 100%;
     margin-top: 0.3rem;
     border: 0;
-    background-color: #e1e1e1;
-    font-size: 1.12rem; }
+    background-color: #e1e1e1; }
   main .input-icons i {
     position: absolute; }
   main .input-icons {
@@ -271,18 +273,13 @@ main {
     padding: 1.3rem 0 0 0;
     color: #2d2d52;
     min-width: 3.12rem;
-    text-align: center;
-    font-size: 1.2rem; }
-  main .fa-eye, main .fa-eye-slash {
-    display: none; }
-  main .input-validation {
+    text-align: center; }
+  main .fa-eye, main .fa-eye-slash, main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder, main ::placeholder, main :-ms-input-placeholder {
     /* Edge */
     color: #7a7a7a;
     text-align: center;
     font-size: 20px; }
-  main .ctn-p a {
-    font-size: 18px; }
   main p {
     text-align: center; }
