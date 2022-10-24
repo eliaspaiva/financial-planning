@@ -87,13 +87,11 @@
 
     .box-header, .form-ctn, .box-footer {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
     .category-input, .expense-input{
-      width: 40%;
-      
+      width: 50%; 
     }
-    
-  
+
   }

@@ -93,4 +93,10 @@ button:disabled {
   cursor: not-allowed; }
 
 .btn-categories {
-  width: 45%; }
+  width: 49%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 1rem 0 1rem;
+  background-color: #2d2d52;
+  color: white; }
