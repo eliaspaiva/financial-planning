@@ -65,11 +65,33 @@
       font-size: $font-size-20;
     }
 
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    
+        /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
     p {
       text-align: $text-center;
     }
 
     .hyperlink {
       text-decoration: none;
+    }
+
+    .box-header, .expense-box form, .expense-box .box-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .category-input, .expense-input{
+      width: 45%;
+      
     }
   }
