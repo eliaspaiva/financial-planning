@@ -293,6 +293,6 @@ main {
     text-decoration: none; }
   main .box-header, main .form-ctn, main .box-footer {
     display: flex;
-    justify-content: space-between; }
-  main .category-input, main .expense-input, main .btn-categories {
+    justify-content: space-around; }
+  main .category-input, main .expense-input {
     width: 40%; }
