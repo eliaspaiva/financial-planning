@@ -20,41 +20,39 @@
   <main>
     <section>
       <h1 class="fs-36 fw-1 fc-w">Categories</h1>
-
       <form id="form" method="get">
-
         <div class="input-icons">
           <label for="income" class="fs-20 fw-1 fc-w">Monthly Income</label><br>
-          <i class="fa-light fa-coins icon fs-20"></i>
+          <i class="fa-solid fa-coins icon fs-20"></i>
           <input type="number" id="income" name="income" placeholder="Monthly Income" class="input-field" required><br><br>
         </div>
-
         <button type="submit" id="btn-categories" class="btn">Categories</button>
-
-        <!-- Category Box -->
-        <section id="expense-box">
-          <div class="expense-box-ctn">
-            <form action="">
-              <div class="box-header">
-                <h3>Insert Category</h3>
-                <i class="fa-solid fa-xmark fs-20"></i>
-              </div>
-              <div class="form-ctn">
-                <input type="text" name="category" id="category" placeholder="Category" class="category-input">
-                <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
-              </div>
-              <div class="box-footer">
-                <button id="close-btn" class="btn-categories">Close</button>
-                <button id="save-bt" class="btn-categories">Save</button>
-              </div>
-            </form>
-          </div>
-        </section>
-        <!-- Category Box -->
-        
       </form>
+
+      <!-- Category Box -->
+      <div id="expense-box">
+        <div class="expense-box">
+          <form action="">
+            <div class="box-header">
+              <h3>Insert Category</h3>
+              <i class="fa-solid fa-xmark fs-20"></i>
+            </div>
+            <div class="form-ctn">
+              <input type="text" name="category" id="category" placeholder="Category" class="category-input">
+              <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
+            </div>
+            <div class="box-footer">
+              <button id="close-btn" class="btn-categories">Close</button>
+              <button id="save-bt" class="btn-categories">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Category Box -->
     </section>
   </main>
+
+ 
   <script type="text/javascript" src="/js/category.js"></script>
 </body>
 
