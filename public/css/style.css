@@ -235,6 +235,9 @@ button:disabled {
   opacity: 0.3;
   cursor: not-allowed; }
 
+.btn-categories {
+  width: 45%; }
+
 html {
   font-family: "Lato", sans-serif;
   background: linear-gradient(88deg, #5f85e5 0%, #a13eeb 100%); }
@@ -288,8 +291,8 @@ main {
     text-align: center; }
   main .hyperlink {
     text-decoration: none; }
-  main .box-header, main .expense-box form, main .expense-box .box-footer {
+  main .box-header, main .form-ctn, main .box-footer {
     display: flex;
     justify-content: space-between; }
-  main .category-input, main .expense-input {
-    width: 20%; }
+  main .category-input, main .expense-input, main .btn-categories {
+    width: 40%; }

@@ -85,13 +85,13 @@
       text-decoration: none;
     }
 
-    .box-header, .expense-box form, .expense-box .box-footer {
+    .box-header, .form-ctn, .box-footer {
       display: flex;
       justify-content: space-between;
     }
 
-    .category-input, .expense-input{
-      width: 45%;
+    .category-input, .expense-input, .btn-categories{
+      width: 40%;
       
     }
   }
