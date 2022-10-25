@@ -18,8 +18,9 @@
 
 <body>
   <main>
-    <section >
+    <section class="main-parent">
       <h1 class="fs-36 fw-1 fc-w">Categories</h1>
+      
       <form id="form" method="get">
         <div class="input-icons">
           <label for="income" class="fs-20 fw-1 fc-w">Monthly Income</label><br>
@@ -29,13 +30,13 @@
       </form>
       
       <!-- Category Box -->
-      <div id="expense-box">
-        <div class="expense-box">
-          <form action="">
-            <div class="box-header">
-              <h3 class="fs-20 fw-1 fc-w">Insert Category</h3>
-              <i class="fa-solid fa-xmark fs-20" id="icon-close"></i>
-            </div>
+      <section id="category-box">
+        <div class="expense-ctn">
+          <div class="box-header">
+            <h3 class="fs-20 fw-1 fc-w">Insert Category</h3>
+            <i class="fa-solid fa-xmark fs-20" id="icon-close"></i>
+          </div>
+          <form action="" class="">
             <div class="form-ctn">
               <select name="category" id="category" placeholder="Category" class="category-input">
                 <option value="housing">Housing</option>
@@ -45,6 +46,7 @@
                 <option value="subscriptions">Subscriptions</option>
               <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
             </div>
+
             <div class="box-footer">
               <button id="close-btn" class="btn-categories">Close</button>
               <button id="save-bt" class="btn-categories">Save</button>
@@ -54,14 +56,20 @@
             </div>
           </form>
         </div>
-      </div>
+      </section>
       <!-- Category Box -->
 
-      <section>
+      <div>
         <div class="prnt-ctn">
-
+          <ul>
+            <h3>Teste</h3>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+          </ul>
         </div>
-      </section>
+      </div>
     </section>
   </main>
 
