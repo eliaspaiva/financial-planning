@@ -26,11 +26,10 @@
           <i class="fa-solid fa-coins icon fs-20"></i>
           <input type="number" id="income" name="income" placeholder="Monthly Income" class="input-field" required><br><br>
         </div>
-        <button type="submit" id="btn-categories" class="btn">Add Categories</button>
       </form>
-
+      
       <!-- Category Box -->
-      <div id="expense-box" style="display: none;" >
+      <div id="expense-box">
         <div class="expense-box">
           <form action="">
             <div class="box-header">
@@ -38,17 +37,31 @@
               <i class="fa-solid fa-xmark fs-20" id="icon-close"></i>
             </div>
             <div class="form-ctn">
-              <input type="text" name="category" id="category" placeholder="Category" class="category-input">
+              <select name="category" id="category" placeholder="Category" class="category-input">
+                <option value="housing">Housing</option>
+                <option value="smma">SMMA</option>
+                <option value="debt">Debt</option>
+                <option value="beauty">Beauty</option>
+                <option value="subscriptions">Subscriptions</option>
               <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
             </div>
             <div class="box-footer">
               <button id="close-btn" class="btn-categories">Close</button>
               <button id="save-bt" class="btn-categories">Save</button>
             </div>
+            <div>
+              <button type="submit" id="btn-categories" class="btn">Create Budget</button>
+            </div>
           </form>
         </div>
       </div>
       <!-- Category Box -->
+
+      <section>
+        <div class="prnt-ctn">
+
+        </div>
+      </section>
     </section>
   </main>
 
