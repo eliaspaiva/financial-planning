@@ -1,7 +1,7 @@
 const income = document.getElementById('income');
 const categoriesBox = document.getElementById('expense-box');
 const iconClose = document.getElementById('icon-close');
-console.log(iconClose);
+
 const closeBtn = document.getElementById('close-btn');
 
 const getIncomeValue = () => console.log(income.value);
