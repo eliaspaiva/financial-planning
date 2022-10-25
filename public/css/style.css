@@ -258,7 +258,6 @@ main {
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */ }
   main h1 {
-    margin: 2rem 0;
     text-align: center; }
   main form {
     width: 80%;
@@ -297,8 +296,17 @@ main {
   main p {
     text-align: center; }
   main .hyperlink {
-    text-decoration: none; }
+    text-decoration: none;
+    padding: .5rem; }
+  main main {
+    position: relative; }
+  main section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
   main #expense-box {
+    display: none;
     border: 1px solid transparent;
     width: 100%;
     height: 100%;

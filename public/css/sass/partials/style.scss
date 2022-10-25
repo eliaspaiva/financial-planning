@@ -18,7 +18,6 @@
   
 
     h1 {
-      margin: 2rem 0;
       text-align: center;
     }
 
@@ -83,8 +82,19 @@
 
     .hyperlink {
       text-decoration: none;
+      padding: .5rem;
     }
 
+    main {
+        position: relative;
+    }
+
+    section {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
 
     #expense-box {
       display: none;
