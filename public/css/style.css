@@ -300,6 +300,8 @@ main {
   main .hyperlink {
     text-decoration: none;
     padding: .5rem; }
+  main .main-parent {
+    width: 100%; }
   main .box-header {
     text-align: center; }
   main .form-ctn, main .box-footer {
@@ -311,6 +313,17 @@ main {
     font-size: 16px;
     margin: 1.3rem 0 0 0; }
   main .box-add-category {
-    margin-bottom: 3rem;
+    width: 80%;
+    margin: 0 auto;
     background-color: white;
     border: 1px solid black; }
+  main .box-add-category-form {
+    width: 100%; }
+  main .ctg-title {
+    text-align: center;
+    margin: 0.8rem 0.5rem 0; }
+  main .box-add-category-footer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; }

@@ -90,16 +90,10 @@
       padding: .5rem;
     }
 
-    // main {
-    //     position: relative;
-    // }
 
-    // .main-parent {
-    //   position: absolute;
-    //   top: 50%;
-    //   transform: translateY(-50%);
-    //   width: 100%;
-    // }
+    .main-parent {
+    width: 100%;
+    }
 
     .box-header {
     text-align: center;
@@ -118,9 +112,25 @@
     }
 
     .box-add-category {
-      margin-bottom: 3rem;
+      width: 80%;
+      margin: $margin-middle;
       background-color: $white-color;
       border: 1px solid black;
-   
+    }
+
+    .box-add-category-form {
+      width: 100%;
+    }
+
+    .ctg-title {
+      text-align: $text-center;
+      margin: 0.8rem 0.5rem 0;
+    }
+
+    .box-add-category-footer {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin: $margin-middle;
     }
   }
