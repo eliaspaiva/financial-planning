@@ -245,6 +245,9 @@ button:disabled {
   background-color: #2d2d52;
   color: white; }
 
+.btn-full-width {
+  width: 100%; }
+
 html {
   font-family: "Lato", sans-serif;
   background: linear-gradient(88deg, #5f85e5 0%, #a13eeb 100%); }
@@ -307,11 +310,16 @@ main {
   main .form-ctn, main .box-footer {
     display: flex;
     justify-content: space-between; }
-  main .category-input, main .expense-input {
-    width: 49%;
+  main .category-input, main .expense-input, main .price-input {
     padding: 0.5rem;
     font-size: 16px;
     margin: 1.3rem 0 0 0; }
+  main .expense-input {
+    width: 70%; }
+  main .price-input {
+    width: 30%; }
+  main .category-input {
+    width: 100%; }
   main .box-add-category {
     width: 80%;
     margin: 0 auto;

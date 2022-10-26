@@ -101,3 +101,6 @@ button:disabled {
   margin: 1rem 0 1rem;
   background-color: #2d2d52;
   color: white; }
+
+.btn-full-width {
+  width: 100%; }

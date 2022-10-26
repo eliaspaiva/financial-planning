@@ -104,11 +104,18 @@
       justify-content: space-between;
     }
 
-    .category-input, .expense-input{
-      width: 49%;
+    .category-input, .expense-input, .price-input{
       padding: 0.5rem;
       font-size: $font-size-16;
       margin: 1.3rem 0 0 0;
+    }
+
+    .expense-input {
+      width: 70%;
+    }
+
+    .price-input {
+      width: 30%;
     }
 
     .category-input {
