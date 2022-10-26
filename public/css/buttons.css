@@ -102,5 +102,14 @@ button:disabled {
   background-color: #2d2d52;
   color: white; }
 
+.btn-income {
+  width: 49%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 0rem 0 1rem;
+  background-color: #2d2d52;
+  color: white; }
+
 .btn-full-width {
   width: 100%; }
