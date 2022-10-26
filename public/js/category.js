@@ -4,20 +4,21 @@ const btnIncomeEdit = document.getElementById('btnIncomeEdit');
 
 const getIncomeValue = (e) => {
     e.preventDefault();
-    const value = income.value;
-    if (value.length > 0) {
+    if (income.value.length > 0) {
         income.setAttribute('disabled', 'disabled');
         btnIncomeEdit.removeAttribute('disabled');
+        btnIncomeSave.setAttribute('disabled', 'disabled');
     }
 };
 
-const btnIncomeEdit = (e) => {
+const editIncomeValue = (e) => {
     e.preventDefault();
-    const value = income.value;
-    if (value.length > 0) {
-        income.setAttribute('disabled', 'disabled');
-        btnIncomeEdit.removeAttribute('disabled');
+    if (income.disabled) {
+        income.removeAttribute('disabled');
+        btnIncomeSave.removeAttribute('disabled');
+        btnIncomeEdit.setAttribute('disabled', 'disabled');
     }
 };
 
 btnIncomeSave.addEventListener('click', getIncomeValue);
+btnIncomeEdit.addEventListener('click', editIncomeValue);
