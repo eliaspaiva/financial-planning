@@ -104,10 +104,18 @@
       justify-content: space-between;
     }
 
+    .box-footer {
+      width: 80%;
+      margin: $margin-middle;
+    }
+
+    .expense-ctn h3 {
+      margin-bottom: 1rem;
+    }
+
     .category-input, .expense-input, .price-input{
       padding: 0.5rem;
       font-size: $font-size-16;
-      margin: 1.3rem 0 0 0;
     }
 
     .teste {

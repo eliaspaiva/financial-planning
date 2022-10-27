@@ -334,10 +334,14 @@ main {
   main .form-ctn, main .box-footer {
     display: flex;
     justify-content: space-between; }
+  main .box-footer {
+    width: 80%;
+    margin: 0 auto; }
+  main .expense-ctn h3 {
+    margin-bottom: 1rem; }
   main .category-input, main .expense-input, main .price-input {
     padding: 0.5rem;
-    font-size: 16px;
-    margin: 1.3rem 0 0 0; }
+    font-size: 16px; }
   main .teste {
     width: 49%;
     border: 0;
