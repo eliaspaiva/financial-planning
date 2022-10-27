@@ -58,7 +58,7 @@ const getExpenseValue = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length) {
         expenseInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
-        btnCategorySave.setAttribute('disabled', 'disabled');
+        btnPriceSave.setAttribute('disabled', 'disabled');
     }
 };
 
@@ -66,7 +66,7 @@ const editExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.disabled) {
         expenseInput.removeAttribute('disabled');
-        btnCategorySave.removeAttribute('disabled');
+        btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
     }
 };
