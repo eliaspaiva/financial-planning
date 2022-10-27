@@ -1,10 +1,14 @@
-const income = document.getElementById('income');
-const btnIncomeSave = document.getElementById('btnIncomeSave');
-const btnIncomeEdit = document.getElementById('btnIncomeEdit');
-const categoryInput = document.querySelector('.category-input');
-const priceInput = document.querySelector('.price-input');
-const expenseInput = document.querySelector('.expense-input');
-const btnAddCategory = document.getElementById('btn-add-category');
+const incomeInput = document.getElementById('income');
+const btnIncomeSave = document.getElementById('btn-income-save');
+const btnIncomeEdit = document.getElementById('btn-income-edit');
+
+const categoryInput = document.querySelector('.category');
+const btnCategorySave = document.getElementById('btn-categorty-save');
+const btnCategoryEdit = document.getElementById('btn-categorty-edit');
+
+const expenseInput = document.querySelector('.price-input');
+const btnExpenseSave = document.getElementById('btn-expense-save');
+const btnExpenseEdit = document.getElementById('btn-expense-edit');
 
 
 const getIncomeValue = (e) => {
