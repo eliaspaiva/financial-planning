@@ -76,5 +76,5 @@ btnIncomeSave.addEventListener('click', getIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
 btnCategorySave.addEventListener('click', getCategoryValue);
 btnCategoryEdit.addEventListener('click', editCategoryValue);
-btnPriceSave.addEventListener('click', getCategoryValue);
-btnPriceEdit.addEventListener('click', editCategoryValue);
+btnPriceSave.addEventListener('click', getExpenseValue);
+btnPriceEdit.addEventListener('click', editExpenseValue);
