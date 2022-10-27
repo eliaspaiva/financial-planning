@@ -23,40 +23,40 @@
       
       <form id="form" method="get">
         <div class="input-icons">
-          <label for="income" class="fs-20 fw-1 fc-w">Monthly Income</label><br>
-          <i class="fa-solid fa-coins icon fs-20"></i>
-          <input type="number" id="income" name="income" placeholder="Monthly Income" class="input-field" required ><br><br>
+          <i class="fa-solid fa-sack-dollar icon fs-20"></i>
+          <input type="number" id="income" name="income" placeholder="Insert Monthly Income" class="input-field" required ><br><br>
           <div class=" box-add-category-footer-income">
               <button class="btn-categories btn-income" id="btnIncomeEdit" disabled>Edit</button>
               <button class="btn-categories btn-income" id="btnIncomeSave" >Save</button>
           </div>
         </div>
       </form>
+
+      <form id="form" method="get">
+        <div class="input-icons">
+          <i class="fa-solid fa-filter icon fs-20"></i>
+          <input type="number" id="income" name="income" placeholder="Insert Category" class="input-field" required><br><br>
+          <div class=" box-add-category-footer-income">
+            <button class="btn-categories btn-income" id="btnIncomeEdit" disabled>Edit</button>
+            <button class="btn-categories btn-income" id="btnIncomeSave">Save</button>
+          </div>
+        </div>
+      </form>
+
+      <form id="form" method="get">
+        <div class="input-icons">
+          <i class="fa-solid fa-coins icon fs-20"></i>
+          <input type="number" id="income" name="income" placeholder="Insert Expense" class="input-field" required><br><br>
+          <div class=" box-add-category-footer-income">
+            <button class="btn-categories btn-income" id="btnIncomeEdit" disabled>Edit</button>
+            <button class="btn-categories btn-income" id="btnIncomeSave">Save</button>
+          </div>
+        </div>
+      </form>
       
-      <section id="category-box">
-        <div class="expense-ctn">
-            <h3 class="fs-20 fw-1 fc-w txt-center">Insert Category</h3>
-            <div class="form-ctn">
-              <form class="form">
-                <input type="text" name="expense" id="expense" placeholder="Category" class="category-input full-width">
-                <button class="btn-categories full-width" id="btn-add-category">Add</button>
-              </form>
-            </div>
-
-            <div class="form-ctn">
-              <form class="form-side-by-side">
-                <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
-                <input type="number" name="price" id="price" placeholder="Price" class="price-input">
-              </form>
-            </div>
-
-            <div class=" box-footer">
-              <button id="add-expense" class="btn-categories btn-add-category">Add Expense</button>
-              <button id="new-category" class="btn-categories btn-add-category">New Category</button>
-            </div>
-          </form>
+    
           
-           <section>
+           <section style="display: none;">
             <div class="box-add-category">
               <div class="box-add-category-ctn">
                 <h5 class="fs-16 ctg-title">Housing</h5>
@@ -68,7 +68,7 @@
                 </form>
           </div>
           </div>
-          <div class=" box-add-category-footer">
+          <div class=" box-add-category-footer" style="display: none;">
             <button class="btn-categories" disabled>Edit</button>
             <button class="btn-categories">Save</button>
           </div>

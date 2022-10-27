@@ -28,17 +28,8 @@ const editIncomeValue = (e) => {
 
 const insertCategory = (e) => {
     e.preventDefault();
-    console.log('oi');
-    const categoryInfo = {
-        category: categoryInput.value,
-        expense: expenseInput.value,
-        price: priceInput.value,
-    };
-    categoryInput.value = '';
-    expenseInput.value = '';
-    priceInput.value = '';    
+    
 };
-
 btnAddCategory.addEventListener('click', insertCategory);
 btnIncomeSave.addEventListener('click', getIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
