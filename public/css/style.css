@@ -258,7 +258,7 @@ button:disabled {
   color: white; }
 
 .btn-income {
-  width: 49%;
+  width: 49.5%;
   border: 0;
   padding: 0.7rem 0;
   font-size: 16px;
@@ -299,6 +299,23 @@ main {
     margin-top: 0.3rem;
     border: 0;
     background-color: #e1e1e1; }
+  main .input-side-by-side {
+    display: flex;
+    justify-content: space-between; }
+  main .expense-input-field {
+    width: 60%;
+    text-align: center;
+    padding: 1.1rem 0;
+    margin-top: 0.3rem;
+    border: 0;
+    background-color: #e1e1e1; }
+  main .price-input-field {
+    width: 39%;
+    text-align: center;
+    padding: 1.1rem 0;
+    margin-top: 0.3rem;
+    border: 0;
+    background-color: #e1e1e1; }
   main .input-icons i {
     position: absolute; }
   main .input-icons {
@@ -329,31 +346,6 @@ main {
     padding: .5rem; }
   main .main-parent {
     width: 100%; }
-  main .box-header {
-    text-align: center; }
-  main .form-ctn, main .box-footer {
-    display: flex;
-    justify-content: space-between; }
-  main .box-footer {
-    width: 80%;
-    margin: 0 auto; }
-  main .expense-ctn h3 {
-    margin-bottom: 1rem; }
-  main .category-input, main .expense-input, main .price-input {
-    padding: 0.5rem;
-    font-size: 16px; }
-  main .teste {
-    width: 49%;
-    border: 0;
-    padding: 0.7rem 0;
-    font-size: 16px;
-    margin: 1rem 0 1rem;
-    background-color: #2d2d52;
-    color: white; }
-  main .expense-input, main .category-input {
-    width: 70%; }
-  main .price-input {
-    width: 45%; }
   main .box-add-category {
     width: 80%;
     margin: 0 auto;
@@ -374,10 +366,3 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 0 auto; }
-  main .form {
-    display: flex;
-    flex-direction: column; }
-  main .form-side-by-side {
-    display: flex; }
-  main .full-width {
-    width: 100%; }

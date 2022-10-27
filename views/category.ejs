@@ -49,7 +49,11 @@
       <form id="form-expense" method="get">
         <div class="input-icons">
           <i class="fa-solid fa-coins icon fs-20"></i>
-          <input type="number" id="expense" name="income" placeholder="Insert Expense" class="input-field" required><br>
+          <div class="input-side-by-side">
+            <input type="texte" id="expense" name="expense" placeholder=" Expense" class="expense-input-field" required><br>
+            <input type="number" id="price" name="price" placeholder="Price" class="price-input-field" required>
+          </div>
+          
           <div class=" box-add-category-footer-income">
             <button class="btn-categories btn-income" id="btn-expense-edit" disabled>Edit</button>
             <button class="btn-categories btn-income" id="btn-expense-save">Save</button>

@@ -41,6 +41,29 @@
       background-color: $gray-color;
     }
 
+    .input-side-by-side {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .expense-input-field {
+      width: 60%;
+      text-align: $text-center;
+      padding: 1.1rem 0;
+      margin-top: 0.3rem;
+      border: 0;
+      background-color: $gray-color;
+    }
+
+    .price-input-field {
+      width: 39%;
+      text-align: $text-center;
+      padding: 1.1rem 0;
+      margin-top: 0.3rem;
+      border: 0;
+      background-color: $gray-color;
+    }
+
     .input-icons i {
     position: absolute;
     }
@@ -90,52 +113,9 @@
       padding: .5rem;
     }
 
-
     .main-parent {
     width: 100%;
     }
-
-    .box-header {
-    text-align: center;
-    }
-
-    .form-ctn, .box-footer {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .box-footer {
-      width: 80%;
-      margin: $margin-middle;
-    }
-
-    .expense-ctn h3 {
-      margin-bottom: 1rem;
-    }
-
-    .category-input, .expense-input, .price-input{
-      padding: 0.5rem;
-      font-size: $font-size-16;
-    }
-
-    .teste {
-      width: 49%;
-      border: 0;
-      padding: 0.7rem 0;
-      font-size: $font-size-16;
-        margin: 1rem 0 1rem;
-        background-color: $black-color;
-        color: $white-color;
-    }
-
-    .expense-input, .category-input{
-      width: 70%;
-    }
-
-    .price-input {
-      width: 45%;
-    }
-
 
     .box-add-category {
       width: 80%;
@@ -167,17 +147,5 @@
       justify-content: space-between;
       margin: $margin-middle;
     }
-
-    .form  {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .form-side-by-side {
-      display: flex;
-    }
-
-    .full-width {
-      width: 100%;
-    }
+  
   }
