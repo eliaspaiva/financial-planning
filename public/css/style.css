@@ -333,7 +333,6 @@ main {
     text-align: center; }
   main .form-ctn, main .box-footer {
     display: flex;
-    flex-direction: column;
     justify-content: space-between; }
   main .category-input, main .expense-input, main .price-input {
     padding: 0.5rem;
@@ -350,7 +349,7 @@ main {
   main .expense-input, main .category-input {
     width: 70%; }
   main .price-input {
-    width: 30%; }
+    width: 45%; }
   main .box-add-category {
     width: 80%;
     margin: 0 auto;
