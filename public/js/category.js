@@ -57,6 +57,7 @@ const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length) {
         expenseInput.setAttribute('disabled', 'disabled');
+        priceInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnPriceSave.setAttribute('disabled', 'disabled');
     }
@@ -66,6 +67,7 @@ const editExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.disabled) {
         expenseInput.removeAttribute('disabled');
+        priceInput.removeAttribute('disabled');
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
     }

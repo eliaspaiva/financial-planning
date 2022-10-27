@@ -147,5 +147,10 @@
       justify-content: space-between;
       margin: $margin-middle;
     }
+
+    input:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    }
   
   }
