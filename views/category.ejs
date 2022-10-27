@@ -35,21 +35,24 @@
       
       <section id="category-box">
         <div class="expense-ctn">
-          <div class="box-header">
-            <h3 class="fs-20 fw-1 fc-w">Insert Category</h3>
-          </div>
-          <form>
+            <h3 class="fs-20 fw-1 fc-w txt-center">Insert Category</h3>
             <div class="form-ctn">
-              <input type="text" name="expense" id="expense" placeholder="Category" class="category-input">
+              <form class="form">
+                <input type="text" name="expense" id="expense" placeholder="Category" class="category-input full-width">
+                <button class="btn-categories full-width">Add</button>
+              </form>
             </div>
 
             <div class="form-ctn">
-              <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
-              <input type="number" name="price" id="price" placeholder="Price" class="price-input">
+              <form class="form-side-by-side">
+                <input type="text" name="expense" id="expense" placeholder="Expense" class="expense-input">
+                <input type="number" name="price" id="price" placeholder="Price" class="price-input">
+              </form>
             </div>
 
             <div class=" box-footer">
-              <button id="save-bt" class="btn-categories btn-full-width">Add</button>
+              <button id="add-expense" class="btn-categories btn-add-category">Add Expense</button>
+              <button id="new-category" class="btn-categories btn-add-category">New Category</button>
             </div>
           </form>
           

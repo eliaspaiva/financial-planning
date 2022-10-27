@@ -1,0 +1,466 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Colors */
+/* Font*/
+/* Font Weight */
+/* Font-size */
+/* Margin */
+/* Text Alignment  */
+/* Display  */
+/* Classes  */
+.ff-1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.ff-2 {
+  font-family: "Lato", sans-serif;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fc-w {
+  color: rgb(255, 255, 255);
+}
+
+.fc-g {
+  color: rgb(54, 233, 187);
+}
+
+.fc-b {
+  color: rgb(0, 220, 229);
+}
+
+.fc-p {
+  color: rgb(71, 26, 153);
+}
+
+.fc-b {
+  color: rgb(45, 45, 82);
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+
+.fs-54 {
+  font-size: 54px;
+}
+
+/* Colors */
+/* Font*/
+/* Font Weight */
+/* Font-size */
+/* Margin */
+/* Text Alignment  */
+/* Display  */
+/* Classes  */
+.ff-1 {
+  font-family: "Raleway", sans-serif;
+}
+
+.ff-2 {
+  font-family: "Lato", sans-serif;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fc-w {
+  color: rgb(255, 255, 255);
+}
+
+.fc-g {
+  color: rgb(54, 233, 187);
+}
+
+.fc-b {
+  color: rgb(0, 220, 229);
+}
+
+.fc-p {
+  color: rgb(71, 26, 153);
+}
+
+.fc-b {
+  color: rgb(45, 45, 82);
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+
+.fs-54 {
+  font-size: 54px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  padding: 1.3rem 5.6rem;
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-categories {
+  width: 49%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 1rem 0 1rem;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+}
+
+.btn-income {
+  width: 49%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 0rem 0 1rem;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+}
+
+.btn-full-width {
+  width: 100%;
+}
+
+.btn-small {
+  width: 30%;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(88deg, rgb(95, 133, 229) 0%, rgb(161, 62, 235) 100%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+main h1 {
+  text-align: center;
+}
+main .page-title {
+  margin-top: 2rem;
+}
+main form {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+}
+main .input-field {
+  width: 100%;
+  text-align: center;
+  padding: 1.1rem 0;
+  margin-top: 0.3rem;
+  border: 0;
+  background-color: rgb(225, 225, 225);
+}
+main .input-icons i {
+  position: absolute;
+}
+main .input-icons {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+main .icon {
+  padding: 1.6rem 0 0 0;
+  color: rgb(45, 45, 82);
+  min-width: 3.12rem;
+  text-align: center;
+}
+main .fa-eye, main .fa-eye-slash, main .input-validation {
+  display: none;
+}
+main ::-webkit-input-placeholder, main ::placeholder, main :-ms-input-placeholder {
+  /* Edge */
+  color: rgb(122, 122, 122);
+  text-align: center;
+  font-size: 20px;
+}
+main input::-webkit-outer-spin-button,
+main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main input[type=number] {
+  -moz-appearance: textfield;
+}
+main p {
+  text-align: center;
+}
+main .hyperlink {
+  text-decoration: none;
+  padding: 0.5rem;
+}
+main .main-parent {
+  width: 100%;
+}
+main .box-header {
+  text-align: center;
+}
+main .form-ctn, main .box-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .category-input, main .expense-input, main .price-input {
+  padding: 0.5rem;
+  font-size: 16px;
+  margin: 1.3rem 0 0 0;
+}
+main .teste {
+  width: 49%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 1rem 0 1rem;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+}
+main .expense-input, main .category-input {
+  width: 70%;
+}
+main .price-input {
+  width: 30%;
+}
+main .box-add-category {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+main .box-add-category-form {
+  width: 100%;
+}
+main .ctg-title {
+  text-align: center;
+  margin: 0.8rem 0.5rem 0;
+}
+main .box-add-category-footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+main .box-add-category-footer-income {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+main .form {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */

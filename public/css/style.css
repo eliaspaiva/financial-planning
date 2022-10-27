@@ -68,12 +68,18 @@ select {
 /* Margin */
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%; }
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
 .ff-2 {
   font-family: "Lato", sans-serif; }
+
+.txt-center {
+  text-align: center; }
 
 .fw-1 {
   font-weight: 100; }
@@ -148,12 +154,18 @@ select {
 /* Margin */
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%; }
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
 .ff-2 {
   font-family: "Lato", sans-serif; }
+
+.txt-center {
+  text-align: center; }
 
 .fw-1 {
   font-weight: 100; }
@@ -254,8 +266,11 @@ button:disabled {
   background-color: #2d2d52;
   color: white; }
 
-.btn-full-width {
+.full-width {
   width: 100%; }
+
+.btn-small {
+  width: 30%; }
 
 html {
   font-family: "Lato", sans-serif;
@@ -318,17 +333,24 @@ main {
     text-align: center; }
   main .form-ctn, main .box-footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; }
   main .category-input, main .expense-input, main .price-input {
     padding: 0.5rem;
     font-size: 16px;
     margin: 1.3rem 0 0 0; }
-  main .expense-input {
+  main .teste {
+    width: 49%;
+    border: 0;
+    padding: 0.7rem 0;
+    font-size: 16px;
+    margin: 1rem 0 1rem;
+    background-color: #2d2d52;
+    color: white; }
+  main .expense-input, main .category-input {
     width: 70%; }
   main .price-input {
     width: 30%; }
-  main .category-input {
-    width: 100%; }
   main .box-add-category {
     width: 80%;
     margin: 0 auto;
@@ -349,3 +371,10 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 0 auto; }
+  main .form {
+    display: flex;
+    flex-direction: column; }
+  main .form-side-by-side {
+    display: flex; }
+  main .full-width {
+    width: 100%; }

@@ -5,12 +5,18 @@
 /* Margin */
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%; }
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif; }
 
 .ff-2 {
   font-family: "Lato", sans-serif; }
+
+.txt-center {
+  text-align: center; }
 
 .fw-1 {
   font-weight: 100; }
@@ -111,5 +117,8 @@ button:disabled {
   background-color: #2d2d52;
   color: white; }
 
-.btn-full-width {
+.full-width {
   width: 100%; }
+
+.btn-small {
+  width: 30%; }

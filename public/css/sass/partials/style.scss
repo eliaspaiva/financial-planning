@@ -1,6 +1,6 @@
   @import './resets';
   @import './variables';
-  @import './buttons';
+  @import './buttons.scss';
 
   // Style
 
@@ -101,6 +101,7 @@
 
     .form-ctn, .box-footer {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
     }
 
@@ -110,7 +111,17 @@
       margin: 1.3rem 0 0 0;
     }
 
-    .expense-input {
+    .teste {
+      width: 49%;
+      border: 0;
+      padding: 0.7rem 0;
+      font-size: $font-size-16;
+        margin: 1rem 0 1rem;
+        background-color: $black-color;
+        color: $white-color;
+    }
+
+    .expense-input, .category-input{
       width: 70%;
     }
 
@@ -118,9 +129,6 @@
       width: 30%;
     }
 
-    .category-input {
-      width: 100%;
-    }
 
     .box-add-category {
       width: 80%;
@@ -151,5 +159,18 @@
       display: flex;
       justify-content: space-between;
       margin: $margin-middle;
+    }
+
+    .form  {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-side-by-side {
+      display: flex;
+    }
+
+    .full-width {
+      width: 100%;
     }
   }

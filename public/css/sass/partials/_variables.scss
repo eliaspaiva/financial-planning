@@ -43,6 +43,11 @@ $text-center: center;
 /* Display  */
 $display-none: none;
 
+// Width
+.full-width {
+  width: 100%;
+}
+
 /* Classes  */
 .ff-1 {
   font-family: $font-family-raleway;
@@ -52,7 +57,9 @@ $display-none: none;
   font-family: $font-family-lato;
 }
 
-
+.txt-center {
+  text-align: center;
+}
 
 .fw-1 {
   font-weight: $font-weight-100;
