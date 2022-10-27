@@ -2,19 +2,23 @@ const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
 
-const categoryInput = document.querySelector('.category');
+const categoryInput = document.getElementById('category');
 const btnCategorySave = document.getElementById('btn-categorty-save');
 const btnCategoryEdit = document.getElementById('btn-categorty-edit');
 
-const expenseInput = document.querySelector('.price-input');
-const btnExpenseSave = document.getElementById('btn-expense-save');
-const btnExpenseEdit = document.getElementById('btn-expense-edit');
+const expenseInput = document.getElementById('expense');
+const priceInput = document.getElementById('price');
+const btnPriceSave = document.getElementById('btn-price-save');
+const btnPriceEdit = document.getElementById('btn-price-edit');
+
+
+
 
 
 const getIncomeValue = (e) => {
     e.preventDefault();
-    if (income.value.length > 0) {
-        income.setAttribute('disabled', 'disabled');
+    if (incomeInput.value.length > 0) {
+        incomeInput.setAttribute('disabled', 'disabled');
         btnIncomeEdit.removeAttribute('disabled');
         btnIncomeSave.setAttribute('disabled', 'disabled');
     }
@@ -23,8 +27,8 @@ const getIncomeValue = (e) => {
 const editIncomeValue = (e) => {
     e.preventDefault();
 
-    if (income.disabled) {
-        income.removeAttribute('disabled');
+    if (incomeInput.disabled) {
+        incomeInput.removeAttribute('disabled');
         btnIncomeSave.removeAttribute('disabled');
         btnIncomeEdit.setAttribute('disabled', 'disabled');
     }
