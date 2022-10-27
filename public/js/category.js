@@ -4,7 +4,7 @@ const btnIncomeEdit = document.getElementById('btnIncomeEdit');
 const categoryInput = document.querySelector('.category-input');
 const priceInput = document.querySelector('.price-input');
 const expenseInput = document.querySelector('.expense-input');
-const btnAddCategory = document.querySelector('.btn-add-category');
+const btnAddCategory = document.getElementById('btn-add-category');
 
 
 const getIncomeValue = (e) => {
@@ -18,6 +18,7 @@ const getIncomeValue = (e) => {
 
 const editIncomeValue = (e) => {
     e.preventDefault();
+
     if (income.disabled) {
         income.removeAttribute('disabled');
         btnIncomeSave.removeAttribute('disabled');
@@ -27,9 +28,17 @@ const editIncomeValue = (e) => {
 
 const insertCategory = (e) => {
     e.preventDefault();
-    
+    console.log('oi');
+    const categoryInfo = {
+        category: categoryInput.value,
+        expense: expenseInput.value,
+        price: priceInput.value,
+    };
+    categoryInput.value = '';
+    expenseInput.value = '';
+    priceInput.value = '';    
+};
 
-}
-
+btnAddCategory.addEventListener('click', insertCategory);
 btnIncomeSave.addEventListener('click', getIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
