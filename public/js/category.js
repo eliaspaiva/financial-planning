@@ -55,8 +55,7 @@ const editCategoryValue = (e) => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    console.log('oi');
-    if (expenseInput.value.length > 0) {
+    if (expenseInput.value.length > 0 && priceInput.value.length) {
         expenseInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
