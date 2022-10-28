@@ -12,6 +12,7 @@ const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const budgetSettings = {};
+const
 
 // Income
 const getIncomeValue = (e) => {
@@ -40,8 +41,7 @@ const getCategoryValue = (e) => {
         categoryInput.setAttribute('disabled', 'disabled');
         btnCategoryEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
-        budgetSettings.category = categoryInput.value;
-        console.log(budgetSettings);
+        
     }
 };
 
