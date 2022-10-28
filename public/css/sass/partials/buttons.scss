@@ -27,12 +27,22 @@ button:disabled {
   color: $white-color;
 }
 
+.new-button {
+  text-align: center;
+  width: 100%;
+  border: 0;
+  font-size: $font-size-16;
+  margin: 0rem 0 1.2rem 0;
+  background-color: $black-color;
+  color: $white-color;
+}
+
 .btn-income {
   width: 49.5%;
   border: 0;
   padding: 0.7rem 0;
   font-size: $font-size-16;
-  margin: 0rem 0 1rem;
+  margin: 0rem 0 0.1rem 0;
   background-color: $black-color;
   color: $white-color;
 }
