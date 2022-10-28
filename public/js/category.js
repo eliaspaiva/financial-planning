@@ -11,6 +11,8 @@ const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
+const budgetSettings = {};
+
 // Income
 const getIncomeValue = (e) => {
     e.preventDefault();
@@ -38,6 +40,8 @@ const getCategoryValue = (e) => {
         categoryInput.setAttribute('disabled', 'disabled');
         btnCategoryEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
+        budgetSettings.category = categoryInput.value;
+        console.log(budgetSettings);
     }
 };
 
@@ -60,6 +64,11 @@ const getExpenseValue = (e) => {
         priceInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnPriceSave.setAttribute('disabled', 'disabled');
+        budgetSettings.expense = expenseInput.value;
+        budgetSettings.price = priceInput.value;
+        const values = Object.values(budgetSettings);
+        console.log(values);
+
     }
 };
 
