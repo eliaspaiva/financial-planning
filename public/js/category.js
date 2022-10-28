@@ -5,6 +5,7 @@ const btnIncomeEdit = document.getElementById('btn-income-edit');
 const categoryInput = document.getElementById('category');
 const btnCategorySave = document.getElementById('btn-categorty-save');
 const btnCategoryEdit = document.getElementById('btn-categorty-edit');
+const btnNewCategory = document.getElementById('new-category');
 
 const expenseInput = document.getElementById('expense');
 const priceInput = document.getElementById('price');
@@ -49,6 +50,9 @@ const getCategoryValue = (e) => {
         array.forEach((category) => {
             title.innerHTML = category;
         });
+        btnNewCategory.style.display = 'block';
+        console.log(array);
+
     }
 };
 
@@ -59,6 +63,20 @@ const editCategoryValue = (e) => {
         btnCategorySave.removeAttribute('disabled');
         btnCategoryEdit.setAttribute('disabled', 'disabled');
         array.splice(categoryInput.value);
+        btnNewCategory.style.display = 'none';
+       
+    }
+};
+
+const newCategory = (e) => {
+    e.preventDefault();
+    if (btnNewCategory.style.display === 'block') {
+        categoryInput.removeAttribute('disabled');
+        categoryInput.value = '';
+        btnCategoryEdit.setAttribute('disabled', 'disabled');
+        btnCategorySave.removeAttribute('disabled');
+        array.push(categoryInput.value);
+        console.log(array);
     }
 };
 
@@ -94,5 +112,6 @@ btnIncomeSave.addEventListener('click', getIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
 btnCategorySave.addEventListener('click', getCategoryValue);
 btnCategoryEdit.addEventListener('click', editCategoryValue);
+btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
