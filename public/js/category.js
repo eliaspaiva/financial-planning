@@ -12,6 +12,8 @@ const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
+const teste = document.getElementById('teste');
+
 const title = document.getElementById('title');
 
 const budgetSettings = {};
@@ -40,6 +42,7 @@ const editIncomeValue = (e) => {
 
 // Category
 
+// eslint-disable-next-line max-lines-per-function
 const getCategoryValue = (e) => {
     e.preventDefault();
     if (categoryInput.value.length > 0) {
@@ -47,11 +50,16 @@ const getCategoryValue = (e) => {
         btnCategoryEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
         array.push(categoryInput.value);
-        array.forEach((category) => {
-            title.innerHTML = category;
-        });
+        
         btnNewCategory.style.display = 'block';
         console.log(array);
+        array.forEach((category) => {
+            const el = document.createElement('p');
+            array.slice(0, -1);
+            if (array.length > 0);
+            el.innerHTML = category;
+            teste.appendChild(el);
+        });
 
     }
 };
@@ -62,8 +70,10 @@ const editCategoryValue = (e) => {
         categoryInput.removeAttribute('disabled');
         btnCategorySave.removeAttribute('disabled');
         btnCategoryEdit.setAttribute('disabled', 'disabled');
-        array.splice(categoryInput.value);
+        array.pop();
         btnNewCategory.style.display = 'none';
+        array.slice(0, -1);
+        console.log(array);
        
     }
 };
@@ -75,7 +85,6 @@ const newCategory = (e) => {
         categoryInput.value = '';
         btnCategoryEdit.setAttribute('disabled', 'disabled');
         btnCategorySave.removeAttribute('disabled');
-        array.push(categoryInput.value);
         console.log(array);
     }
 };
@@ -105,6 +114,7 @@ const editExpenseValue = (e) => {
         priceInput.removeAttribute('disabled');
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
+        
     }
 };
 
