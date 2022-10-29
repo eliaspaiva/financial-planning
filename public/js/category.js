@@ -13,12 +13,7 @@ const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const resultBox = document.getElementById('resultBox');
-
-const title = document.getElementById('title');
-
-const  = {};
 const saveInputValue = [];
-const pElement = document.createElement('p');
 
 
 // Income
@@ -52,9 +47,12 @@ const getCategoryValue = (e) => {
         
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
-            pElement.innerHTML = category.slice(-1);
+            const pElement = document.createElement('p');
+            pElement.classList.add('categoryH2');
+            pElement.innerHTML = category;
             resultBox.appendChild(pElement);
         });
+        console.log(saveInputValue);
 
     }
 };
@@ -66,19 +64,22 @@ const editCategoryValue = (e) => {
         btnCategorySave.removeAttribute('disabled');
         btnCategoryEdit.setAttribute('disabled', 'disabled');
         btnNewCategory.style.display = 'none';
-        console.log(saveInputValue);
+        const allItems = document.querySelectorAll('.categoryH2');
+        const lastItem = allItems[allItems.length - 1];
+        lastItem.remove();
+        console.log(allItems);
     }
 };
 
 const newCategory = (e) => {
     e.preventDefault();
     if (btnNewCategory.style.display === 'block') {
+        btnNewCategory.style.display = 'none';
         categoryInput.removeAttribute('disabled');
         categoryInput.value = '';
         btnCategoryEdit.setAttribute('disabled', 'disabled');
         btnCategorySave.removeAttribute('disabled');
         saveInputValue.pop();
-        if(categoryInput.value ===)
     }
 };
 
