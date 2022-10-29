@@ -15,6 +15,10 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
+const createcheckBox = () => {
+
+};
+
 
 // Income
 const getIncomeValue = (e) => {
