@@ -52,7 +52,6 @@ const getCategoryValue = (e) => {
             pElement.innerHTML = category;
             resultBox.appendChild(pElement);
         });
-        console.log(saveInputValue);
 
     }
 };
@@ -67,7 +66,7 @@ const editCategoryValue = (e) => {
         const allItems = document.querySelectorAll('.categoryH2');
         const lastItem = allItems[allItems.length - 1];
         lastItem.remove();
-        console.log(allItems);
+        saveInputValue.pop();
     }
 };
 
