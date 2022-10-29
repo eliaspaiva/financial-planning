@@ -16,6 +16,14 @@ const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
 const createcheckBox = () => {
+    const h5 = document.createElement('h5');
+    h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
+    h5.setAttribute('id', 'title');
+    const form = document.createElement('form');
+    form.classList.add('box-add-category-form');
+    resultBox.appendChild(h5);
+    resultBox.appendChild(form);
+
 
 };
 
