@@ -12,13 +12,13 @@ const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
-const teste = document.getElementById('teste');
+const resultBox = document.getElementById('resultBox');
 
 const title = document.getElementById('title');
 
-const budgetSettings = {};
-const array = [];
-
+const  = {};
+const saveInputValue = [];
+const pElement = document.createElement('p');
 
 
 // Income
@@ -42,23 +42,18 @@ const editIncomeValue = (e) => {
 
 // Category
 
-// eslint-disable-next-line max-lines-per-function
 const getCategoryValue = (e) => {
     e.preventDefault();
     if (categoryInput.value.length > 0) {
         categoryInput.setAttribute('disabled', 'disabled');
         btnCategoryEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
-        array.push(categoryInput.value);
+        saveInputValue.push(categoryInput.value);
         
         btnNewCategory.style.display = 'block';
-        console.log(array);
-        array.forEach((category) => {
-            const el = document.createElement('p');
-            array.slice(0, -1);
-            if (array.length > 0);
-            el.innerHTML = category;
-            teste.appendChild(el);
+        saveInputValue.forEach((category) => {
+            pElement.innerHTML = category.slice(-1);
+            resultBox.appendChild(pElement);
         });
 
     }
@@ -70,11 +65,8 @@ const editCategoryValue = (e) => {
         categoryInput.removeAttribute('disabled');
         btnCategorySave.removeAttribute('disabled');
         btnCategoryEdit.setAttribute('disabled', 'disabled');
-        array.pop();
         btnNewCategory.style.display = 'none';
-        array.slice(0, -1);
-        console.log(array);
-       
+        console.log(saveInputValue);
     }
 };
 
@@ -85,7 +77,8 @@ const newCategory = (e) => {
         categoryInput.value = '';
         btnCategoryEdit.setAttribute('disabled', 'disabled');
         btnCategorySave.removeAttribute('disabled');
-        console.log(array);
+        saveInputValue.pop();
+        if(categoryInput.value ===)
     }
 };
 
@@ -99,11 +92,6 @@ const getExpenseValue = (e) => {
         priceInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnPriceSave.setAttribute('disabled', 'disabled');
-        budgetSettings.expense = expenseInput.value;
-        budgetSettings.price = priceInput.value;
-        const values = Object.values(budgetSettings);
-        console.log(values);
-
     }
 };
 
