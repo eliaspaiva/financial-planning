@@ -16,21 +16,12 @@ const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
 // Dynamic Html
-const createcheckBox = (textValue) => {
+// eslint-disable-next-line max-lines-per-function
+const checkboxTitle = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
     h5.innerHTML = textValue;
-    const form = document.createElement('form');
-    form.classList.add('box-add-category-form', 'fs-16', 'ctg-title');
-    form.setAttribute('type', 'radio');
-    form.setAttribute('name', textValue);
-    form.setAttribute('id', textValue);
-    const label = document.createElement('label');
-    label.classList.add('label-dynamic-html');
-    label.setAttribute('for', textValue);
     resultBox.appendChild(h5);
-    resultBox.appendChild(form);
-    resultBox.appendChild(label);
     return resultBox;
 };
 
@@ -65,7 +56,7 @@ const getCategoryValue = (e) => {
         saveInputValue.push(categoryInput.value);
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
-            createcheckBox(category);
+            checkboxTitle(category);
         });
     }
 };
@@ -127,3 +118,15 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
+
+// const form = document.createElement('form');
+//     const input = document.createElement('input');
+//     input.classList.add('box-add-category-form', 'fs-16', 'ctg-title');
+//     input.setAttribute('type', 'radio');
+//     input.setAttribute('name', textValue);
+//     input.setAttribute('id', textValue);
+//     const label = document.createElement('label');
+//     label.classList.add('label-dynamic-html');
+//     label.setAttribute('for', textValue);
+//     label.setAttribute('value', textValue);
+//     label.innerHTML = textValue;
