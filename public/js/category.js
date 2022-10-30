@@ -15,16 +15,11 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
-const createcheckBox = () => {
+const createcheckBox = (textValue, className) => {
     const h5 = document.createElement('h5');
-    h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
-    h5.setAttribute('id', 'title');
-    const form = document.createElement('form');
-    form.classList.add('box-add-category-form');
-    resultBox.appendChild(h5);
-    resultBox.appendChild(form);
-
-
+    h5.classList.add(className, 'fs-16', 'ctg-title');
+    h5.innerHTML = textValue;
+    return resultBox.appendChild(h5);
 };
 
 
@@ -59,12 +54,8 @@ const getCategoryValue = (e) => {
         
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
-            const pElement = document.createElement('p');
-            pElement.classList.add('categoryH2');
-            pElement.innerHTML = category;
-            resultBox.appendChild(pElement);
+            createcheckBox(category, 'categoryH2');
         });
-
     }
 };
 
