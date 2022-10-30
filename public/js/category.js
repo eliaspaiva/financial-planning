@@ -16,8 +16,7 @@ const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
 // Dynamic Html
-// eslint-disable-next-line max-lines-per-function
-const checkboxTitle = (textValue) => {
+const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
     h5.innerHTML = textValue;
@@ -56,7 +55,7 @@ const getCategoryValue = (e) => {
         saveInputValue.push(categoryInput.value);
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
-            checkboxTitle(category);
+            categoryToBox(category);
         });
     }
 };
