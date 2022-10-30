@@ -15,11 +15,23 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
-const createcheckBox = (textValue, className) => {
+// Dynamic Html
+const createcheckBox = (textValue) => {
     const h5 = document.createElement('h5');
-    h5.classList.add(className, 'fs-16', 'ctg-title');
+    h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
     h5.innerHTML = textValue;
-    return resultBox.appendChild(h5);
+    const form = document.createElement('form');
+    form.classList.add('box-add-category-form', 'fs-16', 'ctg-title');
+    form.setAttribute('type', 'radio');
+    form.setAttribute('name', textValue);
+    form.setAttribute('id', textValue);
+    const label = document.createElement('label');
+    label.classList.add('label-dynamic-html');
+    label.setAttribute('for', textValue);
+    resultBox.appendChild(h5);
+    resultBox.appendChild(form);
+    resultBox.appendChild(label);
+    return resultBox;
 };
 
 
@@ -51,10 +63,9 @@ const getCategoryValue = (e) => {
         btnCategoryEdit.removeAttribute('disabled');
         btnCategorySave.setAttribute('disabled', 'disabled');
         saveInputValue.push(categoryInput.value);
-        
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
-            createcheckBox(category, 'categoryH2');
+            createcheckBox(category);
         });
     }
 };
