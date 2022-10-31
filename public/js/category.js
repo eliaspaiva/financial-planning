@@ -12,6 +12,8 @@ const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 
+const dropdownMenu = document.getElementById('dropdown');
+
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
@@ -22,6 +24,13 @@ const categoryToBox = (textValue) => {
     h5.innerHTML = textValue;
     resultBox.appendChild(h5);
     return resultBox;
+};
+
+const dataToDropdownMenu = (textValue) => {
+    const option = document.createElement('option');
+    option.setAttribute('value', textValue);
+    option.innerHTML = textValue;
+    dropdownMenu.appendChild(option);
 };
 
 
@@ -56,6 +65,7 @@ const getCategoryValue = (e) => {
         btnNewCategory.style.display = 'block';
         saveInputValue.forEach((category) => {
             categoryToBox(category);
+            dataToDropdownMenu(category);
         });
     }
 };
@@ -71,6 +81,7 @@ const editCategoryValue = (e) => {
         const lastItem = allItems[allItems.length - 1];
         lastItem.remove();
         saveInputValue.pop();
+         
     }
 };
 
