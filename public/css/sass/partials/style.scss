@@ -157,9 +157,12 @@
     cursor: not-allowed;
     }
 
-    .dropdown {
+    select {
       width: 100%;
       padding: 1.1rem 0;
+      display: none;
     }
+
+
   
   }

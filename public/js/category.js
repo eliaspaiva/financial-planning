@@ -64,9 +64,9 @@ const getCategoryValue = (e) => {
         btnCategorySave.setAttribute('disabled', 'disabled');
         saveInputValue.push(categoryInput.value);
         btnNewCategory.style.display = 'block';
+        dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
             categoryToBox(category);
-            dataToDropdownMenu(category);
         });
     }
 };
@@ -110,6 +110,7 @@ const getExpenseValue = (e) => {
         priceInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnPriceSave.setAttribute('disabled', 'disabled');
+        dataToDropdownMenu('teste');    
     }
 };
 
@@ -120,7 +121,7 @@ const editExpenseValue = (e) => {
         priceInput.removeAttribute('disabled');
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
-        
+          
     }
 };
 
