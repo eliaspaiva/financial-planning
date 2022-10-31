@@ -17,6 +17,14 @@ const dropdownMenu = document.getElementById('dropdown');
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
+const dataToDropdownMenu = (textValue) => {
+    const option = document.createElement('option');
+    option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
+    option.setAttribute('value', textValue);
+    option.innerHTML = textValue;
+    dropdownMenu.appendChild(option);
+};
+
 // Dynamic Html
 const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
@@ -24,13 +32,6 @@ const categoryToBox = (textValue) => {
     h5.innerHTML = textValue;
     resultBox.appendChild(h5);
     return resultBox;
-};
-
-const dataToDropdownMenu = (textValue) => {
-    const option = document.createElement('option');
-    option.setAttribute('value', textValue);
-    option.innerHTML = textValue;
-    dropdownMenu.appendChild(option);
 };
 
 
@@ -81,7 +82,9 @@ const editCategoryValue = (e) => {
         const lastItem = allItems[allItems.length - 1];
         lastItem.remove();
         saveInputValue.pop();
-         
+        const menuItes = document.querySelectorAll('.itemsToMenu');
+        const lastItemMenu = menuItes[menuItes.length - 1];
+        lastItemMenu.remove();
     }
 };
 
