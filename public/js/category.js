@@ -14,6 +14,7 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const dropdownMenu = document.getElementById('dropdown');
 
+
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
@@ -67,6 +68,7 @@ const getCategoryValue = (e) => {
         dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
             categoryToBox(category);
+            dataToDropdownMenu(category);
         });
     }
 };
@@ -105,12 +107,11 @@ const newCategory = (e) => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    if (expenseInput.value.length > 0 && priceInput.value.length) {
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length == 0) {
         expenseInput.setAttribute('disabled', 'disabled');
         priceInput.setAttribute('disabled', 'disabled');
         btnPriceEdit.removeAttribute('disabled');
         btnPriceSave.setAttribute('disabled', 'disabled');
-        dataToDropdownMenu('teste');    
     }
 };
 
@@ -121,7 +122,6 @@ const editExpenseValue = (e) => {
         priceInput.removeAttribute('disabled');
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
-          
     }
 };
 
