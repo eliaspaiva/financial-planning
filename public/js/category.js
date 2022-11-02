@@ -17,6 +17,8 @@ const dropdownMenu = document.getElementById('dropdown');
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
+// Helper Functions
+
 const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
@@ -34,6 +36,7 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
+// Functionality
 
 // Income
 const getIncomeValue = (e) => {
