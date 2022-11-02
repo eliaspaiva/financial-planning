@@ -19,6 +19,9 @@ const saveInputValue = [];
 
 // Helper Functions
 
+
+
+// Dynamic Html
 const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
@@ -27,7 +30,6 @@ const dataToDropdownMenu = (textValue) => {
     dropdownMenu.appendChild(option);
 };
 
-// Dynamic Html
 const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
@@ -37,7 +39,6 @@ const categoryToBox = (textValue) => {
 };
 
 // Functionality
-
 // Income
 const getIncomeValue = (e) => {
     e.preventDefault();
@@ -144,6 +145,7 @@ const editExpenseValue = (e) => {
     }
 };
 
+// Event Listeners
 expenseInput.addEventListener('input', enableSaveButtonExpense);
 priceInput.addEventListener('input', enableSaveButtonPrice);
 btnIncomeSave.addEventListener('click', getIncomeValue);
