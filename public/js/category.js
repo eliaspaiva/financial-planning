@@ -38,6 +38,10 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
+const addRadioButtonsToBox = () => {
+    
+}
+
 // Functionality
 // Income
 const getIncomeValue = (e) => {
@@ -132,7 +136,6 @@ const getExpenseValue = (e) => {
         btnPriceSave.removeAttribute('disabled');
     }
 };
-
 
 
 const editExpenseValue = (e) => {
