@@ -149,6 +149,9 @@ const getExpenseValue = (e) => {
         expenseObject.price = priceInput.value;
         console.log(expenseObject);
         addRadioButtonsToBox(expenseObject.expense, expenseObject.price);
+        expenseInput.value = '';
+        priceInput.value = '';
+
     }
 };
 
@@ -173,12 +176,3 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
-
-// 
-//     
-//     
-//     const label = document.createElement('label');
-//     label.classList.add('label-dynamic-html');
-//     label.setAttribute('for', textValue);
-//     label.setAttribute('value', textValue);
-//     label.innerHTML = textValue;
