@@ -16,7 +16,7 @@ const dropdownMenu = document.getElementById('dropdown');
 
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
-const saveExpensePriceValue = [];
+const expenseObject = {};
 // Helper Functions
 
 
@@ -38,17 +38,18 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
-const addRadioButtonsToBox = (textValue) => {
+const addRadioButtonsToBox = (expense, price) => {
     const form = document.createElement('form');
     resultBox.appendChild(form);
     const inputRadio = document.createElement('input');
     inputRadio.setAttribute('type', 'checkbox');
-    inputRadio.setAttribute('name', textValue);
-    inputRadio.setAttribute('id', textValue);
-    inputRadio.setAttribute('value', textValue);
+    inputRadio.setAttribute('name', expense, price);
+    inputRadio.setAttribute('id', expense, price);
+    inputRadio.setAttribute('value', expense, price);
     form.appendChild(inputRadio);
     const labelRadio = document.createElement('label');
-    inputRadio.setAttribute('for', textValue);
+    labelRadio.innerHTML = `${expense} - ${price}`;
+    inputRadio.setAttribute('for', expense, price);
     form.appendChild(labelRadio);
     return resultBox;
 };
@@ -144,12 +145,10 @@ const enableSaveButtonExpense = (e) => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        saveExpensePriceValue.push(priceInput.value, expenseInput.value);
-        console.log(saveExpensePriceValue);
-        saveExpensePriceValue.forEach((category) => {
-            console.log(`teste1 ${category[0]} and ${category[1]}`);
-        });
-        addRadioButtonsToBox();
+        expenseObject.expense = expenseInput.value;
+        expenseObject.price = priceInput.value;
+        console.log(expenseObject);
+        addRadioButtonsToBox(expenseObject.expense, expenseObject.price);
     }
 };
 
