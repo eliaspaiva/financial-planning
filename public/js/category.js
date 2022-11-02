@@ -16,7 +16,7 @@ const dropdownMenu = document.getElementById('dropdown');
 
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
-
+const saveExpensePriceValue = [];
 // Helper Functions
 
 
@@ -38,9 +38,20 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
-const addRadioButtonsToBox = () => {
-    
-}
+const addRadioButtonsToBox = (textValue) => {
+    const form = document.createElement('form');
+    resultBox.appendChild(form);
+    const inputRadio = document.createElement('input');
+    inputRadio.setAttribute('type', 'checkbox');
+    inputRadio.setAttribute('name', textValue);
+    inputRadio.setAttribute('id', textValue);
+    inputRadio.setAttribute('value', textValue);
+    form.appendChild(inputRadio);
+    const labelRadio = document.createElement('label');
+    inputRadio.setAttribute('for', textValue);
+    form.appendChild(labelRadio);
+    return resultBox;
+};
 
 // Functionality
 // Income
@@ -133,7 +144,12 @@ const enableSaveButtonExpense = (e) => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        btnPriceSave.removeAttribute('disabled');
+        saveExpensePriceValue.push(priceInput.value, expenseInput.value);
+        console.log(saveExpensePriceValue);
+        saveExpensePriceValue.forEach((category) => {
+            console.log(`teste1 ${category[0]} and ${category[1]}`);
+        });
+        addRadioButtonsToBox();
     }
 };
 
@@ -159,12 +175,9 @@ btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 
-// const form = document.createElement('form');
-//     const input = document.createElement('input');
-//     input.classList.add('box-add-category-form', 'fs-16', 'ctg-title');
-//     input.setAttribute('type', 'radio');
-//     input.setAttribute('name', textValue);
-//     input.setAttribute('id', textValue);
+// 
+//     
+//     
 //     const label = document.createElement('label');
 //     label.classList.add('label-dynamic-html');
 //     label.setAttribute('for', textValue);
