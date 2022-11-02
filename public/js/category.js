@@ -14,7 +14,6 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const dropdownMenu = document.getElementById('dropdown');
 
-
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 
@@ -71,6 +70,10 @@ const getCategoryValue = (e) => {
             dataToDropdownMenu(category);
         });
     }
+
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
+        btnPriceSave.removeAttribute('disabled');
+    }
 };
 
 const editCategoryValue = (e) => {
@@ -105,15 +108,28 @@ const newCategory = (e) => {
 
 // Expense
 
-const getExpenseValue = (e) => {
+const enableSaveButtonPrice = (e) => {
     e.preventDefault();
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length == 0) {
-        expenseInput.setAttribute('disabled', 'disabled');
-        priceInput.setAttribute('disabled', 'disabled');
-        btnPriceEdit.removeAttribute('disabled');
-        btnPriceSave.setAttribute('disabled', 'disabled');
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
+        btnPriceSave.removeAttribute('disabled');
     }
 };
+
+const enableSaveButtonExpense = (e) => {
+    e.preventDefault();
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
+        btnPriceSave.removeAttribute('disabled');
+    }
+};
+
+const getExpenseValue = (e) => {
+    e.preventDefault();
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
+        btnPriceSave.removeAttribute('disabled');
+    }
+};
+
+
 
 const editExpenseValue = (e) => {
     e.preventDefault();
@@ -125,6 +141,8 @@ const editExpenseValue = (e) => {
     }
 };
 
+expenseInput.addEventListener('input', enableSaveButtonExpense);
+priceInput.addEventListener('input', enableSaveButtonPrice);
 btnIncomeSave.addEventListener('click', getIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
 btnCategorySave.addEventListener('click', getCategoryValue);
