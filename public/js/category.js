@@ -16,6 +16,7 @@ const dropdownMenu = document.getElementById('dropdown');
 
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
+const allDropdownValues = [];
 const expenseObject = {};
 // Helper Functions
 
@@ -130,6 +131,7 @@ const newCategory = (e) => {
 
 const enableSaveButtonPrice = (e) => {
     e.preventDefault();
+
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
         btnPriceSave.removeAttribute('disabled');
     }
@@ -144,15 +146,18 @@ const enableSaveButtonExpense = (e) => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
+    allDropdownValues.push(dropdownMenu.value);
+    console.log(allDropdownValues);
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
+        expenseObject.category = dropdownMenu.value;
         expenseObject.expense = expenseInput.value;
         expenseObject.price = priceInput.value;
         console.log(expenseObject);
         addRadioButtonsToBox(expenseObject.expense, expenseObject.price);
         expenseInput.value = '';
         priceInput.value = '';
-
     }
+
 };
 
 
@@ -166,7 +171,12 @@ const editExpenseValue = (e) => {
     }
 };
 
+const teste = () => {
+    console.log(dropdownMenu.value);
+};
+
 // Event Listeners
+dropdownMenu.addEventListener('input', teste);
 expenseInput.addEventListener('input', enableSaveButtonExpense);
 priceInput.addEventListener('input', enableSaveButtonPrice);
 btnIncomeSave.addEventListener('click', getIncomeValue);
