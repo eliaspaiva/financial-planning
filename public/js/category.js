@@ -39,7 +39,7 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
-const addRadioButtonsToBox = (expense, price) => {
+const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
     resultBox.appendChild(form);
     const inputRadio = document.createElement('input');
@@ -153,7 +153,7 @@ const getExpenseValue = (e) => {
         expenseObject.expense = expenseInput.value;
         expenseObject.price = priceInput.value;
         console.log(expenseObject);
-        addRadioButtonsToBox(expenseObject.expense, expenseObject.price);
+        addcheckBoxToBox(expenseObject.expense, expenseObject.price);
         expenseInput.value = '';
         priceInput.value = '';
     }
