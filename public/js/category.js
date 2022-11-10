@@ -88,17 +88,15 @@ const getCategoryValue = (e) => {
         btnNewCategory.style.display = 'block';
         dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
-            categoryToBox(category);
-            dataToDropdownMenu(category);
-            dropDownValue.push(category);
-            console.log(dropDownValue);
-        });
-        dropDownValue.forEach((element) => {
-            if (element.toUpperCase() === categoryInput.value) {
-                console.log('tezte');
+            if (dropDownValue.includes(category.toUpperCase()))  {
+                alert('Item cannot be repeated');
+                console.log(category);
+            } else {
+                categoryToBox(category);
+                dataToDropdownMenu(category);
+                console.log(category);
             }
         });
-
     }
 
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
