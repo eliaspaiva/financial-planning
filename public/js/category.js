@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -16,8 +17,8 @@ const dropdownMenu = document.getElementById('dropdown');
 
 const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
-const allDropdownValues = [];
 const expenseObject = {};
+const dropDownValue = [];
 // Helper Functions
 
 
@@ -89,7 +90,15 @@ const getCategoryValue = (e) => {
         saveInputValue.forEach((category) => {
             categoryToBox(category);
             dataToDropdownMenu(category);
+            dropDownValue.push(category);
+            console.log(dropDownValue);
         });
+        dropDownValue.forEach((element) => {
+            if (element.toUpperCase() === categoryInput.value) {
+                console.log('tezte');
+            }
+        });
+
     }
 
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
@@ -146,8 +155,6 @@ const enableSaveButtonExpense = (e) => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    allDropdownValues.push(dropdownMenu.value);
-    console.log(allDropdownValues);
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
         expenseObject.category = dropdownMenu.value;
         expenseObject.expense = expenseInput.value;
