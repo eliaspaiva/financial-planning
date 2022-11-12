@@ -23,7 +23,7 @@ const dropDownValue = [];
 const bigFirstLetter = (name, attribute) => {
     const word = name;
     const firstLetter = word.charAt(0).toUpperCase();
-    const remainingLetters = word.substring(1);
+    const remainingLetters = word.substring(1).toLowerCase();
     const mainWord = `${firstLetter}${remainingLetters}`;
     return attribute.innerHTML = mainWord;
 };
@@ -48,18 +48,18 @@ const categoryToBox = (textValue) => {
 // Main Functions
 
 const addcheckBoxToBox = (expense, price) => {
-    const form = document.createElement('form');
-    resultBox.appendChild(form);
+    const div = document.createElement('div');
+    resultBox.appendChild(div);
     const inputRadio = document.createElement('input');
     inputRadio.setAttribute('type', 'checkbox');
     inputRadio.setAttribute('name', expense, price);
     inputRadio.setAttribute('id', expense, price);
     inputRadio.setAttribute('value', expense, price);
-    form.appendChild(inputRadio);
+    div.appendChild(inputRadio);
     const labelRadio = document.createElement('label');
     labelRadio.innerHTML = `${expense} - ${price}`;
     inputRadio.setAttribute('for', expense, price);
-    form.appendChild(labelRadio);
+    div.appendChild(labelRadio);
     return resultBox;
 };
 
@@ -96,12 +96,11 @@ const getCategoryValue = (e) => {
         dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
             if (dropDownValue.includes(category.toUpperCase()))  {
-                alert('Item cannot be repeated');
+                alert('Item Cannot Be Repeated');
             } else {
                 dropDownValue.push(category.toUpperCase());
-                categoryToBox(category);
                 dataToDropdownMenu(category);
-                console.log(dropDownValue);
+                categoryToBox(category);
             }
         });
     }
@@ -183,12 +182,14 @@ const editExpenseValue = (e) => {
     }
 };
 
-const teste = () => {
+const changeCategory = () => {
+    console.log('can be removed');
     console.log(dropdownMenu.value);
+    console.log(dropDownValue);
 };
 
 // Event Listeners
-dropdownMenu.addEventListener('input', teste);
+dropdownMenu.addEventListener('input', changeCategory);
 expenseInput.addEventListener('input', enableSaveButtonExpense);
 priceInput.addEventListener('input', enableSaveButtonPrice);
 btnIncomeSave.addEventListener('click', getIncomeValue);
