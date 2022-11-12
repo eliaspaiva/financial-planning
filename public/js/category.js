@@ -40,7 +40,7 @@ const dataToDropdownMenu = (textValue) => {
 const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
-    bigFirstLetter(textValue, resultBox);
+    bigFirstLetter(textValue, h5);
     resultBox.appendChild(h5);
     return resultBox;
 };
