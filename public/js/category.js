@@ -88,13 +88,14 @@ const getCategoryValue = (e) => {
         btnNewCategory.style.display = 'block';
         dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
-            if (dropDownValue.includes(category) && category.toUpperCase())  {
+            if (dropDownValue.includes(category.toUpperCase()))  {
                 alert('Item cannot be repeated');
             } else {
-                
+                console.log('can be removed');
+                dropDownValue.push(category.toUpperCase());
                 categoryToBox(category);
                 dataToDropdownMenu(category);
-                console.log(category);
+                console.log(dropDownValue);
             }
         });
     }
