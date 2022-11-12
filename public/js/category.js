@@ -188,13 +188,12 @@ const changeCategory = () => {
     // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
     const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
-    allH5Values.forEach((e => {
-        const values = e.innerHTML;
-        if (values === currentValue) {
-            console.log('can be removed');
-        }
+    allH5Values.forEach((el => {
+        const teste = allH5Values.findIndex((e => e.innerHTML == currentValue));
+        console.log(el.innerHTML);
+        console.log(teste);
     }));
-  
+    
 };
 
 // Event Listeners
