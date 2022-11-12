@@ -21,6 +21,7 @@ const resultBox = document.getElementById('resultBox');
 const saveInputValue = [];
 const expenseObject = {};
 const dropDownValue = [];
+const numbers = [];
 
 // Helper Functions
 const bigFirstLetter = (name, attribute) => {
@@ -186,14 +187,15 @@ const editExpenseValue = (e) => {
 
 const changeCategory = () => {
     // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
+    // const teste = allH5Values.findIndex((e => e.innerHTML == currentValue));
     const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
     allH5Values.forEach((el => {
-        const teste = allH5Values.findIndex((e => e.innerHTML == currentValue));
-        console.log(el.innerHTML);
-        console.log(teste);
+        numbers.push(el.innerHTML);
     }));
-    
+    console.log(numbers);
+    const teste = numbers.findIndex((e => e == currentValue));
+    console.log(teste);
 };
 
 // Event Listeners
