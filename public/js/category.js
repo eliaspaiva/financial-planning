@@ -20,25 +20,32 @@ const saveInputValue = [];
 const expenseObject = {};
 const dropDownValue = [];
 // Helper Functions
-
-
+const bigFirstLetter = (name, attribute) => {
+    const word = name;
+    const firstLetter = word.charAt(0).toUpperCase();
+    const remainingLetters = word.substring(1);
+    const mainWord = `${firstLetter}${remainingLetters}`;
+    return attribute.innerHTML = mainWord;
+};
 
 // Dynamic Html
 const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
     option.setAttribute('value', textValue);
-    option.innerHTML = textValue.toUpperCase();
+    bigFirstLetter(textValue, option);
     dropdownMenu.appendChild(option);
 };
 
 const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
-    h5.innerHTML = textValue.toUpperCase();
+    bigFirstLetter(textValue, resultBox);
     resultBox.appendChild(h5);
     return resultBox;
 };
+
+// Main Functions
 
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
@@ -91,7 +98,6 @@ const getCategoryValue = (e) => {
             if (dropDownValue.includes(category.toUpperCase()))  {
                 alert('Item cannot be repeated');
             } else {
-                console.log('can be removed');
                 dropDownValue.push(category.toUpperCase());
                 categoryToBox(category);
                 dataToDropdownMenu(category);
