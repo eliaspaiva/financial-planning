@@ -190,7 +190,9 @@ const editExpenseValue = (e) => {
 const changeCategory = () => {
     // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
     const allH5Values = document.querySelectorAll('.categoryH2');
-    console.log(allH5Values.innerHTML);
+    allH5Values.forEach((elements => {
+        console.log(elements.innerHTML);
+    }));
     // if (dropDownValue.includes(dropdownMenu.value)) {
     
         
