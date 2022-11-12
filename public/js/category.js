@@ -15,9 +15,6 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const dropdownMenu = document.getElementById('dropdown');
 
-
-
-
 const resultBox = document.getElementById('resultBox');
 
 // Empty Elements
@@ -189,14 +186,15 @@ const editExpenseValue = (e) => {
 
 const changeCategory = () => {
     // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
+    const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
-    allH5Values.forEach((elements => {
-        console.log(elements.innerHTML);
+    allH5Values.forEach((e => {
+        const values = e.innerHTML;
+        if (values === currentValue) {
+            console.log('can be removed');
+        }
     }));
-    // if (dropDownValue.includes(dropdownMenu.value)) {
-    
-        
-    // }
+  
 };
 
 // Event Listeners
