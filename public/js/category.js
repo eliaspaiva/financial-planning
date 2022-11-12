@@ -15,10 +15,16 @@ const btnPriceEdit = document.getElementById('btn-price-edit');
 
 const dropdownMenu = document.getElementById('dropdown');
 
+
+
+
 const resultBox = document.getElementById('resultBox');
+
+// Empty Elements
 const saveInputValue = [];
 const expenseObject = {};
 const dropDownValue = [];
+
 // Helper Functions
 const bigFirstLetter = (name, attribute) => {
     const word = name;
@@ -163,7 +169,6 @@ const getExpenseValue = (e) => {
         expenseObject.category = dropdownMenu.value;
         expenseObject.expense = expenseInput.value;
         expenseObject.price = priceInput.value;
-        console.log(expenseObject);
         addcheckBoxToBox(expenseObject.expense, expenseObject.price);
         expenseInput.value = '';
         priceInput.value = '';
@@ -183,9 +188,13 @@ const editExpenseValue = (e) => {
 };
 
 const changeCategory = () => {
-    console.log('can be removed');
-    console.log(dropdownMenu.value);
-    console.log(dropDownValue);
+    // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
+    const allH5Values = document.querySelectorAll('.categoryH2');
+    console.log(allH5Values.innerHTML);
+    // if (dropDownValue.includes(dropdownMenu.value)) {
+    
+        
+    // }
 };
 
 // Event Listeners
