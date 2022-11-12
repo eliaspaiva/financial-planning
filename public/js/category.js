@@ -187,15 +187,19 @@ const editExpenseValue = (e) => {
 
 const changeCategory = () => {
     // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
-    // const teste = allH5Values.findIndex((e => e.innerHTML == currentValue));
     const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
     allH5Values.forEach((el => {
         numbers.push(el.innerHTML);
+        el === currentValue;
     }));
     console.log(numbers);
-    const teste = numbers.findIndex((e => e == currentValue));
-    console.log(teste);
+    const getIndexNumber = numbers.findIndex((e => e == currentValue));
+    const elementByIndexNumber = allH5Values[getIndexNumber];
+    console.log(elementByIndexNumber);
+    const h1 = document.createElement('h5');
+    h1.innerHTML = 'teste';
+    elementByIndexNumber.appendChild(h1);
 };
 
 // Event Listeners
