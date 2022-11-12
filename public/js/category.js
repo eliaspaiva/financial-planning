@@ -28,14 +28,14 @@ const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
     option.setAttribute('value', textValue);
-    option.innerHTML = textValue;
+    option.innerHTML = textValue.toUpperCase();
     dropdownMenu.appendChild(option);
 };
 
 const categoryToBox = (textValue) => {
     const h5 = document.createElement('h5');
     h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
-    h5.innerHTML = textValue;
+    h5.innerHTML = textValue.toUpperCase();
     resultBox.appendChild(h5);
     return resultBox;
 };
@@ -88,13 +88,12 @@ const getCategoryValue = (e) => {
         btnNewCategory.style.display = 'block';
         dropdownMenu.style.display = 'block';
         saveInputValue.forEach((category) => {
-            if (!dropDownValue.includes(category.toUpperCase() === categoryInput.value.toUpperCase()))  {
-                dropDownValue.push(category);
+            if (dropDownValue.includes(category) && category.toUpperCase())  {
+                alert('Item cannot be repeated');
+            } else {
+                
                 categoryToBox(category);
                 dataToDropdownMenu(category);
-                console.log(category);
-            } else {
-                alert('Item cannot be repeated');
                 console.log(category);
             }
         });
