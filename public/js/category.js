@@ -24,6 +24,7 @@ const dropDownValue = [];
 const numbers = [];
 
 // Helper Functions
+// First Letter Capitalized
 const bigFirstLetter = (name, attribute) => {
     const word = name;
     const firstLetter = word.charAt(0).toUpperCase();
@@ -31,6 +32,8 @@ const bigFirstLetter = (name, attribute) => {
     const mainWord = `${firstLetter}${remainingLetters}`;
     return attribute.innerHTML = mainWord;
 };
+
+// Create Element
 
 // Dynamic Html
 const dataToDropdownMenu = (textValue) => {
@@ -41,11 +44,29 @@ const dataToDropdownMenu = (textValue) => {
     dropdownMenu.appendChild(option);
 };
 
+const addcheckBoxToBox = (expense, price) => {
+    const form = document.createElement('form');
+    const inputRadio = document.createElement('input');
+    inputRadio.setAttribute('type', 'checkbox');
+    inputRadio.setAttribute('name', expense, price);
+    inputRadio.setAttribute('id', expense, price);
+    inputRadio.setAttribute('value', expense, price);
+    form.appendChild(inputRadio);
+    const labelRadio = document.createElement('label');
+    labelRadio.innerHTML = `${expense} - ${price}${'€'}`;
+    inputRadio.setAttribute('for', expense, price);
+    form.appendChild(labelRadio);
+    return form;
+};
+
 const categoryToBox = (textValue) => {
-    const h5 = document.createElement('h5');
-    h5.classList.add('categoryH2', 'fs-16', 'ctg-title');
-    bigFirstLetter(textValue, h5);
-    resultBox.appendChild(h5);
+    const divForH5 = document.createElement('div');
+    divForH5.classList.add('parentH5');
+    resultBox.appendChild(divForH5);
+    const div = document.createElement('div');
+    div.classList.add('categoryH2', 'fs-16', 'ctg-title');
+    bigFirstLetter(textValue, div);
+    divForH5.appendChild(div);
     return resultBox;
 };
 
@@ -146,21 +167,7 @@ const enableSaveButtonExpense = (e) => {
     }
 };
 
-const addcheckBoxToBox = (expense, price) => {
-    const div = document.createElement('div');
-    resultBox.appendChild(div);
-    const inputRadio = document.createElement('input');
-    inputRadio.setAttribute('type', 'checkbox');
-    inputRadio.setAttribute('name', expense, price);
-    inputRadio.setAttribute('id', expense, price);
-    inputRadio.setAttribute('value', expense, price);
-    div.appendChild(inputRadio);
-    const labelRadio = document.createElement('label');
-    labelRadio.innerHTML = `${expense} - ${price}`;
-    inputRadio.setAttribute('for', expense, price);
-    div.appendChild(labelRadio);
-    return resultBox;
-};
+
 
 const changeCategory = () => {
     const currentValue = dropdownMenu.value;
@@ -169,7 +176,9 @@ const changeCategory = () => {
         numbers.push(el.innerHTML);
     }));
     const getIndexNumber = numbers.findIndex((e => e == currentValue));
+    
     const elementByIndexNumber = allH5Values[getIndexNumber];
+    console.log(elementByIndexNumber);
     return elementByIndexNumber;
 };
 
@@ -178,8 +187,8 @@ const getExpenseValue = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
         expenseObject.category = dropdownMenu.value;
         expenseObject.expense = expenseInput.value;
-        expenseObject.price = priceInput.value;
-        addcheckBoxToBox(expenseObject.expense, expenseObject.price);
+        expenseObject.price = priceInput.value;        
+        changeCategory().appendChild(addcheckBoxToBox(expenseObject.expense,  expenseObject.price));
         expenseInput.value = '';
         priceInput.value = '';
     }
