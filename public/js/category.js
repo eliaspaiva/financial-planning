@@ -79,7 +79,7 @@ const getIncomeValue = (e) => {
 };
 
 const editIncomeValue = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     if (incomeInput.disabled) {
         incomeInput.removeAttribute('disabled');
         btnIncomeSave.removeAttribute('disabled');
@@ -88,6 +88,19 @@ const editIncomeValue = (e) => {
 };
 
 // Category
+
+const changeCategory = () => {
+    // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
+    const currentValue = dropdownMenu.value;
+    const allH5Values = document.querySelectorAll('.categoryH2');
+    allH5Values.forEach((el => {
+        numbers.push(el.innerHTML);
+    }));
+    const getIndexNumber = numbers.findIndex((e => e == currentValue));
+    const elementByIndexNumber = allH5Values[getIndexNumber];
+    console.log(elementByIndexNumber);
+    return elementByIndexNumber;
+};
 
 const getCategoryValue = (e) => {
     e.preventDefault();
@@ -183,23 +196,6 @@ const editExpenseValue = (e) => {
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
     }
-};
-
-const changeCategory = () => {
-    // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
-    const currentValue = dropdownMenu.value;
-    const allH5Values = document.querySelectorAll('.categoryH2');
-    allH5Values.forEach((el => {
-        numbers.push(el.innerHTML);
-        el === currentValue;
-    }));
-    console.log(numbers);
-    const getIndexNumber = numbers.findIndex((e => e == currentValue));
-    const elementByIndexNumber = allH5Values[getIndexNumber];
-    console.log(elementByIndexNumber);
-    const h1 = document.createElement('h5');
-    h1.innerHTML = 'teste';
-    elementByIndexNumber.appendChild(h1);
 };
 
 // Event Listeners
