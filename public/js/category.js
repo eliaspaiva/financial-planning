@@ -51,21 +51,6 @@ const categoryToBox = (textValue) => {
 
 // Main Functions
 
-const addcheckBoxToBox = (expense, price) => {
-    const div = document.createElement('div');
-    resultBox.appendChild(div);
-    const inputRadio = document.createElement('input');
-    inputRadio.setAttribute('type', 'checkbox');
-    inputRadio.setAttribute('name', expense, price);
-    inputRadio.setAttribute('id', expense, price);
-    inputRadio.setAttribute('value', expense, price);
-    div.appendChild(inputRadio);
-    const labelRadio = document.createElement('label');
-    labelRadio.innerHTML = `${expense} - ${price}`;
-    inputRadio.setAttribute('for', expense, price);
-    div.appendChild(labelRadio);
-    return resultBox;
-};
 
 // Functionality
 // Income
@@ -88,19 +73,6 @@ const editIncomeValue = (e) => {
 };
 
 // Category
-
-const changeCategory = () => {
-    // addcheckBoxToBox(expenseObject.expense, expenseObject.price);
-    const currentValue = dropdownMenu.value;
-    const allH5Values = document.querySelectorAll('.categoryH2');
-    allH5Values.forEach((el => {
-        numbers.push(el.innerHTML);
-    }));
-    const getIndexNumber = numbers.findIndex((e => e == currentValue));
-    const elementByIndexNumber = allH5Values[getIndexNumber];
-    console.log(elementByIndexNumber);
-    return elementByIndexNumber;
-};
 
 const getCategoryValue = (e) => {
     e.preventDefault();
@@ -172,6 +144,33 @@ const enableSaveButtonExpense = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
         btnPriceSave.removeAttribute('disabled');
     }
+};
+
+const addcheckBoxToBox = (expense, price) => {
+    const div = document.createElement('div');
+    resultBox.appendChild(div);
+    const inputRadio = document.createElement('input');
+    inputRadio.setAttribute('type', 'checkbox');
+    inputRadio.setAttribute('name', expense, price);
+    inputRadio.setAttribute('id', expense, price);
+    inputRadio.setAttribute('value', expense, price);
+    div.appendChild(inputRadio);
+    const labelRadio = document.createElement('label');
+    labelRadio.innerHTML = `${expense} - ${price}`;
+    inputRadio.setAttribute('for', expense, price);
+    div.appendChild(labelRadio);
+    return resultBox;
+};
+
+const changeCategory = () => {
+    const currentValue = dropdownMenu.value;
+    const allH5Values = document.querySelectorAll('.categoryH2');
+    allH5Values.forEach((el => {
+        numbers.push(el.innerHTML);
+    }));
+    const getIndexNumber = numbers.findIndex((e => e == currentValue));
+    const elementByIndexNumber = allH5Values[getIndexNumber];
+    return elementByIndexNumber;
 };
 
 const getExpenseValue = (e) => {
