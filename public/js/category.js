@@ -21,10 +21,17 @@ const uniqueChars = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (name, attribute) => {
-    const word = name;
-    const firstLetter = word.charAt(0).toUpperCase();
-    const remainingLetters = word.substring(1).toLowerCase();
-    const mainWord = `${firstLetter}${remainingLetters}`;
+    const toString = dropDownValue.toString();
+    const wordsToArray = toString.split(',');
+    console.log(wordsToArray);
+    let mainWord = '';
+    wordsToArray.forEach((word) => {
+        const firstLetter = word.charAt(0).toUpperCase();
+        console.log(firstLetter);
+        const remainingLetters = word.substring(1).toLowerCase();
+        mainWord = `${firstLetter}${remainingLetters}`;
+    });
+    
     return attribute.innerHTML = mainWord;
 };
 
