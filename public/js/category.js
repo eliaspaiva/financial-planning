@@ -1,19 +1,15 @@
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
-
 const categoryInput = document.getElementById('category');
 const btnCategorySave = document.getElementById('btn-categorty-save');
 const btnCategoryEdit = document.getElementById('btn-categorty-edit');
 const btnNewCategory = document.getElementById('new-category');
-
 const expenseInput = document.getElementById('expense');
 const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
-
 const dropdownMenu = document.getElementById('dropdown');
-
 const resultBox = document.getElementById('resultBox');
 
 // Empty Elements
@@ -31,8 +27,6 @@ const bigFirstLetter = (name, attribute) => {
     const mainWord = `${firstLetter}${remainingLetters}`;
     return attribute.innerHTML = mainWord;
 };
-
-// Create Element
 
 // Dynamic Html
 const dataToDropdownMenu = (textValue) => {
@@ -68,9 +62,6 @@ const categoryToBox = (textValue) => {
     divForH5.appendChild(div);
     return resultBox;
 };
-
-// Main Functions
-
 
 // Functionality
 // Income
