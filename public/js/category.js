@@ -122,6 +122,7 @@ const editCategoryValue = (e) => {
         const lastItem = allItems[allItems.length - 1];
         lastItem.remove();
         saveInputValue.pop();
+        dropDownValue.pop();
         const menuItes = document.querySelectorAll('.itemsToMenu');
         const lastItemMenu = menuItes[menuItes.length - 1];
         lastItemMenu.remove();
