@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -22,6 +21,7 @@ const saveInputValue = [];
 const expenseObject = {};
 const dropDownValue = [];
 const numbers = [];
+const uniqueChars = [];
 
 // Helper Functions
 // First Letter Capitalized
@@ -169,18 +169,22 @@ const enableSaveButtonExpense = (e) => {
 const changeCategory = () => {
     const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
-    console.log(allH5Values);
     allH5Values.forEach((el => {
-        numbers.push(el.innerHTML);
-        console.log(numbers);
-        if (numbers.includes('1')) {
-            console.log(y);
+        const elInnerHtml = el.innerHTML;
+        if (elInnerHtml.includes('id')) {
+            // do nothing
+        } else {
+            numbers.push(elInnerHtml);
         }
+
+        numbers.forEach((element) => {
+            if (!uniqueChars.includes(element)) {
+                uniqueChars.push(element);
+            }
+        });       
     }));
-    const getIndexNumber = numbers.findIndex((e => e == currentValue));
-    console.log(getIndexNumber);
+    const getIndexNumber = uniqueChars.findIndex((e => e == currentValue));
     const elementByIndexNumber = allH5Values[getIndexNumber];
-    console.log(elementByIndexNumber);
     return elementByIndexNumber;
 };
 
