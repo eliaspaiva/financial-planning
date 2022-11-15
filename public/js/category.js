@@ -92,7 +92,7 @@ const editIncomeValue = (e) => {
         btnIncomeEdit.setAttribute('disabled', 'disabled');
     }
 };
-
+ 
 // Category
 
 const getCategoryValue = (e) => {
@@ -151,7 +151,6 @@ const newCategory = (e) => {
 
 
 // Expense
-
 const enableSaveButtonPrice = (e) => {
     e.preventDefault();
 
@@ -167,16 +166,19 @@ const enableSaveButtonExpense = (e) => {
     }
 };
 
-
-
 const changeCategory = () => {
     const currentValue = dropdownMenu.value;
     const allH5Values = document.querySelectorAll('.categoryH2');
+    console.log(allH5Values);
     allH5Values.forEach((el => {
         numbers.push(el.innerHTML);
+        console.log(numbers);
+        if (numbers.includes('1')) {
+            console.log(y);
+        }
     }));
     const getIndexNumber = numbers.findIndex((e => e == currentValue));
-    
+    console.log(getIndexNumber);
     const elementByIndexNumber = allH5Values[getIndexNumber];
     console.log(elementByIndexNumber);
     return elementByIndexNumber;
@@ -194,7 +196,6 @@ const getExpenseValue = (e) => {
     }
 
 };
-
 
 const editExpenseValue = (e) => {
     e.preventDefault();
