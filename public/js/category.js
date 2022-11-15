@@ -176,7 +176,6 @@ const getExpenseValue = (e) => {
         expenseInput.value = '';
         priceInput.value = '';
     }
-
 };
 
 const editExpenseValue = (e) => {
