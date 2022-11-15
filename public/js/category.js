@@ -23,7 +23,6 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 
-// Helper Functions
 // First Letter Capitalized
 const bigFirstLetter = (name, attribute) => {
     const word = name;
@@ -94,16 +93,20 @@ const editIncomeValue = (e) => {
 };
  
 // Category
+const getCategoryValueHelper = () => {
+    categoryInput.setAttribute('disabled', 'disabled');
+    btnCategoryEdit.removeAttribute('disabled');
+    btnCategorySave.setAttribute('disabled', 'disabled');
+    saveInputValue.push(categoryInput.value);
+    btnNewCategory.style.display = 'block';
+    dropdownMenu.style.display = 'block';
+};
+
 
 const getCategoryValue = (e) => {
     e.preventDefault();
     if (categoryInput.value.length > 0) {
-        categoryInput.setAttribute('disabled', 'disabled');
-        btnCategoryEdit.removeAttribute('disabled');
-        btnCategorySave.setAttribute('disabled', 'disabled');
-        saveInputValue.push(categoryInput.value);
-        btnNewCategory.style.display = 'block';
-        dropdownMenu.style.display = 'block';
+        getCategoryValueHelper();
         saveInputValue.forEach((category) => {
             if (dropDownValue.includes(category.toUpperCase()))  {
                 alert('Item Cannot Be Repeated');
@@ -114,10 +117,7 @@ const getCategoryValue = (e) => {
             }
         });
     }
-
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        btnPriceSave.removeAttribute('disabled');
-    }
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) btnPriceSave.removeAttribute('disabled');
 };
 
 const editCategoryValue = (e) => {
@@ -149,21 +149,15 @@ const newCategory = (e) => {
     }
 };
 
-
 // Expense
 const enableSaveButtonPrice = (e) => {
     e.preventDefault();
-
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        btnPriceSave.removeAttribute('disabled');
-    }
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) btnPriceSave.removeAttribute('disabled');
 };
 
 const enableSaveButtonExpense = (e) => {
     e.preventDefault();
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        btnPriceSave.removeAttribute('disabled');
-    }
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) btnPriceSave.removeAttribute('disabled');
 };
 
 const changeCategory = () => {
@@ -171,16 +165,9 @@ const changeCategory = () => {
     const allH5Values = document.querySelectorAll('.categoryH2');
     allH5Values.forEach((el => {
         const elInnerHtml = el.innerHTML;
-        if (elInnerHtml.includes('id')) {
-            // do nothing
-        } else {
-            numbers.push(elInnerHtml);
-        }
-
+        elInnerHtml.includes('id') ? 'do nothing': numbers.push(elInnerHtml);
         numbers.forEach((element) => {
-            if (!uniqueChars.includes(element)) {
-                uniqueChars.push(element);
-            }
+            if (!uniqueChars.includes(element)) uniqueChars.push(element);
         });       
     }));
     const getIndexNumber = uniqueChars.findIndex((e => e == currentValue));
