@@ -359,9 +359,9 @@ main {
     width: 100%; }
   main .box-add-category {
     width: 80%;
-    margin: 0 auto;
+    margin: 2.5rem auto .5rem auto;
     background-color: white;
-    padding: 1rem 0; }
+    padding: 1.1rem 0; }
   main .box-add-category-form {
     width: 100%; }
   main .ctg-title {
@@ -371,7 +371,7 @@ main {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    margin: 0rem 0 1.2rem 0; }
+    margin: 0 auto; }
   main .box-add-category-footer-income {
     width: 100%;
     display: flex;

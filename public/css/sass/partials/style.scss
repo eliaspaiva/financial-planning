@@ -123,9 +123,9 @@
 
     .box-add-category {
       width: 80%;
-      margin: $margin-middle;
+      margin: 2.5rem auto .5rem auto;
       background-color: rgb(255, 255, 255);
-      padding: 1rem 0;
+      padding: 1.1rem 0;
     }
 
     .box-add-category-form {
@@ -141,9 +141,13 @@
       width: 80%;
       display: flex;
       justify-content: space-between;
-      margin: 0rem 0 1.2rem 0;;
+      margin: $margin-middle;
     }
 
+
+    .box-add-category-footer {
+      
+    }
 
     .box-add-category-footer-income {
       width: 100%;
