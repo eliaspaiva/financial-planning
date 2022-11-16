@@ -10,6 +10,7 @@ const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
 const dropdownMenu = document.getElementById('dropdown');
+const box = document.getElementById('box-add-category');
 const resultBox = document.getElementById('resultBox');
 
 // Empty Elements
@@ -192,6 +193,7 @@ const getExpenseValue = (e) => {
         expenseInput.value = '';
         priceInput.value = '';
     }
+    box.style.display = 'block';
 };
 
 const editExpenseValue = (e) => {
