@@ -20,21 +20,26 @@ const numbers = [];
 const uniqueChars = [];
 
 // First Letter Capitalized
-const bigFirstLetter = (name, attribute) => {
-    const toString = dropDownValue.toString();
-    const wordsToArray = toString.split(',');
-    let mainWord = '';
-    wordsToArray.forEach((word) => {
-        const firstLetter = word.charAt(0).toUpperCase();
-        const remainingLetters1 = word.substring(1).toLowerCase();
-        const firstLetterSecondWord = word.substring(word.indexOf(' ') + 1).word.charAt(0).toUpperCase();
-        console.log(firstLetterSecondWord);
-        
-        mainWord = `${firstLetter}${remainingLetters1}`;
-    });
-    
-    return attribute.innerHTML = mainWord;
+const bigFirstLetter = (text, attribute) => {
+    const toString = text.toString();
+    const wordsToArray = toString.split(' ');
+    let result = '';
+    let fullFirstWord = '';
+    let fullSecondWord = '';
+    if (wordsToArray.length == 1) {
+        wordsToArray.forEach((word) => {
+            result = word[0].toUpperCase() + word.substring(1).toLowerCase();
+        });
+        return attribute.innerHTML = result;
+    } {
+        const firstWord = wordsToArray.shift();
+        fullFirstWord = firstWord[0].toUpperCase() + firstWord.substring(1).toLowerCase();
+        const secondWord = wordsToArray[wordsToArray.length - 1];
+        fullSecondWord = secondWord[0].toUpperCase() + secondWord.substring(1).toLowerCase();
+        return attribute.innerHTML = `${fullFirstWord}  ${fullSecondWord}`;
+    }
 };
+    
 
 // Dynamic Html
 const dataToDropdownMenu = (textValue) => {
