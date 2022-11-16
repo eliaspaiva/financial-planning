@@ -23,13 +23,14 @@ const uniqueChars = [];
 const bigFirstLetter = (name, attribute) => {
     const toString = dropDownValue.toString();
     const wordsToArray = toString.split(',');
-    console.log(wordsToArray);
     let mainWord = '';
     wordsToArray.forEach((word) => {
         const firstLetter = word.charAt(0).toUpperCase();
-        console.log(firstLetter);
-        const remainingLetters = word.substring(1).toLowerCase();
-        mainWord = `${firstLetter}${remainingLetters}`;
+        const remainingLetters1 = word.substring(1).toLowerCase();
+        const firstLetterSecondWord = word.substring(word.indexOf(' ') + 1).word.charAt(0).toUpperCase();
+        console.log(firstLetterSecondWord);
+        
+        mainWord = `${firstLetter}${remainingLetters1}`;
     });
     
     return attribute.innerHTML = mainWord;
