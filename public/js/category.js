@@ -36,7 +36,7 @@ const bigFirstLetter = (text, attribute) => {
         fullFirstWord = firstWord[0].toUpperCase() + firstWord.substring(1).toLowerCase();
         const secondWord = wordsToArray[wordsToArray.length - 1];
         fullSecondWord = secondWord[0].toUpperCase() + secondWord.substring(1).toLowerCase();
-        return attribute.innerHTML = `${fullFirstWord}  ${fullSecondWord}`;
+        return attribute.innerHTML = `${fullFirstWord} ${fullSecondWord}`;
     }
 };
     
@@ -170,12 +170,14 @@ const changeCategory = () => {
     const allH5Values = document.querySelectorAll('.categoryH2');
     allH5Values.forEach((el => {
         const elInnerHtml = el.innerHTML;
-        elInnerHtml.includes('id') ? 'do nothing': numbers.push(elInnerHtml);
+        elInnerHtml.includes('id') ? 'do nothing' : numbers.push(elInnerHtml);
         numbers.forEach((element) => {
-            if (!uniqueChars.includes(element)) uniqueChars.push(element);
+            if (!uniqueChars.includes(element)) {
+                uniqueChars.push(element);
+            }
         });       
     }));
-    const getIndexNumber = uniqueChars.findIndex((e => e == currentValue));
+    const getIndexNumber = uniqueChars.findIndex((e => e.toLowerCase() == currentValue.toLowerCase()));
     const elementByIndexNumber = allH5Values[getIndexNumber];
     return elementByIndexNumber;
 };
@@ -186,7 +188,7 @@ const getExpenseValue = (e) => {
         expenseObject.category = dropdownMenu.value;
         expenseObject.expense = expenseInput.value;
         expenseObject.price = priceInput.value;        
-        changeCategory().appendChild(addcheckBoxToBox(expenseObject.expense,  expenseObject.price));
+        changeCategory().appendChild(addcheckBoxToBox(expenseObject.expense, expenseObject.price));
         expenseInput.value = '';
         priceInput.value = '';
     }
