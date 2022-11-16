@@ -123,7 +123,7 @@
 
     .box-add-category {
       width: 80%;
-      margin: 2.5rem auto .5rem auto;
+      margin: 2.5rem auto 0 auto;
       background-color: rgb(255, 255, 255);
       padding: 1.1rem 0;
     }
@@ -142,11 +142,6 @@
       display: flex;
       justify-content: space-between;
       margin: $margin-middle;
-    }
-
-
-    .box-add-category-footer {
-      
     }
 
     .box-add-category-footer-income {

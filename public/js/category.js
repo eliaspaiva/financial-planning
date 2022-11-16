@@ -196,6 +196,8 @@ const getExpenseValue = (e) => {
         priceInput.value = '';
     }
     box.style.display = 'block';
+    btnBoxEdit.style.display = 'block';
+    btnBoxSave.style.display = 'block';
 };
 
 const editExpenseValue = (e) => {
