@@ -50,38 +50,38 @@
       justify-content: space-between;
     }
 
-    .expense-input-field {
+    .expense-input-field, .price-input-field{
+
       width: 49.5%;
       text-align: $text-center;
       padding: 1.1rem 0;
       margin-top: 0.3rem;
       border: 0;
       background-color: $gray-color;
-    }
-
-    .price-input-field {
-      width: 49.5%;
-      text-align: $text-center;
-      padding: 1.1rem 0;
-      margin-top: 0.3rem;
-      border: 0;
-      background-color: $gray-color;
-    }
-
-    .input-icons i {
-    position: absolute;
     }
     
     .input-icons {
     width: 100%;
     margin-bottom: 0.6rem;
+    position: relative;
     }
     
     .icon {
+    position: absolute;
     padding: 1.6rem 0 0 0;
     color: $black-color;
     min-width: 3.12rem;
     text-align: $text-center;
+    top: 3rem;
+    }
+
+    .icon2 {
+      position: absolute;
+      padding: 1.6rem 0 0 0;
+      left: 1rem;
+      color: $black-color;
+      min-width: 3.12rem;
+      text-align: $text-center;
     }
 
     .fa-eye, .fa-eye-slash, .input-validation{
