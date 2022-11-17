@@ -332,28 +332,24 @@ main {
     text-align: center; }
   main .input-icons i {
     position: absolute; }
-  main .expense-input-field {
+  main .input-side-by-side {
     position: relative; }
-  main .input-icons {
-    width: 100%;
-    margin-bottom: 0.6rem; }
   main .icon {
     padding: 1.6rem 0 0 0;
     color: #2d2d52;
     min-width: 3.12rem;
     text-align: center; }
+  main .input-icons {
+    width: 100%;
+    margin-bottom: 0.6rem; }
   main .icon2 {
-    position: relative;
-    left: 5rem;
+    position: absolute;
     padding: 1.6rem 0 0 0;
     color: #2d2d52;
     min-width: 3.12rem;
-    text-align: center; }
-  main .icon3 {
-    padding: 1.6rem 0 0 0;
-    color: #2d2d52;
-    min-width: 3.12rem;
-    text-align: center; }
+    text-align: center;
+    top: 0px;
+    right: 130px; }
   main .fa-eye, main .fa-eye-slash, main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder, main ::placeholder, main :-ms-input-placeholder {
