@@ -28,8 +28,9 @@
 
     form {
       width: 80%;
-      margin: $margin-middle;
+      margin: 0 auto 0.5rem auto;
       max-width: 600px;
+      text-align: left;
     }
 
     #form-category, #form-expense {
