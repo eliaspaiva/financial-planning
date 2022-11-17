@@ -66,9 +66,6 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
-.margin-bottom {
-  margin-bottom: 3rem; }
-
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -155,9 +152,6 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
-.margin-bottom {
-  margin-bottom: 3rem; }
-
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -379,7 +373,6 @@ main {
   main .main-parent {
     width: 100%; }
   main .box-add-category {
-    width: 80%;
     margin: 2.5rem auto 0 auto;
     background-color: white;
     padding: 1.1rem 0; }
@@ -389,7 +382,7 @@ main {
     text-align: center;
     margin: 0.8rem 0.5rem 0; }
   main .box-add-category-footer {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto; }
@@ -405,3 +398,7 @@ main {
     width: 100%;
     padding: 1.1rem 0;
     display: none; }
+  main .box {
+    width: 80%;
+    margin: 0 auto 3rem auto;
+    max-width: 600px; }

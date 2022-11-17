@@ -148,7 +148,6 @@
     }
 
     .box-add-category {
-      width: 80%;
       margin: 2.5rem auto 0 auto;
       background-color: rgb(255, 255, 255);
       padding: 1.1rem 0;
@@ -164,7 +163,7 @@
     }
 
     .box-add-category-footer {
-      width: 80%;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       margin: $margin-middle;
@@ -188,6 +187,10 @@
       display: none;
     }
 
-
+    .box {
+      width: 80%;
+      margin: 0 auto 3rem auto;
+      max-width: 600px;
+    }
   
   }
