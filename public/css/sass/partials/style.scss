@@ -46,12 +46,13 @@
     }
 
     .input-side-by-side {
+      position: relative;
       display: flex;
-      justify-content: space-between;
+      justify-content:space-between;
     }
 
     .expense-input-field, .price-input-field{
-      width: 49.5%;
+      width: 99.5%;
       text-align: $text-center;
       padding: 1.1rem 0;
       margin-top: 0.3rem;
@@ -62,8 +63,6 @@
     .expense-input-field {
       position: relative;
     }
-
-   
     
     .input-icons {
       width: 100%;
@@ -81,8 +80,9 @@
       position: absolute;
     }
 
-    .input-side-by-side {
+    .icon-inside {
       position: relative;
+      width: 100%;
     }
 
    .icon {
@@ -103,8 +103,8 @@
       color: $black-color;
       min-width: 3.12rem;
       text-align: $text-center;
+      left: 0;
       top: 0px;
-      right: 0px;
     }
       
       

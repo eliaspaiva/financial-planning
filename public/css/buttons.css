@@ -3,6 +3,9 @@
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin-bottom {
+  margin-bottom: 3rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -118,7 +121,7 @@ button:disabled {
   color: white; }
 
 .btn-income {
-  width: 49.5%;
+  width: 49.8%;
   border: 0;
   padding: 0.7rem 0;
   font-size: 16px;

@@ -66,6 +66,9 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin-bottom {
+  margin-bottom: 3rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -152,6 +155,9 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin-bottom {
+  margin-bottom: 3rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -267,7 +273,7 @@ button:disabled {
   color: white; }
 
 .btn-income {
-  width: 49.5%;
+  width: 49.8%;
   border: 0;
   padding: 0.7rem 0;
   font-size: 16px;
@@ -311,10 +317,11 @@ main {
     border: 0;
     background-color: #e1e1e1; }
   main .input-side-by-side {
+    position: relative;
     display: flex;
     justify-content: space-between; }
   main .expense-input-field, main .price-input-field {
-    width: 49.5%;
+    width: 99.5%;
     text-align: center;
     padding: 1.1rem 0;
     margin-top: 0.3rem;
@@ -332,8 +339,9 @@ main {
     text-align: center; }
   main .input-icons i {
     position: absolute; }
-  main .input-side-by-side {
-    position: relative; }
+  main .icon-inside {
+    position: relative;
+    width: 100%; }
   main .icon {
     padding: 1.6rem 0 0 0;
     color: #2d2d52;
@@ -348,8 +356,8 @@ main {
     color: #2d2d52;
     min-width: 3.12rem;
     text-align: center;
-    top: 0px;
-    right: 130px; }
+    left: 0;
+    top: 0px; }
   main .fa-eye, main .fa-eye-slash, main .input-validation {
     display: none; }
   main ::-webkit-input-placeholder, main ::placeholder, main :-ms-input-placeholder {
