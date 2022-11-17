@@ -320,21 +320,37 @@ main {
     margin-top: 0.3rem;
     border: 0;
     background-color: #e1e1e1; }
+  main .expense-input-field {
+    position: relative; }
   main .input-icons {
     width: 100%;
-    margin-bottom: 0.6rem;
-    position: relative; }
+    margin-bottom: 0.6rem; }
   main .icon {
-    position: absolute;
     padding: 1.6rem 0 0 0;
     color: #2d2d52;
     min-width: 3.12rem;
-    text-align: center;
-    top: -6rem; }
-  main .icon2 {
-    position: absolute;
+    text-align: center; }
+  main .input-icons i {
+    position: absolute; }
+  main .expense-input-field {
+    position: relative; }
+  main .input-icons {
+    width: 100%;
+    margin-bottom: 0.6rem; }
+  main .icon {
     padding: 1.6rem 0 0 0;
-    left: 1rem;
+    color: #2d2d52;
+    min-width: 3.12rem;
+    text-align: center; }
+  main .icon2 {
+    position: relative;
+    left: 5rem;
+    padding: 1.6rem 0 0 0;
+    color: #2d2d52;
+    min-width: 3.12rem;
+    text-align: center; }
+  main .icon3 {
+    padding: 1.6rem 0 0 0;
     color: #2d2d52;
     min-width: 3.12rem;
     text-align: center; }

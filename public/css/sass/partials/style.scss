@@ -51,7 +51,6 @@
     }
 
     .expense-input-field, .price-input-field{
-
       width: 49.5%;
       text-align: $text-center;
       padding: 1.1rem 0;
@@ -60,25 +59,56 @@
       background-color: $gray-color;
     }
     
+    .expense-input-field {
+      position: relative;
+    }
+
+   
+    
     .input-icons {
-    width: 100%;
-    margin-bottom: 0.6rem;
-    position: relative;
+      width: 100%;
+      margin-bottom: 0.6rem;
     }
     
     .icon {
-    position: absolute;
+      padding: 1.6rem 0 0 0;
+      color: $black-color;
+      min-width: 3.12rem;
+      text-align: $text-center;
+    }
+
+    .input-icons i {
+      position: absolute;
+    }
+
+  .expense-input-field {
+    position: relative;
+   }
+      
+      
+  .input-icons {
+    width: 100%;
+    margin-bottom: 0.6rem;
+  }
+      
+  .icon {
     padding: 1.6rem 0 0 0;
     color: $black-color;
     min-width: 3.12rem;
     text-align: $text-center;
-    top: -6rem;
-    }
+  }
+      
+  .icon2 {
+    position: relative;
+    left: 5rem;
+    padding: 1.6rem 0 0 0;
+    color: $black-color;
+    min-width: 3.12rem;
+    text-align: $text-center;
+  }
 
-    .icon2 {
-      position: absolute;
+    .icon3 {
       padding: 1.6rem 0 0 0;
-      left: 1rem;
       color: $black-color;
       min-width: 3.12rem;
       text-align: $text-center;
