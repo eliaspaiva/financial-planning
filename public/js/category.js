@@ -62,7 +62,7 @@ const addcheckBoxToBox = (expense, price) => {
     inputRadio.setAttribute('value', expense, price);
     form.appendChild(inputRadio);
     const labelRadio = document.createElement('label');
-    labelRadio.classList.add('fs-16', 'fw-4');
+    labelRadio.classList.add('fs-16', 'fw-4', 'margin0');
     labelRadio.innerHTML = `${expense} - ${price}${'€'}`;
     inputRadio.setAttribute('for', expense, price);
     form.appendChild(labelRadio);
@@ -74,7 +74,7 @@ const categoryToBox = (textValue) => {
     divForH5.classList.add('parentH5');
     resultBox.appendChild(divForH5);
     const div = document.createElement('div');
-    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6');
+    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom');
     bigFirstLetter(textValue, div);
     divForH5.appendChild(div);
     return resultBox;
