@@ -53,23 +53,30 @@ const dataToDropdownMenu = (textValue) => {
     dropdownMenu.appendChild(option);
 };
 
+const iconsNextToCheckbox = () => {
+    const divForIcons = document.createElement('div');
+    divForIcons.classList.add('ctn-form-icons');
+    
+};
+
 const createInputAndLabel = (attribute, element1, element2) => {
+    const divForInputLabel = document.createElement('div');
+    divForInputLabel.classList.add('ctn-form-input-label');
     const inputRadio = document.createElement('input');
     inputRadio.setAttribute('type', 'checkbox');
     inputRadio.setAttribute('name', element1, element2);
     inputRadio.setAttribute('id', element1, element2);
     inputRadio.setAttribute('value', element1, element2);
-    attribute.appendChild(inputRadio);
+    divForInputLabel.appendChild(inputRadio);
     const labelRadio = document.createElement('label');
     labelRadio.classList.add('fs-16', 'fw-4', 'margin0');
     labelRadio.innerHTML = `${element1} - ${element2}${'€'}`;
     inputRadio.setAttribute('for', element1, element2);
-    attribute.appendChild(labelRadio);
+    divForInputLabel.appendChild(labelRadio);
+    attribute.appendChild(divForInputLabel);
 };
 
-const iconsNextToCheckbox = () => {
 
-};
 
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
