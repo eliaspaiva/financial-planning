@@ -9,14 +9,10 @@ const expenseInput = document.getElementById('expense');
 const priceInput = document.getElementById('price');
 const btnPriceSave = document.getElementById('btn-price-save');
 const btnPriceEdit = document.getElementById('btn-price-edit');
-const btnBoxEdit = document.getElementById('btn-box-edit');
 const btnBoxSave = document.getElementById('btn-box-save');
 const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
-const iconRemove = document.createElement('i');
-const iconEdit = document.createElement('i');
-
 
 // Empty Elements
 const saveInputValue = [];
@@ -47,7 +43,6 @@ const bigFirstLetter = (text, attribute) => {
 };
     
 
-// Dynamic Html
 const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
@@ -57,19 +52,16 @@ const dataToDropdownMenu = (textValue) => {
 };
    
 
-
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
     divForIcons.classList.add('ctn-form-icons');
     const iconRemove = document.createElement('i');
+    const iconEdit = document.createElement('i');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-pen-to-square');
-    iconRemove.style.display = 'none';
-    divForIcons.appendChild(iconRemove);
-    const iconEdit = document.createElement('i');
     iconEdit.classList.add('fa-solid');
     iconEdit.classList.add('fa-trash');
-    iconEdit.style.display = 'none';
+    divForIcons.appendChild(iconRemove);
     divForIcons.appendChild(iconEdit);
     console.log(iconEdit);
     console.log(iconRemove);
@@ -94,7 +86,6 @@ const createInputAndLabel = (element1, element2) => {
 };
 
 
-
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
     form.classList.add('form-flex');
@@ -114,9 +105,8 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
-// Functionality
-// Income
-const getIncomeValue = (e) => {
+
+const saveIncomeValue = (e) => {
     e.preventDefault();
     if (incomeInput.value.length > 0) {
         incomeInput.setAttribute('disabled', 'disabled');
@@ -231,9 +221,7 @@ const getExpenseValue = (e) => {
         priceInput.value = '';
     }
     box.style.display = 'block';
-    btnBoxEdit.style.display = 'block';
     btnBoxSave.style.display = 'block';
-    btnBoxEdit.removeAttribute('disabled');
 };
 
 const editExpenseValue = (e) => {
@@ -246,25 +234,15 @@ const editExpenseValue = (e) => {
     }
 };
 
-const editBox = (e) => {
-    e.preventDefault();
-    if (box.style.display === 'block') {
-        iconEdit.style.display = 'block';
-        iconRemove.style.display = 'block';
-        dropdownMenu.style.display = 'block';
-        console.log('oi');
-    }
-};
 
 // Event Listeners
 dropdownMenu.addEventListener('input', changeCategory);
 expenseInput.addEventListener('input', enableSaveButtonExpense);
 priceInput.addEventListener('input', enableSaveButtonPrice);
-btnIncomeSave.addEventListener('click', getIncomeValue);
+btnIncomeSave.addEventListener('click', saveIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
 btnCategorySave.addEventListener('click', getCategoryValue);
 btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
-btnBoxEdit.addEventListener('click', editBox);
