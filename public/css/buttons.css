@@ -9,6 +9,10 @@
 .margin-bottom {
   margin-bottom: 2rem; }
 
+/* Padding */
+.extra-padding {
+  padding: 0.8rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -114,7 +118,7 @@ button:disabled {
   background-color: #2d2d52;
   color: white; }
 
-.new-button {
+.long-button {
   text-align: center;
   width: 100%;
   border: 0;

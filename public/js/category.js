@@ -13,6 +13,8 @@ const btnBoxSave = document.getElementById('btn-box-save');
 const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
+const iconRemove = document.createElement('i');
+const iconEdit = document.createElement('i');
 
 // Empty Elements
 const saveInputValue = [];
@@ -55,8 +57,6 @@ const dataToDropdownMenu = (textValue) => {
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
     divForIcons.classList.add('ctn-form-icons');
-    const iconRemove = document.createElement('i');
-    const iconEdit = document.createElement('i');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-pen-to-square');
     iconEdit.classList.add('fa-solid');
@@ -234,6 +234,14 @@ const editExpenseValue = (e) => {
     }
 };
 
+// Box
+const editIcon = () => {
+    console.log('oi');
+};
+
+const removeIcon = () => {
+    console.log('oi');
+};
 
 // Event Listeners
 dropdownMenu.addEventListener('input', changeCategory);
@@ -246,3 +254,5 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
+iconRemove.addEventListener('click', editIcon);
+iconEdit.addEventListener('click', removeIcon);
