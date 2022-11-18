@@ -56,14 +56,14 @@ const dataToDropdownMenu = (textValue) => {
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
     divForIcons.classList.add('ctn-form-icons');
-    const iconEdit = document.createElement('i');
-    iconEdit.classList.add('fa-solid');
-    iconEdit.classList.add('fa-trash');
-    divForIcons.appendChild(iconEdit);
     const iconRemove = document.createElement('i');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-pen-to-square');
     divForIcons.appendChild(iconRemove);
+    const iconEdit = document.createElement('i');
+    iconEdit.classList.add('fa-solid');
+    iconEdit.classList.add('fa-trash');
+    divForIcons.appendChild(iconEdit);
     return divForIcons;
 };
 
