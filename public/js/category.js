@@ -56,10 +56,16 @@ const dataToDropdownMenu = (textValue) => {
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
     divForIcons.classList.add('ctn-form-icons');
-    
+    const iconEdit = document.createElement('i');
+    iconEdit.classList.add('fa-solid fa-pen-to-square');
+    divForIcons.appendChild(iconEdit);
+    const iconRemove = document.createElement('i');
+    iconRemove.classList.add('fa-solid fa-trash');
+    divForIcons.appendChild(iconRemove);
+    return divForIcons;
 };
 
-const createInputAndLabel = (attribute, element1, element2) => {
+const createInputAndLabel = (element1, element2) => {
     const divForInputLabel = document.createElement('div');
     divForInputLabel.classList.add('ctn-form-input-label');
     const inputRadio = document.createElement('input');
@@ -73,7 +79,7 @@ const createInputAndLabel = (attribute, element1, element2) => {
     labelRadio.innerHTML = `${element1} - ${element2}${'€'}`;
     inputRadio.setAttribute('for', element1, element2);
     divForInputLabel.appendChild(labelRadio);
-    attribute.appendChild(divForInputLabel);
+    return divForInputLabel;
 };
 
 
@@ -81,10 +87,8 @@ const createInputAndLabel = (attribute, element1, element2) => {
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
     form.classList.add('form-flex');
-    createInputAndLabel(form, expense, price);
-    const createButton = document.createElement('button');
-    createButton.innerHTML = 'teste';
-    form.appendChild(createButton);
+    form.appendChild(createInputAndLabel(expense, price));
+    form.appendChild(iconsNextToCheckbox());
     return form;
 };
 
