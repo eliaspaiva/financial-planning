@@ -14,6 +14,8 @@ const btnBoxSave = document.getElementById('btn-box-save');
 const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
+const editIcon = document.querySelector('.fa-pen-to-square');
+const removeIcon = document.querySelector('.fa-trash');
 
 // Empty Elements
 const saveInputValue = [];
@@ -242,8 +244,8 @@ const editExpenseValue = (e) => {
 const editBox = (e) => {
     e.preventDefault();
     if (box.style.display === 'block') {
-        
-        console.log('oi');
+        editIcon.style.display = 'block';
+        removeIcon.style.display = 'block';
     }
 };
 
