@@ -66,6 +66,12 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0; }
+
+.margin-bottom {
+  margin-bottom: 2rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -152,6 +158,12 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0; }
+
+.margin-bottom {
+  margin-bottom: 2rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
@@ -381,7 +393,7 @@ main {
     width: 100%; }
   main .ctg-title {
     text-align: center;
-    margin: 0.8rem 0.5rem 0; }
+    margin: 1rem 0 2.5rem 0; }
   main .box-add-category-footer {
     width: 100%;
     display: flex;
@@ -403,3 +415,8 @@ main {
     width: 80%;
     margin: 0 auto 3rem auto;
     max-width: 600px; }
+  main .parentH5 {
+    margin-bottom: 1.5rem; }
+  main .form-flex {
+    display: flex;
+    justify-content: space-between; }

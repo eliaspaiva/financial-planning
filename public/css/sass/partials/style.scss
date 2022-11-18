@@ -108,9 +108,6 @@
       top: 0px;
     }
       
-      
-  
-      
     .fa-eye, .fa-eye-slash, .input-validation{
       display: $display-none;
     }
@@ -160,7 +157,7 @@
 
     .ctg-title {
       text-align: $text-center;
-      margin: 0.8rem 0.5rem 0;
+      margin: 1rem 0 2.5rem 0;
     }
 
     .box-add-category-footer {
@@ -192,6 +189,15 @@
       width: 80%;
       margin: 0 auto 3rem auto;
       max-width: 600px;
+    }
+
+    .parentH5 {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-flex {
+      display: flex;
+      justify-content: space-between;
     }
   
   }

@@ -55,6 +55,7 @@ const dataToDropdownMenu = (textValue) => {
 
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
+    form.classList.add('form-flex');
     const inputRadio = document.createElement('input');
     inputRadio.setAttribute('type', 'checkbox');
     inputRadio.setAttribute('name', expense, price);
@@ -66,6 +67,9 @@ const addcheckBoxToBox = (expense, price) => {
     labelRadio.innerHTML = `${expense} - ${price}${'€'}`;
     inputRadio.setAttribute('for', expense, price);
     form.appendChild(labelRadio);
+    const createButton = document.createElement('button');
+    createButton.innerHTML = 'teste';
+    form.appendChild(createButton);
     return form;
 };
 
@@ -199,6 +203,7 @@ const getExpenseValue = (e) => {
     box.style.display = 'block';
     btnBoxEdit.style.display = 'block';
     btnBoxSave.style.display = 'block';
+    btnBoxEdit.removeAttribute('disabled');
 };
 
 const editExpenseValue = (e) => {
@@ -208,6 +213,14 @@ const editExpenseValue = (e) => {
         priceInput.removeAttribute('disabled');
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
+    }
+};
+
+const editBox = (e) => {
+    e.preventDefault();
+    if (box.style.display === 'block') {
+        
+        console.log('oi');
     }
 };
 
@@ -222,3 +235,4 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
+btnBoxEdit.addEventListener('click', editBox);

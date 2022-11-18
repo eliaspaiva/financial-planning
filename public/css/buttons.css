@@ -3,6 +3,12 @@
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0; }
+
+.margin-bottom {
+  margin-bottom: 2rem; }
+
 /* Text Alignment  */
 /* Display  */
 .full-width {
