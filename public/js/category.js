@@ -59,10 +59,12 @@ const iconsNextToCheckbox = () => {
     const iconRemove = document.createElement('i');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-pen-to-square');
+    iconRemove.style.display = 'none';
     divForIcons.appendChild(iconRemove);
     const iconEdit = document.createElement('i');
     iconEdit.classList.add('fa-solid');
     iconEdit.classList.add('fa-trash');
+    iconEdit.style.display = 'none';
     divForIcons.appendChild(iconEdit);
     return divForIcons;
 };
