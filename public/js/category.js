@@ -14,8 +14,9 @@ const btnBoxSave = document.getElementById('btn-box-save');
 const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
-const editIcon = document.querySelector('.fa-pen-to-square');
-const removeIcon = document.querySelector('.fa-trash');
+const iconRemove = document.createElement('i');
+const iconEdit = document.createElement('i');
+
 
 // Empty Elements
 const saveInputValue = [];
@@ -54,6 +55,8 @@ const dataToDropdownMenu = (textValue) => {
     bigFirstLetter(textValue, option);
     dropdownMenu.appendChild(option);
 };
+   
+
 
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
@@ -68,6 +71,8 @@ const iconsNextToCheckbox = () => {
     iconEdit.classList.add('fa-trash');
     iconEdit.style.display = 'none';
     divForIcons.appendChild(iconEdit);
+    console.log(iconEdit);
+    console.log(iconRemove);
     return divForIcons;
 };
 
@@ -244,8 +249,10 @@ const editExpenseValue = (e) => {
 const editBox = (e) => {
     e.preventDefault();
     if (box.style.display === 'block') {
-        editIcon.style.display = 'block';
-        removeIcon.style.display = 'block';
+        iconEdit.style.display = 'block';
+        iconRemove.style.display = 'block';
+        dropdownMenu.style.display = 'block';
+        console.log('oi');
     }
 };
 
