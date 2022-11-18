@@ -53,20 +53,28 @@ const dataToDropdownMenu = (textValue) => {
     dropdownMenu.appendChild(option);
 };
 
+const createInputAndLabel = (attribute, element1, element2) => {
+    const inputRadio = document.createElement('input');
+    inputRadio.setAttribute('type', 'checkbox');
+    inputRadio.setAttribute('name', element1, element2);
+    inputRadio.setAttribute('id', element1, element2);
+    inputRadio.setAttribute('value', element1, element2);
+    attribute.appendChild(inputRadio);
+    const labelRadio = document.createElement('label');
+    labelRadio.classList.add('fs-16', 'fw-4', 'margin0');
+    labelRadio.innerHTML = `${element1} - ${element2}${'€'}`;
+    inputRadio.setAttribute('for', element1, element2);
+    attribute.appendChild(labelRadio);
+};
+
+const iconsNextToCheckbox = () => {
+
+};
+
 const addcheckBoxToBox = (expense, price) => {
     const form = document.createElement('form');
     form.classList.add('form-flex');
-    const inputRadio = document.createElement('input');
-    inputRadio.setAttribute('type', 'checkbox');
-    inputRadio.setAttribute('name', expense, price);
-    inputRadio.setAttribute('id', expense, price);
-    inputRadio.setAttribute('value', expense, price);
-    form.appendChild(inputRadio);
-    const labelRadio = document.createElement('label');
-    labelRadio.classList.add('fs-16', 'fw-4', 'margin0');
-    labelRadio.innerHTML = `${expense} - ${price}${'€'}`;
-    inputRadio.setAttribute('for', expense, price);
-    form.appendChild(labelRadio);
+    createInputAndLabel(form, expense, price);
     const createButton = document.createElement('button');
     createButton.innerHTML = 'teste';
     form.appendChild(createButton);
