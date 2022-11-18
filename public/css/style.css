@@ -420,3 +420,5 @@ main {
   main .form-flex {
     display: flex;
     justify-content: space-between; }
+  main .ctn-form-input-label, main .ctn-form-icons {
+    display: flex; }
