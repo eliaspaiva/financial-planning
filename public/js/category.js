@@ -235,6 +235,17 @@ const editExpenseValue = (e) => {
 };
 
 // Box
+
+const removeIcon = (e) => {
+    if (e.target.classList.contains('fa-trash')) {
+        const checkboxContent = document.querySelector('.form-flex');
+        console.log(checkboxContent);
+        let children = checkboxContent.children;
+        console.log(children);
+    }
+};
+
+
 const editIcon = (e) => {
     if (e.target.classList.contains('fa-pen-to-square')) {
         console.log('oi');
@@ -242,12 +253,7 @@ const editIcon = (e) => {
     
 };
 
-const removeIcon = (e) => {
-    if (e.target.classList.contains('fa-trash')) {
-        console.log('oi');
-    }
-    
-};
+
 
 const saveBox = () => {
     console.log('oi');
