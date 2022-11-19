@@ -241,30 +241,18 @@ const editExpenseValue = (e) => {
 
 // Box
 
-const removeIcon = () => {
+const removeIcon = (e) => {
     const checkboxContent = document.querySelector('.form-flex');
-    console.log(checkboxContent);
     const firstChild = checkboxContent.firstChild;
     const firstChildForm = firstChild.firstChild.name;
     console.log(firstChildForm);
     console.log(allExpenseValues);
-    // if (e.target.classList.contains('fa-trash')) {
-    //     if (lastChild.includes(expenseObject.expense)) {
-    //         allExpenseValues.forEach((element => {
-    //             if()
-    //         }))
-    //         console.log(allExpenseValues);
-    //         console.log('oi');
-    //     }
-        
-
-    // }
+    if (e.target.classList.contains('fa-trash')) {
+        if (allExpenseValues.includes(firstChildForm)) {
+            console.log('oi');
+        }
+    }
 };
-
-// console.log(checkboxContent);
-// console.log(lastChild);
-    
-
 
 const editIcon = (e) => {
     if (e.target.classList.contains('fa-pen-to-square')) {
