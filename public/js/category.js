@@ -56,16 +56,18 @@ const dataToDropdownMenu = (textValue) => {
    
 
 const iconsNextToCheckbox = () => {
+    const randomNumber = Math.floor(Math.random() * 1000 + 1);
     const divForIcons = document.createElement('div');
     const iconRemove = document.createElement('i');
     const iconEdit = document.createElement('i');
     divForIcons.classList.add('ctn-form-icons');
     iconRemove.classList.add('fa-solid');
-    iconRemove.classList.add('fa-pen-to-square');
+    iconRemove.classList.add('fa-trash');
+    iconRemove.setAttribute('id', randomNumber);
     iconEdit.classList.add('fa-solid');
-    iconEdit.classList.add('fa-trash');
-    divForIcons.appendChild(iconRemove);
+    iconEdit.classList.add('fa-pen-to-square');
     divForIcons.appendChild(iconEdit);
+    divForIcons.appendChild(iconRemove);
     return divForIcons;
 };
 
@@ -242,15 +244,10 @@ const editExpenseValue = (e) => {
 // Box
 
 const removeIcon = (e) => {
-    const checkboxContent = document.querySelector('.form-flex');
-    const firstChild = checkboxContent.firstChild;
-    const firstChildForm = firstChild.firstChild.name;
-    console.log(firstChildForm);
-    console.log(allExpenseValues);
     if (e.target.classList.contains('fa-trash')) {
-        if (allExpenseValues.includes(firstChildForm)) {
-            console.log('oi');
-        }
+        
+        const checkboxContent = document.querySelector('.form-flex');
+        console.log(checkboxContent);
     }
 };
 
