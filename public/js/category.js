@@ -14,8 +14,6 @@ const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
-const iconEdit = document.querySelector('.fa-pen-to-square');
-const iconRemove = document.querySelector('.fa-trash');
 
 
 // Empty Elements
