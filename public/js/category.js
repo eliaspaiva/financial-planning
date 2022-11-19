@@ -22,6 +22,7 @@ const expenseObject = {};
 const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
+const allPriceValues = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -217,11 +218,13 @@ const getExpenseValue = (e) => {
         expenseObject.expense = expenseInput.value;
         expenseObject.price = priceInput.value;        
         changeCategory().appendChild(addcheckBoxToBox(expenseObject.expense, expenseObject.price));
+        allPriceValues.push(priceInput.value);
         expenseInput.value = '';
         priceInput.value = '';
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
+    
 };
 
 const editExpenseValue = (e) => {
@@ -232,16 +235,22 @@ const editExpenseValue = (e) => {
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
     }
+   
+
 };
 
 // Box
 
 const removeIcon = (e) => {
+    const checkboxContent = document.querySelector('.form-flex');
+    const firstChild = checkboxContent.firstChild;
+    const lastChild = firstChild.lastChild.innerHTML;
+    // console.log(checkboxContent);
+    // console.log(lastChild);
     if (e.target.classList.contains('fa-trash')) {
-        const checkboxContent = document.querySelector('.form-flex');
-        console.log(checkboxContent);
-        let children = checkboxContent.children;
-        console.log(children);
+        if (lastChild.includes(expenseObject.expense)) console.log('oi');
+        console.log(allPriceValues);
+
     }
 };
 
