@@ -13,6 +13,9 @@ const btnBoxSave = document.getElementById('btn-box-save');
 const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
+const boxSaveBtn = document.getElementById('btn-box-save');
+let iconRemove = document.createElement('i');
+let iconEdit = document.createElement('i');
 
 // Empty Elements
 const saveInputValue = [];
@@ -50,28 +53,21 @@ const dataToDropdownMenu = (textValue) => {
     bigFirstLetter(textValue, option);
     dropdownMenu.appendChild(option);
 };
-
-const removeIcon = () => {
-    return document.createElement('i');
-};
-
-const editIcon = () => {
-    return document.createElement('i');
-};
    
 
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
-    removeIcon();
-    editIcon();
+    iconRemove = document.createElement('i');
+    iconEdit = document.createElement('i');
     divForIcons.classList.add('ctn-form-icons');
-    removeIcon().classList.add('fa-solid');
-    removeIcon().classList.add('fa-pen-to-square');
-    editIcon().classList.add('fa-solid');
-    editIcon().classList.add('fa-trash');
-    divForIcons.appendChild(removeIcon());
-    divForIcons.appendChild(editIcon());
-
+    iconRemove.classList.add('fa-solid');
+    iconRemove.classList.add('fa-pen-to-square');
+    iconEdit.classList.add('fa-solid');
+    iconEdit.classList.add('fa-trash');
+    divForIcons.appendChild(iconRemove);
+    divForIcons.appendChild(iconEdit);
+    console.log(iconEdit);
+    console.log(iconRemove);
     return divForIcons;
 };
 
@@ -242,11 +238,15 @@ const editExpenseValue = (e) => {
 };
 
 // Box
-const clickEditIcon = () => {
+const editIcon = () => {
     console.log('oi');
 };
 
-const clickRemoveIcon = () => {
+const removeIcon = () => {
+    console.log('oi');
+};
+
+const saveBox = () => {
     console.log('oi');
 };
 
@@ -261,5 +261,6 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
-editIcon().addEventListener('click', clickEditIcon);
-removeIcon().addEventListener('click', clickRemoveIcon);
+iconRemove.addEventListener('click', editIcon);
+iconEdit.addEventListener('click', removeIcon);
+boxSaveBtn.addEventListener('click', saveBox);
