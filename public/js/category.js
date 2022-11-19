@@ -23,6 +23,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const allExpenseValues = [];
+const teste = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -57,6 +58,7 @@ const dataToDropdownMenu = (textValue) => {
 
 const iconsNextToCheckbox = () => {
     const randomNumber = Math.floor(Math.random() * 1000 + 1);
+    teste.push(randomNumber);
     const divForIcons = document.createElement('div');
     const iconRemove = document.createElement('i');
     const iconEdit = document.createElement('i');
@@ -244,10 +246,11 @@ const editExpenseValue = (e) => {
 // Box
 
 const removeIcon = (e) => {
+    console.log(teste);
     if (e.target.classList.contains('fa-trash')) {
-        
-        const checkboxContent = document.querySelector('.form-flex');
-        console.log(checkboxContent);
+        console.log(document.querySelector('.fa-trash'));
+    } else {
+        console.log('false');
     }
 };
 
