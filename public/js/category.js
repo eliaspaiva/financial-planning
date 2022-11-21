@@ -17,7 +17,6 @@ const boxSaveBtn = document.getElementById('btn-box-save');
 
 // Empty Elements
 const saveInputValue = [];
-const expenseObject = {};
 const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
@@ -57,13 +56,9 @@ const dataToDropdownMenu = (textValue) => {
 const iconsNextToCheckbox = () => {
     const divForIcons = document.createElement('div');
     const iconRemove = document.createElement('i');
-    const iconEdit = document.createElement('i');
     divForIcons.classList.add('ctn-form-icons');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-trash');
-    iconEdit.classList.add('fa-solid');
-    iconEdit.classList.add('fa-pen-to-square');
-    divForIcons.appendChild(iconEdit);
     divForIcons.appendChild(iconRemove);
     return divForIcons;
 };
@@ -213,18 +208,18 @@ const changeCategory = () => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        expenseObject.category = dropdownMenu.value;
-        expenseObject.expense = expenseInput.value;
-        expenseObject.price = priceInput.value;        
-        changeCategory().appendChild(addcheckBoxToBox(expenseObject.expense, expenseObject.price));
+        const expenseValue = expenseInput.value;
+        const priceValue = priceInput.value;        
+        changeCategory().appendChild(addcheckBoxToBox(expenseValue, priceValue));
         allExpenseValues.push(expenseInput.value.toLowerCase());
         expenseInput.value = '';
         priceInput.value = '';
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
-    
 };
+
+
 
 const editExpenseValue = (e) => {
     e.preventDefault();
@@ -243,11 +238,9 @@ const editExpenseValue = (e) => {
 const removeIcon = (e) => {
     const event = e.target;
     if (event.classList.contains('fa-trash')) {
-        const previousSibling = event.previousSibling;
         const parent = event.parentElement;
         const parentPreviousSibling = parent.previousSibling;
         event.remove();
-        previousSibling.remove();
         parent.remove();
         parentPreviousSibling.remove();
     }
