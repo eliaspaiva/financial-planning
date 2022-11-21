@@ -14,6 +14,7 @@ const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
+const randomNumber = Math.floor(Math.random() * 1000 + 1);
 
 
 // Empty Elements
@@ -57,15 +58,15 @@ const dataToDropdownMenu = (textValue) => {
    
 
 const iconsNextToCheckbox = () => {
-    const randomNumber = Math.floor(Math.random() * 1000 + 1);
-    teste.push(randomNumber);
+    const randomNumber1 = Math.floor(Math.random() * 1000 + 1);
+    teste.push(randomNumber1);
     const divForIcons = document.createElement('div');
     const iconRemove = document.createElement('i');
     const iconEdit = document.createElement('i');
     divForIcons.classList.add('ctn-form-icons');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-trash');
-    iconRemove.setAttribute('id', randomNumber);
+    iconRemove.classList.add(randomNumber1);
     iconEdit.classList.add('fa-solid');
     iconEdit.classList.add('fa-pen-to-square');
     divForIcons.appendChild(iconEdit);
@@ -246,17 +247,22 @@ const editExpenseValue = (e) => {
 // Box
 
 const removeIcon = (e) => {
-    console.log(teste);
-    if (e.target.classList.contains('fa-trash')) {
-        console.log(document.querySelector('.fa-trash'));
-    } else {
-        console.log('false');
+    const event = e.target;
+    if (event.classList.contains('fa-trash')) {
+        const previousSibling = event.previousSibling;
+        const parent = event.parentElement;
+        const parentPreviousSibling = parent.previousSibling;
+        event.remove();
+        previousSibling.remove();
+        parent.remove();
+        parentPreviousSibling.remove();
     }
+   
 };
 
 const editIcon = (e) => {
     if (e.target.classList.contains('fa-pen-to-square')) {
-        console.log('oi');
+        console.log(event);
     }
     
 };
