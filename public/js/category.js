@@ -208,12 +208,12 @@ const getExpenseValue = (e) => {
     e.preventDefault();
     
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
-        console.log(expenseInput.value);
-        allExpenseValues.push(expenseInput.value);
-        console.log( allExpenseValues);
+        allExpenseValues.push(expenseInput.value);  
         allExpenseValues.forEach((category) => {
             if (compareExpenseValues.includes(category.toUpperCase()))  {
                 alert('Item Cannot Be Repeated');
+                console.log(allExpenseValues);
+                console.log(compareExpenseValues);
             } else {
                 compareExpenseValues.push(category.toUpperCase());
                 changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
@@ -224,6 +224,7 @@ const getExpenseValue = (e) => {
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
+    allExpenseValues.pop();
 };
 
 //  if (categoryInput.value.length > 0) {
