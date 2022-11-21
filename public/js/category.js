@@ -14,8 +14,6 @@ const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
-const randomNumber = Math.floor(Math.random() * 1000 + 1);
-
 
 // Empty Elements
 const saveInputValue = [];
@@ -24,7 +22,6 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const allExpenseValues = [];
-const teste = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -58,15 +55,12 @@ const dataToDropdownMenu = (textValue) => {
    
 
 const iconsNextToCheckbox = () => {
-    const randomNumber1 = Math.floor(Math.random() * 1000 + 1);
-    teste.push(randomNumber1);
     const divForIcons = document.createElement('div');
     const iconRemove = document.createElement('i');
     const iconEdit = document.createElement('i');
     divForIcons.classList.add('ctn-form-icons');
     iconRemove.classList.add('fa-solid');
     iconRemove.classList.add('fa-trash');
-    iconRemove.classList.add(randomNumber1);
     iconEdit.classList.add('fa-solid');
     iconEdit.classList.add('fa-pen-to-square');
     divForIcons.appendChild(iconEdit);
@@ -261,6 +255,7 @@ const removeIcon = (e) => {
 };
 
 const editIcon = (e) => {
+    const event = e.target;
     if (e.target.classList.contains('fa-pen-to-square')) {
         console.log(event);
     }
