@@ -43,7 +43,6 @@ const bigFirstLetter = (text, attribute) => {
     }
 };
     
-
 const dataToDropdownMenu = (textValue) => {
     const option = document.createElement('option');
     option.classList.add('itemsToMenu', 'fs-16', 'ctg-title');
@@ -100,7 +99,6 @@ const categoryToBox = (textValue) => {
     return resultBox;
 };
 
-
 const saveIncomeValue = (e) => {
     e.preventDefault();
     if (incomeInput.value.length > 0) {
@@ -128,7 +126,6 @@ const getCategoryValueHelper = () => {
     btnNewCategory.style.display = 'block';
     dropdownMenu.style.display = 'block';
 };
-
 
 const getCategoryValue = (e) => {
     e.preventDefault();
