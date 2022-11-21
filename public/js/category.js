@@ -207,10 +207,8 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {
-        const expenseValue = expenseInput.value;
-        const priceValue = priceInput.value;        
-        changeCategory().appendChild(addcheckBoxToBox(expenseValue, priceValue));
+    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {     
+        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         allExpenseValues.push(expenseInput.value.toLowerCase());
         expenseInput.value = '';
         priceInput.value = '';
@@ -218,8 +216,6 @@ const getExpenseValue = (e) => {
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
 };
-
-
 
 const editExpenseValue = (e) => {
     e.preventDefault();
@@ -229,8 +225,6 @@ const editExpenseValue = (e) => {
         btnPriceSave.removeAttribute('disabled');
         btnPriceEdit.setAttribute('disabled', 'disabled');
     }
-   
-
 };
 
 // Box
@@ -254,8 +248,6 @@ const editIcon = (e) => {
     }
     
 };
-
-
 
 const saveBox = () => {
     console.log('oi');
