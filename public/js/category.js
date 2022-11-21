@@ -227,19 +227,6 @@ const getExpenseValue = (e) => {
     allExpenseValues.pop();
 };
 
-//  if (categoryInput.value.length > 0) {
-//         getCategoryValueHelper();
-//         saveInputValue.forEach((category) => {
-//             if (dropDownValue.includes(category.toUpperCase()))  {
-//                 alert('Item Cannot Be Repeated');
-//             } else {
-//                 dropDownValue.push(category.toUpperCase());
-//                 dataToDropdownMenu(category);
-//                 categoryToBox(category);
-//             }
-//         });
-//     }
-
 const editExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.disabled) {
