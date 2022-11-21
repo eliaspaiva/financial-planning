@@ -206,13 +206,17 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    allExpenseValues.push(expenseInput.value.toLowerCase());
-    if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {     
+    
+    if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
+        console.log(expenseInput.value);
+        allExpenseValues.push(expenseInput.value);
+        console.log( allExpenseValues);
         allExpenseValues.forEach((category) => {
-            if (compareExpenseValues.includes(category))  {
+            if (compareExpenseValues.includes(category.toUpperCase()))  {
                 alert('Item Cannot Be Repeated');
             } else {
-                changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));    
+                compareExpenseValues.push(category.toUpperCase());
+                changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
             }
         });
         expenseInput.value = '';
