@@ -207,6 +207,7 @@ const getExpenseValue = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {     
         changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         allExpenseValues.push(expenseInput.value.toLowerCase());
+        console.log(allExpenseValues);
         expenseInput.value = '';
         priceInput.value = '';
     }
@@ -235,19 +236,16 @@ const removeIcon = (e) => {
         parent.remove();
         parentPreviousSibling.remove();
     }
-   
 };
 
 const editIcon = (e) => {
     const event = e.target;
     if (e.target.classList.contains('fa-pen-to-square')) {
-        console.log(event);
     }
     
 };
 
 const saveBox = () => {
-    console.log('oi');
     // 
 };
 
