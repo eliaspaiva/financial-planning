@@ -238,13 +238,6 @@ const removeIcon = (e) => {
     }
 };
 
-const editIcon = (e) => {
-    const event = e.target;
-    if (e.target.classList.contains('fa-pen-to-square')) {
-    }
-    
-};
-
 const saveBox = () => {
     // 
 };
@@ -260,6 +253,5 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
-box.addEventListener('click', editIcon);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
