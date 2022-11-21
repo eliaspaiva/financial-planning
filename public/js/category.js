@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -21,6 +22,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const allExpenseValues = [];
+const compareExpenseValues = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -204,16 +206,34 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) {     
-        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
-        allExpenseValues.push(expenseInput.value.toLowerCase());
-        console.log(allExpenseValues);
+    allExpenseValues.push(expenseInput.value.toLowerCase());
+    if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {     
+        allExpenseValues.forEach((category) => {
+            if (compareExpenseValues.includes(category))  {
+                alert('Item Cannot Be Repeated');
+            } else {
+                changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));    
+            }
+        });
         expenseInput.value = '';
         priceInput.value = '';
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
 };
+
+//  if (categoryInput.value.length > 0) {
+//         getCategoryValueHelper();
+//         saveInputValue.forEach((category) => {
+//             if (dropDownValue.includes(category.toUpperCase()))  {
+//                 alert('Item Cannot Be Repeated');
+//             } else {
+//                 dropDownValue.push(category.toUpperCase());
+//                 dataToDropdownMenu(category);
+//                 categoryToBox(category);
+//             }
+//         });
+//     }
 
 const editExpenseValue = (e) => {
     e.preventDefault();
