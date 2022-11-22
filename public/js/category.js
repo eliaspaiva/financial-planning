@@ -226,10 +226,14 @@ const getExpenseValue = (e) => {
     allExpenseValues.pop();
 
     const parent = document.querySelectorAll('#parent');
-    console.log(parent);
-    const firstChild1 = parent.firstChild;
-    const firstChild2 = firstChild1.firstChild;
-    console.log(firstChild2.id);
+    const parentToArray = Array.from(parent);
+    console.log(parentToArray);
+    const getFirstChild = parentToArray.forEach(element => {
+        const  lastChild = element.lastChild;
+        const mainParent = lastChild.firstChild;
+        const thisOne = mainParent.firstChild;
+        console.log(thisOne);
+    });
 };
 
 const editExpenseValue = (e) => {
