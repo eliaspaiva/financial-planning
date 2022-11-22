@@ -95,7 +95,7 @@ const categoryToBox = (textValue) => {
     divForH5.classList.add('parentH5');
     resultBox.appendChild(divForH5);
     const div = document.createElement('div');
-    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom');
+    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom', 'parent');
     bigFirstLetter(textValue, div);
     divForH5.appendChild(div);
     return resultBox;
@@ -206,12 +206,13 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    console.log(dropDownValue);
-    console.log(changeCategory().innerHTML);
+    const findElement = document.querySelectorAll('.parent');
+    console.log(findElement);
+    console.log(findElement.forEach(element => console.log(element.childNodes[1])));
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         allExpenseValues.push(expenseInput.value.toUpperCase());
         allExpenseValues.forEach((category) => {
-            if (compareExpenseValues.includes(category.toUpperCase()) && dropDownValue.includes(changeCategory().innerHTML))  {
+            if (compareExpenseValues.includes(category.toUpperCase()))  {
                 alert('Item Cannot Be Repeated');
             } else {
                 compareExpenseValues.push(category.toUpperCase());
