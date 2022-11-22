@@ -96,7 +96,8 @@ const categoryToBox = (textValue) => {
     divForH5.classList.add('parentH5');
     resultBox.appendChild(divForH5);
     const div = document.createElement('div');
-    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom', 'parent');
+    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom', );
+    div.setAttribute('id', 'parent');
     bigFirstLetter(textValue, div);
     divForH5.appendChild(div);
     return resultBox;
@@ -224,6 +225,11 @@ const getExpenseValue = (e) => {
     btnBoxSave.style.display = 'block';
     allExpenseValues.pop();
 
+    const parent = document.querySelectorAll('#parent');
+    console.log(parent);
+    const firstChild1 = parent.firstChild;
+    const firstChild2 = firstChild1.firstChild;
+    console.log(firstChild2.id);
 };
 
 const editExpenseValue = (e) => {
@@ -266,3 +272,10 @@ btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
+
+// const parent = document.querySelectorAll('#parent');
+//     console.log(parent);
+//     const firstChild1 = parent.firstChild;
+//     const firstChild2 = firstChild1.firstChild;
+//     console.log(firstChild2.id);
+// };
