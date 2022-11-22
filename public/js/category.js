@@ -206,11 +206,12 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
+    console.log(dropDownValue);
+    console.log(changeCategory().innerHTML);
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         allExpenseValues.push(expenseInput.value.toUpperCase());
-        console.log(allExpenseValues);
         allExpenseValues.forEach((category) => {
-            if (compareExpenseValues.includes(category.toUpperCase()))  {
+            if (compareExpenseValues.includes(category.toUpperCase()) && dropDownValue.includes(changeCategory().innerHTML))  {
                 alert('Item Cannot Be Repeated');
             } else {
                 compareExpenseValues.push(category.toUpperCase());
