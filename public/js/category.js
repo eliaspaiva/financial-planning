@@ -16,6 +16,7 @@ const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
 
+
 // Empty Elements
 const saveInputValue = [];
 const dropDownValue = [];
@@ -206,9 +207,6 @@ const changeCategory = () => {
 
 const getExpenseValue = (e) => {
     e.preventDefault();
-    const findElement = document.querySelectorAll('.parent');
-    console.log(findElement);
-    console.log(findElement.forEach(element => console.log(element.childNodes[1])));
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         allExpenseValues.push(expenseInput.value.toUpperCase());
         allExpenseValues.forEach((category) => {
@@ -225,6 +223,7 @@ const getExpenseValue = (e) => {
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
     allExpenseValues.pop();
+
 };
 
 const editExpenseValue = (e) => {
