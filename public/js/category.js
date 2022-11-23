@@ -227,12 +227,16 @@ const getExpenseValue = (e) => {
 
     const parent = document.querySelectorAll('#parent');
     const parentToArray = Array.from(parent);
-    console.log(parentToArray);
-    const getFirstChild = parentToArray.forEach(element => {
+    parentToArray.forEach(element => {
         const  lastChild = element.lastChild;
         const mainParent = lastChild.firstChild;
-        const thisOne = mainParent.firstChild;
-        console.log(thisOne);
+        const getId = mainParent.firstChild.id;
+        if (compareExpenseValues.includes(category.toUpperCase()))  {
+            alert('Item Cannot Be Repeated');
+        } else {
+            compareExpenseValues.push(category.toUpperCase());
+            changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
+        }
     });
 };
 
@@ -276,10 +280,3 @@ btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
-
-// const parent = document.querySelectorAll('#parent');
-//     console.log(parent);
-//     const firstChild1 = parent.firstChild;
-//     const firstChild2 = firstChild1.firstChild;
-//     console.log(firstChild2.id);
-// };
