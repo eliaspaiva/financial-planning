@@ -231,12 +231,8 @@ const getExpenseValue = (e) => {
         const  lastChild = element.lastChild;
         const mainParent = lastChild.firstChild;
         const getId = mainParent.firstChild.id;
-        if (compareExpenseValues.includes(category.toUpperCase()))  {
-            alert('Item Cannot Be Repeated');
-        } else {
-            compareExpenseValues.push(category.toUpperCase());
-            changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
-        }
+        console.log(getId);
+        
     });
 };
 
