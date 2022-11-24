@@ -210,11 +210,10 @@ const getExpenseValue = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         const valueInTheDropdown = changeCategory().firstChild;
-        const dropdownContentValue = valueInTheDropdown;
-        console.log(dropdownContentValue);
+        const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const categoryValue = categoryInput.value.toUpperCase();
         console.log(categoryValue);
-        if (valueInTheDropdown == categoryValue) {
+        if (dropdownContent == categoryValue) {
             console.log('oi');
         } else {
             console.log('nope');
