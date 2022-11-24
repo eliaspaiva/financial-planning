@@ -212,11 +212,16 @@ const getExpenseValue = (e) => {
         const valueInTheDropdown = changeCategory().firstChild;
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const categoryValue = categoryInput.value.toUpperCase();
-        console.log(categoryValue);
         if (dropdownContent == categoryValue) {
             console.log('oi');
+            const parentDiv = document.querySelectorAll('#parent');
+            // goal: find div with same catetory name;
+            // add expense value to this div as its child
+            console.log(parentDiv);
+            
         } else {
-            console.log('nope');
+
+            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         }
         expenseInput.value = '';
         priceInput.value = '';
@@ -265,14 +270,3 @@ btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
-
-// allExpenseValues.push(expenseInput.value.toUpperCase());
-// allExpenseValues.forEach((category) => {
-//     if (compareExpenseValues.includes(category.toUpperCase()))  {
-//         alert('Item Cannot Be Repeated');
-//     } else {
-//         compareExpenseValues.push(category.toUpperCase());
-//         changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
-//     }
-// });
-        
