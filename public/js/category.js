@@ -210,36 +210,28 @@ const changeCategory = () => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
-        allExpenseValues.push(expenseInput.value.toUpperCase());
-        allExpenseValues.forEach((category) => {
-            if (compareExpenseValues.includes(category.toUpperCase()))  {
-                alert('Item Cannot Be Repeated');
-            } else {
-                compareExpenseValues.push(category.toUpperCase());
-                changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
-            }
-        });
-        const valueInTheDropdown = changeCategory().firstChild;
-        const parent = document.querySelectorAll('#parent');
+        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+        //category inside input value
+        const parent = document.querySelectorAll('#resultBox');
         const parentToArray = Array.from(parent);
-        console.log(valueInTheDropdown);
+        const valueInTheDropdown = changeCategory().firstChild;        
+        // console.log(parent);
         parentToArray.forEach(element => {
-            // get text
-            const category = element.firstChild;
-            console.log(category);
-            // get id
             const  lastChild = element.lastChild;
             const mainParent = lastChild.firstChild;
-            const getId = mainParent.firstChild.id;
-            console.log(getId);
+            console.log(mainParent);
+            console.log(mainParent.firstChild);
+            if (valueInTheDropdown == mainParent.firstChild) {
+                console.log('oi');
+            } else {
+                console.log('nope');
+            }
         });
-        
         expenseInput.value = '';
         priceInput.value = '';
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
-    allExpenseValues.pop();    
 };
 
 const editExpenseValue = (e) => {
@@ -282,3 +274,14 @@ btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
+
+// allExpenseValues.push(expenseInput.value.toUpperCase());
+// allExpenseValues.forEach((category) => {
+//     if (compareExpenseValues.includes(category.toUpperCase()))  {
+//         alert('Item Cannot Be Repeated');
+//     } else {
+//         compareExpenseValues.push(category.toUpperCase());
+//         changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
+//     }
+// });
+        
