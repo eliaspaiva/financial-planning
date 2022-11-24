@@ -212,7 +212,7 @@ const getExpenseValue = (e) => {
         const valueInTheDropdown = changeCategory().firstChild;
         const dropdownContentValue = valueInTheDropdown;
         console.log(dropdownContentValue);
-        const categoryValue = categoryInput.value;
+        const categoryValue = categoryInput.value.toUpperCase();
         console.log(categoryValue);
         if (valueInTheDropdown == categoryValue) {
             console.log('oi');
