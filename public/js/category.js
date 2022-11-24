@@ -222,14 +222,18 @@ const getExpenseValue = (e) => {
         const valueInTheDropdown = changeCategory().firstChild;
         const parent = document.querySelectorAll('#parent');
         const parentToArray = Array.from(parent);
-        const teste = parentToArray.forEach(element => {
+        console.log(valueInTheDropdown);
+        parentToArray.forEach(element => {
+            // get text
+            const category = element.firstChild;
+            console.log(category);
+            // get id
             const  lastChild = element.lastChild;
             const mainParent = lastChild.firstChild;
             const getId = mainParent.firstChild.id;
             console.log(getId);
         });
-        const currentCategoryName = parent.firstChild;
-        console.log(currentCategoryName); 
+        
         expenseInput.value = '';
         priceInput.value = '';
     }
