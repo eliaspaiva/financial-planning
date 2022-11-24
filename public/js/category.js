@@ -22,8 +22,6 @@ const saveInputValue = [];
 const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
-const allExpenseValues = [];
-const compareExpenseValues = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -211,22 +209,16 @@ const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
-        //category inside input value
-        const parent = document.querySelectorAll('#resultBox');
-        const parentToArray = Array.from(parent);
-        const valueInTheDropdown = changeCategory().firstChild;        
-        // console.log(parent);
-        parentToArray.forEach(element => {
-            const  lastChild = element.lastChild;
-            const mainParent = lastChild.firstChild;
-            console.log(mainParent);
-            console.log(mainParent.firstChild);
-            if (valueInTheDropdown == mainParent.firstChild) {
-                console.log('oi');
-            } else {
-                console.log('nope');
-            }
-        });
+        const valueInTheDropdown = changeCategory().firstChild;
+        const dropdownContentValue = valueInTheDropdown;
+        console.log(dropdownContentValue);
+        const categoryValue = categoryInput.value;
+        console.log(categoryValue);
+        if (valueInTheDropdown == categoryValue) {
+            console.log('oi');
+        } else {
+            console.log('nope');
+        }
         expenseInput.value = '';
         priceInput.value = '';
     }
