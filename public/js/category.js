@@ -206,6 +206,7 @@ const changeCategory = () => {
     return elementByIndexNumber;
 };
 
+
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
@@ -218,22 +219,23 @@ const getExpenseValue = (e) => {
                 changeCategory().appendChild(addcheckBoxToBox(category, priceInput.value));
             }
         });
+        const valueInTheDropdown = changeCategory().firstChild;
+        const parent = document.querySelectorAll('#parent');
+        const parentToArray = Array.from(parent);
+        const teste = parentToArray.forEach(element => {
+            const  lastChild = element.lastChild;
+            const mainParent = lastChild.firstChild;
+            const getId = mainParent.firstChild.id;
+            console.log(getId);
+        });
+        const currentCategoryName = parent.firstChild;
+        console.log(currentCategoryName); 
         expenseInput.value = '';
         priceInput.value = '';
     }
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
-    allExpenseValues.pop();
-
-    const parent = document.querySelectorAll('#parent');
-    const parentToArray = Array.from(parent);
-    parentToArray.forEach(element => {
-        const  lastChild = element.lastChild;
-        const mainParent = lastChild.firstChild;
-        const getId = mainParent.firstChild.id;
-        console.log(getId);
-        
-    });
+    allExpenseValues.pop();    
 };
 
 const editExpenseValue = (e) => {
