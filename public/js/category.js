@@ -214,9 +214,8 @@ const getExpenseValue = (e) => {
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        const findRightDiv2 = arrayForParent.filter(element => element.children.childNodes[0]);
+        const findRightDiv2 = arrayForParent.forEach(element => console.log(element.lastChild.firstChild.firstChild.id));
         console.log(findRightDiv);
-        console.log(findRightDiv2);
         expenseInput.value = '';
         priceInput.value = '';
     }
