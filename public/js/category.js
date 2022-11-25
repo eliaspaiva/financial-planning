@@ -213,18 +213,15 @@ const getExpenseValue = (e) => {
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const categoryValue = categoryInput.value.toUpperCase();
         if (dropdownContent == categoryValue) {
-            console.log('oi');
             const parentDiv = document.querySelectorAll('#parent');
-            // goal: find div with same category name;
-            // add expense value to this div as its child
-            console.log(parentDiv);
-            const parentId = document.querySelectorAll('.ctn-form-input-label');
-            parentId.forEach(element => {
-                console.log(element.firstChild.id);
+            const arrayForParent = Array.from(parentDiv);
+            arrayForParent.forEach(element => {
+                console.log(element.childNodes[0].textContent.toUpperCase());
+                console.log(dropdownContent);
             });
             
         } else {
-
+            console.log('nope');
             changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         }
         expenseInput.value = '';
