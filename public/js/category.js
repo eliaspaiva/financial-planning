@@ -94,7 +94,7 @@ const categoryToBox = (textValue) => {
     divForH5.classList.add('parentH5');
     resultBox.appendChild(divForH5);
     const div = document.createElement('div');
-    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom', );
+    div.classList.add('categoryH2', 'fs-18', 'ctg-title', 'fw-6', 'margin-bottom');
     div.setAttribute('id', 'parent');
     bigFirstLetter(textValue, div);
     divForH5.appendChild(div);
@@ -208,22 +208,14 @@ const changeCategory = () => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
-        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         const valueInTheDropdown = changeCategory().firstChild;
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const categoryValue = categoryInput.value.toUpperCase();
-        if (dropdownContent == categoryValue) {
-            const parentDiv = document.querySelectorAll('#parent');
-            const arrayForParent = Array.from(parentDiv);
-            arrayForParent.forEach(element => {
-                const uniqueText = element.childNodes[0].textContent.toUpperCase();
-                console.log(uniqueText);
-            });
-            
-        } else {
-            console.log('nope');
-            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
-        }
+        const parentDiv = document.querySelectorAll('#parent');
+        const arrayForParent = Array.from(parentDiv);
+        console.log(arrayForParent);
+        const mapped = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
+        console.log(mapped);
         expenseInput.value = '';
         priceInput.value = '';
     }
