@@ -216,8 +216,8 @@ const getExpenseValue = (e) => {
             const parentDiv = document.querySelectorAll('#parent');
             const arrayForParent = Array.from(parentDiv);
             arrayForParent.forEach(element => {
-                console.log(element.childNodes[0].textContent.toUpperCase());
-                console.log(dropdownContent);
+                const uniqueText = element.childNodes[0].textContent.toUpperCase();
+                console.log(uniqueText);
             });
             
         } else {
