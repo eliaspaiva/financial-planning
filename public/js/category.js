@@ -214,11 +214,10 @@ const getExpenseValue = (e) => {
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        const findRightDiv2 = arrayForParent.forEach(element => console.log(element.lastChild.firstChild.firstChild.id));
-        console.log(findRightDiv);
-        expenseInput.value = '';
-        priceInput.value = '';
+        const findIdInDiv = arrayForParent.forEach(element => console.log(element.lastChild.firstChild.firstChild.id));
     }
+    expenseInput.value = '';
+    priceInput.value = '';
     box.style.display = 'block';
     btnBoxSave.style.display = 'block';
 };
