@@ -215,9 +215,13 @@ const getExpenseValue = (e) => {
         if (dropdownContent == categoryValue) {
             console.log('oi');
             const parentDiv = document.querySelectorAll('#parent');
-            // goal: find div with same catetory name;
+            // goal: find div with same category name;
             // add expense value to this div as its child
             console.log(parentDiv);
+            const parentId = document.querySelectorAll('.ctn-form-input-label');
+            parentId.forEach(element => {
+                console.log(element.firstChild.id);
+            });
             
         } else {
 
