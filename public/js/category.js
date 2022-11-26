@@ -208,13 +208,18 @@ const changeCategory = () => {
 const getExpenseValue = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
-        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
-        const valueInTheDropdown = changeCategory().firstChild;
-        const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
+        const valueInTheDropdown = changeCategory().firstChild;
+        const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        const findIdInDiv = arrayForParent.forEach(element => console.log(element.lastChild.firstChild.firstChild.id));
+        if (findRightDiv) {
+            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+        }
+        
+        const findIdInDiv = arrayForParent.forEach(element =>{
+            console.log(element.lastChild.firstChild.firstChild.id.toUpperCase());
+        });
     }
     expenseInput.value = '';
     priceInput.value = '';
@@ -246,7 +251,7 @@ const removeIcon = (e) => {
 };
 
 const saveBox = () => {
-    // 
+// 
 };
 
 // Event Listeners
