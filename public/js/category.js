@@ -176,7 +176,7 @@ const newCategory = (e) => {
     }
 };
 
-// Expense
+ // Expense
 const enableSaveButtonPrice = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) btnPriceSave.removeAttribute('disabled');
