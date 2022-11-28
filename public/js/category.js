@@ -211,17 +211,20 @@ const getExpenseValue = (e) => {
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
         const valueInTheDropdown = changeCategory().firstChild;
+        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        console.log(findRightDiv);
-        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
-        if (findRightDiv && expenseInput.value) {
-            //
-        }
+        const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
+        console.log(expenseValue);
+        // const getExpenseContent = findRightDiv.find(element => element.lastChild.firstChild.firstChild.id.toUpperCase());
+        // console.log(getExpenseContent);
+        // if (findRightDiv && expenseInput.value) {
+        //     //
+        // }
         
-        const findIdInDiv = arrayForParent.forEach(element =>{
-            console.log(element.lastChild.firstChild.firstChild.id.toUpperCase());
-        });
+        // const findIdInDiv = arrayForParent.forEach(element =>{
+        //     console.log(element.lastChild.firstChild.firstChild.id.toUpperCase());
+        // });
     }
     expenseInput.value = '';
     priceInput.value = '';
