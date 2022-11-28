@@ -176,7 +176,7 @@ const newCategory = (e) => {
     }
 };
 
-  // Expense
+// Expense
 const enableSaveButtonPrice = (e) => {
     e.preventDefault();
     if (expenseInput.value.length > 0 && priceInput.value.length && dropdownMenu.value.length > 0) btnPriceSave.removeAttribute('disabled');
@@ -213,8 +213,10 @@ const getExpenseValue = (e) => {
         const valueInTheDropdown = changeCategory().firstChild;
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        if (findRightDiv) {
-            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+        console.log(findRightDiv);
+        changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+        if (findRightDiv && expenseInput.value) {
+            //
         }
         
         const findIdInDiv = arrayForParent.forEach(element =>{
