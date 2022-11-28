@@ -216,11 +216,11 @@ const getExpenseValue = (e) => {
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
         // const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
-        // console.log(expenseValue);
         if (checkExpense.includes(expenseInput.value)) {
             alert('Item Cannot Be Repeated');
         } else {
             findRightDiv.appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+
             checkExpense.push(expenseInput.value);
         }
     }
