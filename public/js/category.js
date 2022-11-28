@@ -23,6 +23,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const arrayExpenseValue = [];
+const checkExpense = [];
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -211,17 +212,17 @@ const getExpenseValue = (e) => {
     if (expenseInput.value.length > 0 && priceInput.value.length > 0 && dropdownMenu.value.length > 0) {
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
-        const valueInTheDropdown = changeCategory().firstChild;
-        const check = document.querySelector('.form-flex');
-        if (check === null) changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+        const valueInTheDropdown = changeCategory().firstChild; 
+        if (document.querySelector('.form-flex') === null) changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
-        arrayExpenseValue.push(expenseValue);
-        if (arrayExpenseValue.includes(expenseValue)) {
-            console.log('oi');
+        // const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
+        if (checkExpense.includes(expenseInput.value)) {
+            alert('item is there already');
         } else {
-            //
+            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+            checkExpense.push(expenseInput.value);
+            console.log(checkExpense);
         }
     }
     expenseInput.value = '';
