@@ -213,16 +213,15 @@ const getExpenseValue = (e) => {
         const parentDiv = document.querySelectorAll('#parent');
         const arrayForParent = Array.from(parentDiv);
         const valueInTheDropdown = changeCategory().firstChild; 
-        if (document.querySelector('.form-flex') === null) changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
         const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
         const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-        // const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
+        const expenseValue = findRightDiv.lastChild.firstChild.firstChild.id.toUpperCase();
+        console.log(expenseValue);
         if (checkExpense.includes(expenseInput.value)) {
-            alert('item is there already');
+            alert('Item Cannot Be Repeated');
         } else {
-            changeCategory().appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
+            findRightDiv.appendChild(addcheckBoxToBox(expenseInput.value, priceInput.value));
             checkExpense.push(expenseInput.value);
-            console.log(checkExpense);
         }
     }
     expenseInput.value = '';
