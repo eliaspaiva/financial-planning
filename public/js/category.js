@@ -22,7 +22,6 @@ const saveInputValue = [];
 const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
-const arrayExpenseValue = [];
 const checkExpense = [];
 
 // First Letter Capitalized
