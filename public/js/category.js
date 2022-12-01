@@ -22,6 +22,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const checkExpense = [];
+const itemRemoved = []; 
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -246,7 +247,15 @@ const removeIcon = (e) => {
         event.remove();
         parent.remove();
         parentPreviousSibling.remove();
-        return parentPreviousSibling.firstChild.id;
+        const itemSelected = parentPreviousSibling.firstChild.id;
+        itemRemoved.push(itemSelected);
+        itemRemoved.forEach(element => {
+            if (checkExpense.includes(element)) {
+                console.log(itemRemoved);
+                console.log(checkExpense);
+                checkExpense.splice(element);
+            }
+        });
     }
 };
 
