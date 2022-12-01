@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -247,11 +246,12 @@ const removeIcon = (e) => {
         event.remove();
         parent.remove();
         parentPreviousSibling.remove();
+        return parentPreviousSibling.firstChild.id;
     }
 };
 
 const saveBox = () => {
-// 
+// do nothing
 };
 
 // Event Listeners
