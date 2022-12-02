@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -250,11 +251,8 @@ const removeIcon = (e) => {
         const itemSelected = parentPreviousSibling.firstChild.id;
         itemRemoved.push(itemSelected);
         itemRemoved.forEach(element => {
-            if (checkExpense.includes(element)) {
-                console.log(itemRemoved);
-                console.log(checkExpense);
-                checkExpense.splice(element);
-            }
+            const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == element.toLowerCase()));
+            console.log(getIndexNumber);
         });
     }
 };
