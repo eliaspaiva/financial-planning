@@ -435,9 +435,9 @@ main {
   main .confirmation-box {
     background-color: white;
     width: 80%;
-    opacity: 1;
+    opacity: 0.2;
     position: fixed;
-    left: 40%;
+    left: 10%;
     top: 40%; }
   main .confirmation-box .confirmation-box-ctn {
     margin: 0 2rem; }
