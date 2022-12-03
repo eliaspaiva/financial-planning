@@ -435,7 +435,7 @@ main {
   main .confirmation-box {
     background-color: white;
     width: 80%;
-    opacity: 0.2;
+    opacity: 1;
     position: fixed;
     left: 10%;
     top: 40%; }

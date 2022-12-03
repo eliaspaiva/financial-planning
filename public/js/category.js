@@ -1,4 +1,4 @@
-/* eslint-disable max-lines-per-function */
+const wholePage = document.querySelector('.main-parent');
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -260,6 +260,7 @@ const removeIcon = (e) => {
 
 const saveBox = () => {
     confirmationBox.style.display = 'block';
+    wholePage.style.opacity = '0.1';
 };
 
 // Event Listeners
