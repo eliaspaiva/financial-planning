@@ -253,6 +253,8 @@ const removeIcon = (e) => {
         itemRemoved.forEach(element => {
             const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == element.toLowerCase()));
             console.log(getIndexNumber);
+            console.log(checkExpense);
+            console.log(itemRemoved);
         });
     }
 };
