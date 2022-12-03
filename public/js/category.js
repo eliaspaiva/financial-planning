@@ -244,13 +244,16 @@ const removeIcon = (e) => {
     if (event.classList.contains('fa-trash')) {
         const parent = event.parentElement;
         const parentPreviousSibling = parent.previousSibling;
-        console.log(parentPreviousSibling);
         event.remove();
         parent.remove();
         parentPreviousSibling.remove();
         const itemSelected = parentPreviousSibling.firstChild.id;
         const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == itemSelected.toLowerCase()));
         checkExpense.splice(getIndexNumber, 1);
+        const findParent = document.querySelectorAll('.form-flex');
+        const arrayForParent = Array.from(findParent);
+        const toBeRemoved = arrayForParent.find(e => e.firstChild === null);
+        toBeRemoved.remove();
     }
 };
 
