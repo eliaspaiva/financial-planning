@@ -436,6 +436,7 @@ main {
     background-color: white;
     width: 80%; }
   main .confirmation-box .confirmation-box-question {
+    width: 50%;
     margin: 0 auto; }
   main .confirmation-box .confirmation-box-icon, main .confirmation-box-btn {
     display: flex;
