@@ -264,6 +264,7 @@ const saveBox = () => {
     confirmationBox.style.display = 'block';
     wholePage.style.opacity = '0.5';
     wholePage.style.display = 'none';
+    box.style.display = 'block';
 };
 
 const closeConfBox = () => {
