@@ -18,6 +18,8 @@ const boxSaveBtn = document.getElementById('btn-box-save');
 const confirmationBox = document.querySelector('.confirmation-box');
 const closeIcon = document.querySelector('.close-icon');
 const cancelBtn = document.querySelector('.cancel-btn');
+const reviewBox = document.getElementById('review-categories-box');
+const reviewBoxContent = document.getElementById('box-add-category');
 
 
 // Empty Elements
@@ -271,6 +273,7 @@ const closeConfBox = () => {
     confirmationBox.style.display = 'none';
     wholePage.style.display = 'block';
     wholePage.style.opacity = '1';
+    reviewBox.appendChild(reviewBoxContent);
 };
 
 // Event Listeners
