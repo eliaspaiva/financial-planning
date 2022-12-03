@@ -23,7 +23,6 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const checkExpense = [];
-const itemRemoved = []; 
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -245,14 +244,13 @@ const removeIcon = (e) => {
     if (event.classList.contains('fa-trash')) {
         const parent = event.parentElement;
         const parentPreviousSibling = parent.previousSibling;
+        console.log(parentPreviousSibling);
         event.remove();
         parent.remove();
         parentPreviousSibling.remove();
         const itemSelected = parentPreviousSibling.firstChild.id;
-        itemRemoved.push(itemSelected);
         const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == itemSelected.toLowerCase()));
         checkExpense.splice(getIndexNumber, 1);
-        
     }
 };
 
