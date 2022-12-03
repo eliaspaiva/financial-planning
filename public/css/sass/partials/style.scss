@@ -212,6 +212,10 @@
     .confirmation-box {
       background-color: white;
       width: 80%;
+      opacity: 1;
+      position: fixed;
+      left: 40%;
+      top: 40%;
     }
 
     .confirmation-box .confirmation-box-ctn {

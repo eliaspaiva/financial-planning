@@ -434,7 +434,11 @@ main {
     margin-left: 1rem; }
   main .confirmation-box {
     background-color: white;
-    width: 80%; }
+    width: 80%;
+    opacity: 1;
+    position: fixed;
+    left: 40%;
+    top: 40%; }
   main .confirmation-box .confirmation-box-ctn {
     margin: 0 2rem; }
   main .confirmation-box .confirmation-box-question {
