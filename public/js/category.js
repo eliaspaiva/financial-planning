@@ -252,6 +252,7 @@ const removeIcon = (e) => {
         itemRemoved.push(itemSelected);
         const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == itemSelected.toLowerCase()));
         checkExpense.splice(getIndexNumber, 1);
+        
     }
 };
 
