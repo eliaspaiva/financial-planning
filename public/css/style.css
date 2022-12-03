@@ -442,7 +442,7 @@ main {
     top: 35%;
     max-width: 400px; }
   main .confirmation-box .confirmation-box-ctn {
-    margin: 1.5rem 0.5rem 1.5rem; }
+    margin: 1.5rem 1.2rem 1.5rem; }
   main .confirmation-box .confirmation-box-title {
     font-size: 1.2rem; }
   main .confirmation-box .close-icon {
@@ -452,6 +452,17 @@ main {
     margin: 2rem auto;
     text-align: left;
     font-size: 1.2rem; }
-  main .confirmation-box .confirmation-box-icon, main .confirmation-box-btn {
+  main .confirmation-box .confirmation-box-icon {
+    display: flex;
+    justify-content: space-between; }
+  main .confirmation-box .confirmation-box-btn {
     display: flex;
     justify-content: flex-end; }
+  main .confirmation-box .confirm-btn, main .confirmation-box .calcel-btn {
+    margin-left: 0.5rem;
+    border: 0;
+    padding: 0.7rem 0;
+    font-size: 16px;
+    margin: 1rem 0 1rem;
+    background-color: #2d2d52;
+    color: white; }

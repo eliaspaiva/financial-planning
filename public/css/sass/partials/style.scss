@@ -221,7 +221,7 @@
     }
     
     .confirmation-box .confirmation-box-ctn {
-      margin: 1.5rem 0.5rem 1.5rem;
+      margin: 1.5rem 1.2rem 1.5rem;
     }
 
     .confirmation-box .confirmation-box-title {
@@ -247,6 +247,16 @@
     .confirmation-box .confirmation-box-btn {
       display: flex;
       justify-content: flex-end;
+    }
+
+    .confirmation-box .confirm-btn, .confirmation-box .calcel-btn {
+      margin-left: 0.5rem;
+      border: 0;
+      padding: 0.7rem 0;
+      font-size: $font-size-16;
+      margin: 1rem 0 1rem;
+      background-color: $black-color;
+      color: $white-color;
     }
   
   }
