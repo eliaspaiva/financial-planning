@@ -258,7 +258,7 @@ const removeIcon = (e) => {
 };
 
 const saveBox = () => {
-// do nothing
+    console.log('oi');
 };
 
 // Event Listeners
