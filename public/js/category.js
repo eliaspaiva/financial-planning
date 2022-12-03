@@ -15,6 +15,7 @@ const dropdownMenu = document.getElementById('dropdown');
 const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
+const confirmationBox = document.querySelector('.confirmation-box');
 
 
 // Empty Elements
@@ -258,7 +259,7 @@ const removeIcon = (e) => {
 };
 
 const saveBox = () => {
-    console.log('oi');
+    confirmationBox.style.display = 'block';
 };
 
 // Event Listeners
