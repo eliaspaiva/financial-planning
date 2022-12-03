@@ -239,9 +239,14 @@
      font-size: 1.2rem;
     }
 
-    .confirmation-box .confirmation-box-icon, .confirmation-box-btn{
+    .confirmation-box .confirmation-box-icon{
       display: flex;
       justify-content: space-between;
+    }
+
+    .confirmation-box .confirmation-box-btn {
+      display: flex;
+      justify-content: flex-end;
     }
   
   }

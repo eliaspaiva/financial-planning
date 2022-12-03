@@ -454,4 +454,4 @@ main {
     font-size: 1.2rem; }
   main .confirmation-box .confirmation-box-icon, main .confirmation-box-btn {
     display: flex;
-    justify-content: space-between; }
+    justify-content: flex-end; }
