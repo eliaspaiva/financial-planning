@@ -16,7 +16,8 @@ const box = document.getElementById('box');
 const resultBox = document.getElementById('resultBox');
 const boxSaveBtn = document.getElementById('btn-box-save');
 const confirmationBox = document.querySelector('.confirmation-box');
-const closeConfirmationBox = document.querySelector('.cancel');
+const closeIcon = document.querySelector('.close-icon');
+const cancelBtn = document.querySelector('.cancel-btn');
 
 
 // Empty Elements
@@ -284,4 +285,5 @@ btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
 box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
-closeConfirmationBox.addEventListener('click', closeConfBox);
+closeIcon.addEventListener('click', closeConfBox);
+cancelBtn.addEventListener('click', closeConfBox);
