@@ -3,8 +3,25 @@
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+/* Padding */
+.extra-padding {
+  padding: 0.8rem;
+}
+
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%;
+}
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif;
@@ -133,17 +150,27 @@ button:disabled {
   color: rgb(255, 255, 255);
 }
 
-.btn-income {
-  width: 49%;
+.long-button {
+  text-align: center;
+  width: 100%;
   border: 0;
-  padding: 0.7rem 0;
   font-size: 16px;
-  margin: 0rem 0 1rem;
+  margin: 0rem 0 1.2rem 0;
   background-color: rgb(45, 45, 82);
   color: rgb(255, 255, 255);
 }
 
-.btn-full-width {
+.btn-income {
+  width: 49.8%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 0rem 0 0.1rem 0;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+}
+
+.full-width {
   width: 100%;
 }
 

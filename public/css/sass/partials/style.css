@@ -79,8 +79,25 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+/* Padding */
+.extra-padding {
+  padding: 0.8rem;
+}
+
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%;
+}
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif;
@@ -187,8 +204,25 @@ select {
 /* Font Weight */
 /* Font-size */
 /* Margin */
+.margin0 {
+  margin: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+/* Padding */
+.extra-padding {
+  padding: 0.8rem;
+}
+
 /* Text Alignment  */
 /* Display  */
+.full-width {
+  width: 100%;
+}
+
 /* Classes  */
 .ff-1 {
   font-family: "Raleway", sans-serif;
@@ -317,17 +351,27 @@ button:disabled {
   color: rgb(255, 255, 255);
 }
 
-.btn-income {
-  width: 49%;
+.long-button {
+  text-align: center;
+  width: 100%;
   border: 0;
-  padding: 0.7rem 0;
   font-size: 16px;
-  margin: 0rem 0 1rem;
+  margin: 0rem 0 1.2rem 0;
   background-color: rgb(45, 45, 82);
   color: rgb(255, 255, 255);
 }
 
-.btn-full-width {
+.btn-income {
+  width: 49.8%;
+  border: 0;
+  padding: 0.7rem 0;
+  font-size: 16px;
+  margin: 0rem 0 0.1rem 0;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
+}
+
+.full-width {
   width: 100%;
 }
 
@@ -357,8 +401,12 @@ main .page-title {
 }
 main form {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem auto;
   max-width: 600px;
+  text-align: left;
+}
+main #form-category, main #form-expense {
+  margin-top: 2.5rem;
 }
 main .input-field {
   width: 100%;
@@ -368,8 +416,21 @@ main .input-field {
   border: 0;
   background-color: rgb(225, 225, 225);
 }
-main .input-icons i {
-  position: absolute;
+main .input-side-by-side {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+main .expense-input-field, main .price-input-field {
+  width: 99.5%;
+  text-align: center;
+  padding: 1.1rem 0;
+  margin-top: 0.3rem;
+  border: 0;
+  background-color: rgb(225, 225, 225);
+}
+main .expense-input-field {
+  position: relative;
 }
 main .input-icons {
   width: 100%;
@@ -380,6 +441,32 @@ main .icon {
   color: rgb(45, 45, 82);
   min-width: 3.12rem;
   text-align: center;
+}
+main .input-icons i {
+  position: absolute;
+}
+main .icon-inside {
+  position: relative;
+  width: 100%;
+}
+main .icon {
+  padding: 1.6rem 0 0 0;
+  color: rgb(45, 45, 82);
+  min-width: 3.12rem;
+  text-align: center;
+}
+main .input-icons {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+main .icon2 {
+  position: absolute;
+  padding: 1.6rem 0 0 0;
+  color: rgb(45, 45, 82);
+  min-width: 3.12rem;
+  text-align: center;
+  left: 0;
+  top: 0px;
 }
 main .fa-eye, main .fa-eye-slash, main .input-validation {
   display: none;
@@ -408,49 +495,20 @@ main .hyperlink {
 main .main-parent {
   width: 100%;
 }
-main .box-header {
-  text-align: center;
-}
-main .form-ctn, main .box-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-main .category-input, main .expense-input, main .price-input {
-  padding: 0.5rem;
-  font-size: 16px;
-  margin: 1.3rem 0 0 0;
-}
-main .teste {
-  width: 49%;
-  border: 0;
-  padding: 0.7rem 0;
-  font-size: 16px;
-  margin: 1rem 0 1rem;
-  background-color: rgb(45, 45, 82);
-  color: rgb(255, 255, 255);
-}
-main .expense-input, main .category-input {
-  width: 70%;
-}
-main .price-input {
-  width: 30%;
-}
 main .box-add-category {
-  width: 80%;
-  margin: 0 auto;
+  margin: 2.5rem auto 0 auto;
   background-color: rgb(255, 255, 255);
-  border: 1px solid black;
+  padding: 1.1rem 0;
 }
 main .box-add-category-form {
   width: 100%;
 }
 main .ctg-title {
   text-align: center;
-  margin: 0.8rem 0.5rem 0;
+  margin: 1rem 0 2.5rem 0;
 }
 main .box-add-category-footer {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -461,6 +519,71 @@ main .box-add-category-footer-income {
   justify-content: space-between;
   margin: 0 auto;
 }
-main .form {
+main input:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+main select {
+  width: 100%;
+  padding: 1.1rem 0;
+  display: none;
+}
+main .box {
+  width: 80%;
+  margin: 0 auto 3rem auto;
+  max-width: 600px;
+}
+main .parentH5 {
+  margin-bottom: 1.5rem;
+}
+main .form-flex {
   display: flex;
+  justify-content: space-between;
+}
+main .ctn-form-input-label, main .ctn-form-icons {
+  display: flex;
+}
+main .fa-trash {
+  margin-left: 1rem;
+}
+main .confirmation-box {
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  opacity: 1;
+  position: fixed;
+  left: 10%;
+  top: 35%;
+  max-width: 400px;
+}
+main .confirmation-box .confirmation-box-ctn {
+  margin: 1.5rem 1.2rem 1.5rem;
+}
+main .confirmation-box .confirmation-box-title {
+  font-size: 1.2rem;
+}
+main .confirmation-box .close-icon {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+main .confirmation-box .confirmation-box-question {
+  margin: 2rem auto;
+  text-align: left;
+  font-size: 1.2rem;
+}
+main .confirmation-box .confirmation-box-icon {
+  display: flex;
+  justify-content: space-between;
+}
+main .confirmation-box .confirmation-box-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+main .confirmation-box .confirm-btn, main .confirmation-box .cancel-btn {
+  border: 0;
+  padding: 0.7rem 1.2rem;
+  font-size: 16px;
+  margin: 0.1rem 0 0.5rem 0.5rem;
+  background-color: rgb(45, 45, 82);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

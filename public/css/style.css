@@ -459,10 +459,9 @@ main {
     display: flex;
     justify-content: flex-end; }
   main .confirmation-box .confirm-btn, main .confirmation-box .cancel-btn {
-    margin-left: 0.5rem;
     border: 0;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 1.2rem;
     font-size: 16px;
-    margin: 1rem 0 1rem 0.5rem;
+    margin: 0.1rem 0 0.5rem 0.5rem;
     background-color: #2d2d52;
     color: white; }
