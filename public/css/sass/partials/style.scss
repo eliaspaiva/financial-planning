@@ -218,8 +218,12 @@
       top: 40%;
     }
 
-    .confirmation-box .confirmation-box-title {
-      font-size: 1.7rem;
+    .confirmation-box .confirmation-box-title, .confirmation-box .close-icon {
+      font-size: 1.3rem;
+    }
+
+    .confirmation-box .close-icon {
+      margin-top: 0.5rem;
     }
 
     .confirmation-box .confirmation-box-ctn {
@@ -229,7 +233,7 @@
     .confirmation-box .confirmation-box-question {
      margin: 2rem auto;
      text-align: left;
-     font-size: 1.3rem;
+     font-size: 1.1rem;
     }
 
     .confirmation-box .confirmation-box-icon, .confirmation-box-btn{

@@ -439,14 +439,16 @@ main {
     position: fixed;
     left: 10%;
     top: 40%; }
-  main .confirmation-box .confirmation-box-title {
-    font-size: 1.7rem; }
+  main .confirmation-box .confirmation-box-title, main .confirmation-box .close-icon {
+    font-size: 1.3rem; }
+  main .confirmation-box .close-icon {
+    margin-top: 0.5rem; }
   main .confirmation-box .confirmation-box-ctn {
     margin: 0 0.5rem 0 1.5rem; }
   main .confirmation-box .confirmation-box-question {
     margin: 2rem auto;
     text-align: left;
-    font-size: 1.3rem; }
+    font-size: 1.1rem; }
   main .confirmation-box .confirmation-box-icon, main .confirmation-box-btn {
     display: flex;
     justify-content: space-between; }
