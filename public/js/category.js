@@ -268,7 +268,7 @@ const saveBox = () => {
 const closeConfBox = () => {
     confirmationBox.style.display = 'none';
     wholePage.style.display = 'block';
-    wholePage.style.display = '1';
+    wholePage.style.opacity = '1';
 };
 
 // Event Listeners
