@@ -214,9 +214,14 @@
       width: 80%;
     }
 
+    .confirmation-box .confirmation-box-ctn {
+      margin: 0 2rem;
+    }
+
     .confirmation-box .confirmation-box-question {
-      width: 47%;
-     margin: $margin-middle;
+      width: 80%;
+     margin: 2rem auto;
+     text-align: center;
     }
 
     .confirmation-box .confirmation-box-icon, .confirmation-box-btn{

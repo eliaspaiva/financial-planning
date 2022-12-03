@@ -435,9 +435,12 @@ main {
   main .confirmation-box {
     background-color: white;
     width: 80%; }
+  main .confirmation-box .confirmation-box-ctn {
+    margin: 0 2rem; }
   main .confirmation-box .confirmation-box-question {
-    width: 50%;
-    margin: 0 auto; }
+    width: 80%;
+    margin: 2rem auto;
+    text-align: center; }
   main .confirmation-box .confirmation-box-icon, main .confirmation-box-btn {
     display: flex;
     justify-content: space-between; }
