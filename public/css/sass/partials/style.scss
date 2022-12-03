@@ -216,24 +216,26 @@
       position: fixed;
       left: 10%;
       top: 40%;
+      max-width: 400px;
+    }
+    
+    .confirmation-box .confirmation-box-ctn {
+      margin: 0 0.5rem 0 1.5rem;
     }
 
-    .confirmation-box .confirmation-box-title, .confirmation-box .close-icon {
-      font-size: 1.3rem;
+    .confirmation-box .confirmation-box-title {
+      font-size: 1.2rem;
     }
 
     .confirmation-box .close-icon {
+      font-size: 0.9rem;
       margin-top: 0.5rem;
-    }
-
-    .confirmation-box .confirmation-box-ctn {
-      margin: 0 0.5rem 0 1.5rem;
     }
 
     .confirmation-box .confirmation-box-question {
      margin: 2rem auto;
      text-align: left;
-     font-size: 1.1rem;
+     font-size: 1.2rem;
     }
 
     .confirmation-box .confirmation-box-icon, .confirmation-box-btn{
