@@ -208,5 +208,19 @@
     .fa-trash {
       margin-left: 1rem;
     }
+
+    .confirmation-box {
+      background-color: white;
+      width: 80%;
+    }
+
+    .confirmation-box .confirmation-box-question {
+     margin: $margin-middle;
+    }
+
+    .confirmation-box .confirmation-box-icon, .confirmation-box-btn{
+      display: flex;
+      justify-content: space-between;
+    }
   
   }
