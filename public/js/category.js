@@ -250,12 +250,8 @@ const removeIcon = (e) => {
         parentPreviousSibling.remove();
         const itemSelected = parentPreviousSibling.firstChild.id;
         itemRemoved.push(itemSelected);
-        itemRemoved.forEach(element => {
-            const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == element.toLowerCase()));
-            console.log(getIndexNumber);
-            console.log(checkExpense);
-            console.log(itemRemoved);
-        });
+        const getIndexNumber = checkExpense.findIndex((e => e.toLowerCase() == itemSelected.toLowerCase()));
+        checkExpense.splice(getIndexNumber, 1);
     }
 };
 
