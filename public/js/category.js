@@ -270,7 +270,7 @@ const saveBox = () => {
     document.getElementById('form-expense').style.display = 'none';
     pageTitle.style.display = 'none';
     wholePage.style.opacity = '0.5';
-    reviewBoxContent.style.opacity = '0.8';
+    reviewBoxContent.style.opacity = '0.6';
     box.style.display = 'block';
 };
 
