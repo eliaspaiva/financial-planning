@@ -271,7 +271,7 @@ const saveBox = () => {
     pageTitle.style.display = 'none';
     wholePage.style.opacity = '0.5';
     box.style.display = 'block';
-    box.style.marginBottom = '3rem';
+    box.style.marginBottom = '6rem';
 };
 
 const closeConfBox = () => {
