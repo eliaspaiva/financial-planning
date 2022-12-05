@@ -18,8 +18,8 @@ const boxSaveBtn = document.getElementById('btn-box-save');
 const confirmationBox = document.querySelector('.confirmation-box');
 const closeIcon = document.querySelector('.close-icon');
 const cancelBtn = document.querySelector('.cancel-btn');
-const reviewBox = document.getElementById('review-categories-box');
-const reviewBoxContent = document.getElementById('box-add-category');
+const reviewBoxContent = document.getElementById('review-categories-box');
+// const reviewBoxContent = document.getElementById('box-add-category');
 
 
 // Empty Elements
@@ -264,8 +264,11 @@ const removeIcon = (e) => {
 
 const saveBox = () => {
     confirmationBox.style.display = 'block';
+    document.getElementById('form-income').style.display = 'none';
+    document.getElementById('form-category').style.display = 'none';
+    document.getElementById('form-expense').style.display = 'none';
     wholePage.style.opacity = '0.5';
-    wholePage.style.display = 'none';
+    confirmationBox.style.opacity = '0.5';
     box.style.display = 'block';
 };
 
@@ -273,7 +276,6 @@ const closeConfBox = () => {
     confirmationBox.style.display = 'none';
     wholePage.style.display = 'block';
     wholePage.style.opacity = '1';
-    reviewBox.appendChild(reviewBoxContent);
 };
 
 // Event Listeners
