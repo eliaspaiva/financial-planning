@@ -1,4 +1,5 @@
 const wholePage = document.querySelector('.main-parent');
+const pageTitle = document.querySelector('.h1');
 const incomeInput = document.getElementById('income');
 const btnIncomeSave = document.getElementById('btn-income-save');
 const btnIncomeEdit = document.getElementById('btn-income-edit');
@@ -267,9 +268,10 @@ const saveBox = () => {
     document.getElementById('form-income').style.display = 'none';
     document.getElementById('form-category').style.display = 'none';
     document.getElementById('form-expense').style.display = 'none';
+    pageTitle.style.display = 'none';
     wholePage.style.opacity = '0.5';
-    confirmationBox.style.opacity = '0.5';
     box.style.display = 'block';
+    box.style.marginBottom = '3rem';
 };
 
 const closeConfBox = () => {
