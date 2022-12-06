@@ -30,6 +30,27 @@ const uniqueChars = [];
 const checkExpense = [];
 let tobeExported = {};
 
+
+//Functions 
+const saveIncomeValue = (e) => {
+    e.preventDefault();
+    if (incomeInput.value.length > 0) {
+        btnIncomeSave.setAttribute('disabled', 'disabled');
+        incomeInput.setAttribute('disabled', 'disabled');
+        btnIncomeEdit.removeAttribute('disabled');
+        
+    }
+};
+
+const editIncomeValue = (e) => {
+    e.preventDefault(); 
+    if (incomeInput.disabled) {
+        incomeInput.removeAttribute('disabled');
+        btnIncomeSave.removeAttribute('disabled');
+        btnIncomeEdit.setAttribute('disabled', 'disabled');
+    }
+};
+
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
     const toString = text.toString();
@@ -106,24 +127,6 @@ const categoryToBox = (textValue) => {
     bigFirstLetter(textValue, div);
     divForH5.appendChild(div);
     return resultBox;
-};
-
-const saveIncomeValue = (e) => {
-    e.preventDefault();
-    if (incomeInput.value.length > 0) {
-        incomeInput.setAttribute('disabled', 'disabled');
-        btnIncomeEdit.removeAttribute('disabled');
-        btnIncomeSave.setAttribute('disabled', 'disabled');
-    }
-};
-
-const editIncomeValue = (e) => {
-    e.preventDefault(); 
-    if (incomeInput.disabled) {
-        incomeInput.removeAttribute('disabled');
-        btnIncomeSave.removeAttribute('disabled');
-        btnIncomeEdit.setAttribute('disabled', 'disabled');
-    }
 };
  
 // Category
