@@ -29,6 +29,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const checkExpense = [];
+const tobeExported = {};
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
