@@ -289,11 +289,12 @@ const closeConfBox = () => {
 const exportBox = () => {
     const parentDiv = document.querySelectorAll('#parent');
     const arrayForParent = Array.from(parentDiv);
-    const valueInTheDropdown = changeCategory().firstChild;
-    const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
-    const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
-    console.log(arrayForParent);
-    console.log(valueInTheDropdown);
+    arrayForParent.forEach(element => {
+        console.log(element);
+    });
+    // const eachCategoryName = parentDiv.firstChild.textContent;
+    console.log(category);
+
 };
 
 // Event Listeners
