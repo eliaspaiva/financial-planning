@@ -32,13 +32,22 @@ let tobeExported = {};
 
 
 //Functions 
-const saveIncomeValue = (e) => {
+const enableIncomeSaveBtn = (e) => {
     e.preventDefault();
     if (incomeInput.value.length > 0) {
-        btnIncomeSave.setAttribute('disabled', 'disabled');
-        incomeInput.setAttribute('disabled', 'disabled');
+        btnIncomeSave.removeAttribute('disabled');
+    }
+};
+
+const saveIncomeValue = (e) => {
+    e.preventDefault(); 
+    if (!incomeInput.disabled) {
+        tobeExported = {
+            income: incomeInput.value,
+        };
         btnIncomeEdit.removeAttribute('disabled');
-        
+        // incomeInput.removeAttribute('disabled');
+        // btnIncomeSave.removeAttribute('disabled');
     }
 };
 
@@ -289,6 +298,7 @@ const exportBox = () => {
 dropdownMenu.addEventListener('input', changeCategory);
 expenseInput.addEventListener('input', enableSaveButtonExpense);
 priceInput.addEventListener('input', enableSaveButtonPrice);
+incomeInput.addEventListener('input', enableIncomeSaveBtn);
 btnIncomeSave.addEventListener('click', saveIncomeValue);
 btnIncomeEdit.addEventListener('click', editIncomeValue);
 btnCategorySave.addEventListener('click', getCategoryValue);
