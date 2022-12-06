@@ -269,8 +269,8 @@ const saveBox = () => {
     document.getElementById('form-category').style.display = 'none';
     document.getElementById('form-expense').style.display = 'none';
     pageTitle.style.display = 'none';
-    wholePage.style.opacity = '0.1';
-    confirmationBox.style.opacity = '0.5';
+    wholePage.style.opacity = '0.3';
+    confirmationBox.style.opacity = '1';
     box.style.display = 'block';
 };
 
