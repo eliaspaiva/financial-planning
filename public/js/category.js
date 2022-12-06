@@ -28,8 +28,6 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const checkExpense = [];
-let tobeExported = {};
-
 
 //Functions 
 const enableIncomeSaveBtn = (e) => {
@@ -289,12 +287,7 @@ const closeConfBox = () => {
 const exportBox = () => {
     const parentDiv = document.querySelectorAll('#parent');
     const arrayForParent = Array.from(parentDiv);
-    arrayForParent.forEach(element => {
-        console.log(element);
-    });
-    // const eachCategoryName = parentDiv.firstChild.textContent;
-    console.log(category);
-
+    return arrayForParent;
 };
 
 // Event Listeners
