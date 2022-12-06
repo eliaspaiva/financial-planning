@@ -19,8 +19,7 @@ const boxSaveBtn = document.getElementById('btn-box-save');
 const confirmationBox = document.querySelector('.confirmation-box');
 const closeIcon = document.querySelector('.close-icon');
 const cancelBtn = document.querySelector('.cancel-btn');
-const reviewBoxContent = document.getElementById('review-categories-box');
-// const reviewBoxContent = document.getElementById('box-add-category');
+const confirmBtn = document.querySelector('.confirm-btn');
 
 
 // Empty Elements
@@ -29,7 +28,7 @@ const dropDownValue = [];
 const numbers = [];
 const uniqueChars = [];
 const checkExpense = [];
-const tobeExported = {};
+let tobeExported = {};
 
 // First Letter Capitalized
 const bigFirstLetter = (text, attribute) => {
@@ -276,6 +275,13 @@ const closeConfBox = () => {
     wholePage.style.opacity = '1';
 };
 
+const exportBox = () => {
+    tobeExported = {
+        income: incomeInput.value,
+    };
+    console.log(tobeExported);
+};
+
 // Event Listeners
 dropdownMenu.addEventListener('input', changeCategory);
 expenseInput.addEventListener('input', enableSaveButtonExpense);
@@ -291,3 +297,4 @@ box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
 closeIcon.addEventListener('click', closeConfBox);
 cancelBtn.addEventListener('click', closeConfBox);
+confirmBtn.addEventListener('click', exportBox);
