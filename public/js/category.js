@@ -265,13 +265,8 @@ const removeIcon = (e) => {
 
 const saveBox = () => {
     confirmationBox.style.display = 'block';
-    document.getElementById('form-income').style.display = 'none';
-    document.getElementById('form-category').style.display = 'none';
-    document.getElementById('form-expense').style.display = 'none';
     pageTitle.style.display = 'none';
-    wholePage.style.opacity = '0.3';
-    confirmationBox.style.opacity = '1';
-    box.style.display = 'block';
+    wholePage.style.display = 'none';
 };
 
 const closeConfBox = () => {
