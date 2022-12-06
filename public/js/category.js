@@ -282,6 +282,7 @@ const closeConfBox = () => {
     confirmationBox.style.display = 'none';
     wholePage.style.display = 'block';
     wholePage.style.opacity = '1';
+    //
 };
 
 const exportBox = () => {
