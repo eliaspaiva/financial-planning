@@ -42,21 +42,20 @@ const enableIncomeSaveBtn = (e) => {
 const saveIncomeValue = (e) => {
     e.preventDefault(); 
     if (!incomeInput.disabled) {
-        tobeExported = {
-            income: incomeInput.value,
-        };
+      
+        btnIncomeSave.setAttribute('disabled', 'disabled');
         btnIncomeEdit.removeAttribute('disabled');
-        // incomeInput.removeAttribute('disabled');
-        // btnIncomeSave.removeAttribute('disabled');
+        incomeInput.setAttribute('disabled', 'disabled');
     }
 };
 
 const editIncomeValue = (e) => {
     e.preventDefault(); 
-    if (incomeInput.disabled) {
+    if (btnIncomeSave.disabled) {
         incomeInput.removeAttribute('disabled');
         btnIncomeSave.removeAttribute('disabled');
         btnIncomeEdit.setAttribute('disabled', 'disabled');
+        
     }
 };
 
@@ -288,10 +287,13 @@ const closeConfBox = () => {
 };
 
 const exportBox = () => {
-    tobeExported = {
-        income: incomeInput.value,
-    };
-    console.log(tobeExported);
+    const parentDiv = document.querySelectorAll('#parent');
+    const arrayForParent = Array.from(parentDiv);
+    const valueInTheDropdown = changeCategory().firstChild;
+    const dropdownContent = valueInTheDropdown.textContent.toUpperCase();
+    const findRightDiv = arrayForParent.find(element => element.childNodes[0].textContent.toUpperCase() == dropdownContent);
+    console.log(arrayForParent);
+    console.log(valueInTheDropdown);
 };
 
 // Event Listeners
