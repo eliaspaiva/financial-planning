@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 
 // Variables
 const username = document.getElementById('username');
