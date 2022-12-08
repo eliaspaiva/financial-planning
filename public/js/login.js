@@ -1,4 +1,3 @@
-import { teste } from './category';
 
 // Variables
 const username = document.getElementById('username');
@@ -10,8 +9,6 @@ const checkbox = document.getElementById('checkbox');
 const lock = document.querySelector('.fa-lock');
 const openEye = document.querySelector('.fa-eye');
 const closedEye = document.querySelector('.fa-eye-slash');
-
-console.log(teste);
 
 // Button Activation and Password Visibility
 const enabledButton = () => {
