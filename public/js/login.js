@@ -1,13 +1,16 @@
 import bcrypt from 'bcrypt';
 
-const hashPassword = async (pw) => {
-    const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(pw, salt);
-    console.log(salt);
-    console.log(hash);
-};
+const password1 = 'oe3im3io2r3o2';
+const rounds = 10;
 
-hashPassword('elias');
+bcrypt.hash(password1, rounds, (err, hash) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(hash);
+});
+
 
 // Variables
 const username = document.getElementById('username');
