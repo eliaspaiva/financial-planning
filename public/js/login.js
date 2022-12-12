@@ -1,17 +1,3 @@
-import bcrypt from 'bcrypt';
-
-const password1 = 'oe3im3io2r3o2';
-const rounds = 10;
-
-bcrypt.hash(password1, rounds, (err, hash) => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log(hash);
-});
-
-
 // Variables
 const username = document.getElementById('username');
 const password = document.getElementById('password');
