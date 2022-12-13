@@ -307,4 +307,4 @@ box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
 closeIcon.addEventListener('click', closeConfBox);
 cancelBtn.addEventListener('click', closeConfBox);
-confirmBtn.addEventListener('click', exportBox)
+confirmBtn.addEventListener('click', exportBox);
