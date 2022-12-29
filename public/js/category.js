@@ -112,7 +112,7 @@ const createInputAndLabel = (element1, element2) => {
     inputRadio.setAttribute('for', element1, element2);
     divForInputLabel.appendChild(labelRadio);
     return divForInputLabel;
-};
+}
 
 
 const addcheckBoxToBox = (expense, price) => {
