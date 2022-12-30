@@ -304,7 +304,7 @@ btnCategoryEdit.addEventListener('click', editCategoryValue);
 btnNewCategory.addEventListener('click', newCategory);
 btnPriceSave.addEventListener('click', getExpenseValue);
 btnPriceEdit.addEventListener('click', editExpenseValue);
-box.addEventListener('click', removeIcon)
+box.addEventListener('click', removeIcon);
 boxSaveBtn.addEventListener('click', saveBox);
 closeIcon.addEventListener('click', closeConfBox);
 cancelBtn.addEventListener('click', closeConfBox);
