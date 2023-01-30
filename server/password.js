@@ -20,9 +20,13 @@ hashPassword('elias');
 login('elias', '$2b$10$sS8mpST7N6mEelUVoMA Ep.FmaVQymhH/5471LKhQSrvFVZxwGjP3K');
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+mongoose.set('strictQuery',false);
+mongoose.connect('mongodb://localhost:27017/user', { useNewUrlParser: true })
+    .then(() => {
+        console.log('Connection Open!');
+    })
+    .catch(err => {
+        console.log('Error!!!!');
+        console.log(err);
+    });
 
-const Cat = mongoose.model('Cat', { name: String });
-
-const kitty = new Cat({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
