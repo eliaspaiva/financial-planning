@@ -1,6 +1,4 @@
 import bcrypt from 'bcrypt';
-import mongoose from 'mongoose';
-
 
 const hashPassword = async (pw) => {
     const hash = await bcrypt.hash(pw, 12);
@@ -20,13 +18,5 @@ hashPassword('elias');
 login('elias', '$2b$10$sS8mpST7N6mEelUVoMA Ep.FmaVQymhH/5471LKhQSrvFVZxwGjP3K');
 
 
-mongoose.set('strictQuery',false);
-mongoose.connect('mongodb://localhost:27017/user', { useNewUrlParser: true })
-    .then(() => {
-        console.log('Connection Open!');
-    })
-    .catch(err => {
-        console.log('Error!!!!');
-        console.log(err);
-    });
+
 
