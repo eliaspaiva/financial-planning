@@ -16,9 +16,11 @@ const userSchema = new mongoose.Schema({
     password: String,
 });
 
-const User = mongoose.model('User', userSchema);
-const userElias = new User({
+const User = mongoose.model('AppUser', userSchema);
+const userOne = new User({
     username: 'kingjames',
     email: 'elias@gmail.com',
     password: 'teste',
 });
+
+ 
