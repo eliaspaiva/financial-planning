@@ -1,4 +1,3 @@
-const { hash } = require('bcrypt');
 const mongoose = require('mongoose');
 
 const appUsersSchema = mongoose.Schema({
@@ -7,3 +6,7 @@ const appUsersSchema = mongoose.Schema({
     hash: String,
     salt: String,
 });
+
+const AppUsers = mongoose.model('User', appUsersSchema);
+
+module.exports = AppUsers;
