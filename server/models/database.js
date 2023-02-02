@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-
-const AppUsers = require('./users');
+const User = require('./users');
 
 mongoose.set('strictQuery',false);
-mongoose.connect('mongodb://localhost:27017/budgetTracker', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/user', { useNewUrlParser: true })
     .then(() => {
         console.log('Connection Open!');
     })
@@ -11,4 +10,19 @@ mongoose.connect('mongodb://localhost:27017/budgetTracker', { useNewUrlParser: t
         console.log('Error!!!!');
         console.log(err);
     });
+
+
+
+const userOne = new User({
+    username: 'kingjames',
+    email: 'elias@gmail.com',
+    password: 'teste',
+});
+
+userOne.save().then(userOne => {
+    console.log(userOne);
+}).catch(e => {
+    console.log(e);
+});
+
  
